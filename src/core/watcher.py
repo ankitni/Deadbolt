@@ -4,6 +4,7 @@ Monitors directories for suspicious file system activities using behavior-based 
 """
 
 import os
+import sys
 import time
 import threading
 import logging
@@ -12,7 +13,14 @@ from collections import defaultdict, deque
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 import psutil
-import config
+
+# Try relative import first, fallback to direct import
+try:
+    from ..utils import config
+except ImportError:
+    utils_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'utils')
+    sys.path.append(utils_path)
+    import config
 
 class RansomwareWatchHandler(FileSystemEventHandler):
     """Handler for file system events that detects ransomware-like behavior patterns."""
@@ -26,7 +34,13 @@ class RansomwareWatchHandler(FileSystemEventHandler):
         
         # Initialize logging
         self.logger = logging.getLogger(__name__)
-        handler = logging.FileHandler(os.path.join('logs', 'watcher.log'))
+        
+        # Set up project paths
+        project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        logs_dir = os.path.join(project_root, 'logs')
+        os.makedirs(logs_dir, exist_ok=True)
+        
+        handler = logging.FileHandler(os.path.join(logs_dir, 'watcher.log'))
         formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
         handler.setFormatter(formatter)
         self.logger.addHandler(handler)
@@ -35,10 +49,37 @@ class RansomwareWatchHandler(FileSystemEventHandler):
         self.logger.info("Ransomware Watcher initialized - monitoring directories")
         
     def _get_process_info(self):
-        """Get minimal process information for file system events only."""
-        # SIMPLIFIED: Only return empty list to avoid CPU-based process analysis
-        # This focuses detection purely on file system behavior patterns
-        return []
+        """Get process information for file system events - ESSENTIAL FOR THREAT RESPONSE."""
+        try:
+            # Get processes that are currently active and potentially suspicious
+            current_processes = []
+            for proc in psutil.process_iter(['pid', 'name', 'create_time', 'cpu_percent']):
+                try:
+                    proc_info = proc.info
+                    pid = proc_info['pid']
+                    name = proc_info.get('name', 'unknown')
+                    
+                    # Skip system processes but capture potential ransomware
+                    if (pid > 1000 and  # Skip system PIDs
+                        name.lower() not in ['explorer.exe', 'dwm.exe', 'winlogon.exe', 
+                                            'services.exe', 'svchost.exe', 'lsass.exe', 
+                                            'csrss.exe', 'qoder.exe']):  # REMOVED python.exe to detect ransomware
+                        current_processes.append({
+                            'pid': pid,
+                            'name': name,
+                            'create_time': proc_info.get('create_time', 0),
+                            'cpu_percent': proc_info.get('cpu_percent', 0)
+                        })
+                except (psutil.NoSuchProcess, psutil.AccessDenied):
+                    continue
+            
+            # Return up to 10 most recently created processes (potential threats)
+            current_processes.sort(key=lambda x: x.get('create_time', 0), reverse=True)
+            return current_processes[:10]
+            
+        except Exception as e:
+            self.logger.error(f"Error getting process info: {e}")
+            return []
     
     def _should_ignore_file(self, file_path):
         """Check if file should be ignored based on extension or location."""
@@ -65,12 +106,15 @@ class RansomwareWatchHandler(FileSystemEventHandler):
             
         current_time = datetime.now()
         
+        # CAPTURE PROCESS INFO IMMEDIATELY when file activity occurs
+        current_process_info = self._get_process_info()
+        
         with self.lock:
-            # Add event to history
+            # Add event to history WITH process info
             self.event_history[event_type].append({
                 'time': current_time,
                 'path': file_path,
-                'process_info': self._get_process_info()
+                'process_info': current_process_info  # Store actual process info
             })
             
             # Clean old events (keep last 10 minutes)
@@ -79,23 +123,28 @@ class RansomwareWatchHandler(FileSystemEventHandler):
                 while event_list and event_list[0]['time'] < cutoff_time:
                     event_list.popleft()
             
-            # Check for suspicious patterns
+            # Check for suspicious patterns - BEHAVIOR-BASED ONLY
             self._check_mass_operations(current_time)
-            self._check_suspicious_extensions(file_path)
-            self._check_suspicious_filenames(file_path)
+            # BEHAVIOR-ONLY: No extension or filename checks - pure behavior detection
     
     def _check_mass_operations(self, current_time):
         """Check for mass file operations that could indicate ransomware."""
-        time_window = timedelta(seconds=config.RULES['mass_delete']['interval'])
-        recent_time = current_time - time_window
+        # Use the specific time window for each type of operation
+        delete_window = timedelta(seconds=config.RULES['mass_delete']['interval'])
+        rename_window = timedelta(seconds=config.RULES['mass_rename']['interval']) 
+        modification_window = timedelta(seconds=config.RULES['mass_modification']['interval'])
         
-        # Count recent events
+        delete_time = current_time - delete_window
+        rename_time = current_time - rename_window
+        modification_time = current_time - modification_window
+        
+        # Count recent events with correct time windows
         recent_deletes = sum(1 for event in self.event_history['deleted'] 
-                           if event['time'] >= recent_time)
+                           if event['time'] >= delete_time)
         recent_renames = sum(1 for event in self.event_history['moved'] 
-                           if event['time'] >= recent_time)
+                           if event['time'] >= rename_time)
         recent_modifications = sum(1 for event in self.event_history['modified'] 
-                                 if event['time'] >= recent_time)
+                                 if event['time'] >= modification_time)
         
         # Check mass delete pattern
         if recent_deletes >= config.RULES['mass_delete']['count']:
@@ -103,7 +152,7 @@ class RansomwareWatchHandler(FileSystemEventHandler):
                 'type': 'mass_delete',
                 'count': recent_deletes,
                 'time_window': config.RULES['mass_delete']['interval'],
-                'process_info': self._get_recent_process_info('deleted', recent_time),
+                'process_info': self._get_recent_process_info('deleted', delete_time),
                 'severity': 'HIGH',
                 'description': f'Mass file deletion detected: {recent_deletes} files deleted in {config.RULES["mass_delete"]["interval"]} seconds'
             }
@@ -116,22 +165,22 @@ class RansomwareWatchHandler(FileSystemEventHandler):
                 'type': 'mass_rename',
                 'count': recent_renames,
                 'time_window': config.RULES['mass_rename']['interval'],
-                'process_info': self._get_recent_process_info('moved', recent_time),
+                'process_info': self._get_recent_process_info('moved', rename_time),
                 'severity': 'HIGH',
                 'description': f'Mass file renaming detected: {recent_renames} files renamed in {config.RULES["mass_rename"]["interval"]} seconds'
             }
             self.logger.warning(f"RANSOMWARE ALERT: {threat_info['description']}")
             self.detector_callback(threat_info)
         
-        # Check mass modification pattern (potential encryption)
-        if recent_modifications >= 10:  # Reduced threshold for testing
+        # Check mass modification pattern (potential encryption) - CRITICAL FOR RANSOMWARE
+        if recent_modifications >= config.RULES['mass_modification']['count']:
             threat_info = {
                 'type': 'mass_modification',
                 'count': recent_modifications,
-                'time_window': config.RULES['mass_rename']['interval'],
-                'process_info': self._get_recent_process_info('modified', recent_time),
+                'time_window': config.RULES['mass_modification']['interval'],
+                'process_info': self._get_recent_process_info('modified', modification_time),
                 'severity': 'CRITICAL',
-                'description': f'Mass file modification detected: {recent_modifications} files modified in {config.RULES["mass_rename"]["interval"]} seconds (potential encryption)'
+                'description': f'Mass file modification detected: {recent_modifications} files modified in {config.RULES["mass_modification"]["interval"]} seconds (potential encryption)'
             }
             self.logger.critical(f"RANSOMWARE ALERT: {threat_info['description']}")
             self.detector_callback(threat_info)
@@ -141,40 +190,17 @@ class RansomwareWatchHandler(FileSystemEventHandler):
         processes = set()
         for event in self.event_history[event_type]:
             if event['time'] >= since_time and event['process_info']:
+                # Extract PID and name from each process in the process_info list
                 for proc in event['process_info']:
-                    processes.add((proc['pid'], proc['name']))
-        return list(processes)
+                    if isinstance(proc, dict) and 'pid' in proc and 'name' in proc:
+                        processes.add((proc['pid'], proc['name']))
+        
+        # Convert set back to list for the threat response
+        process_list = list(processes)
+        self.logger.info(f"Recent process info for {event_type}: {len(process_list)} unique processes identified")
+        return process_list
     
-    def _check_suspicious_extensions(self, file_path):
-        """Check for suspicious file extensions."""
-        for ext in config.SUSPICIOUS_PATTERNS['extensions']:
-            if file_path.lower().endswith(ext):
-                threat_info = {
-                    'type': 'suspicious_extension',
-                    'file_path': file_path,
-                    'extension': ext,
-                    'process_info': self._get_process_info(),
-                    'severity': 'HIGH',
-                    'description': f'File with suspicious extension created: {file_path}'
-                }
-                self.logger.warning(f"RANSOMWARE ALERT: {threat_info['description']}")
-                self.detector_callback(threat_info)
-    
-    def _check_suspicious_filenames(self, file_path):
-        """Check for suspicious filenames."""
-        filename = os.path.basename(file_path).upper()
-        for pattern in config.SUSPICIOUS_PATTERNS['filenames']:
-            if pattern in filename:
-                threat_info = {
-                    'type': 'suspicious_filename',
-                    'file_path': file_path,
-                    'pattern': pattern,
-                    'process_info': self._get_process_info(),
-                    'severity': 'CRITICAL',
-                    'description': f'Suspicious filename detected: {file_path} (contains: {pattern})'
-                }
-                self.logger.critical(f"RANSOMWARE ALERT: {threat_info['description']}")
-                self.detector_callback(threat_info)
+
     
     def on_modified(self, event):
         """Handle file modification events."""

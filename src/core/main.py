@@ -1,6 +1,7 @@
-"""
+"""  
 Deadbolt Ransomware Defender - Main Orchestrator
 Coordinates the watcher, detector, and responder components for comprehensive ransomware protection.
+Supports both CLI and GUI modes.
 """
 
 import os
@@ -13,11 +14,46 @@ import argparse
 from datetime import datetime
 import json
 
+# Add parent directories to path for imports
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+
 # Import our components
-from watcher import FileSystemWatcher
-from detector import ThreatDetector
-from responder import ThreatResponder
-import config
+try:
+    from .watcher import FileSystemWatcher
+    from .detector import ThreatDetector
+    from .responder import ThreatResponder
+except ImportError:
+    # Fallback for when running as script
+    from watcher import FileSystemWatcher
+    from detector import ThreatDetector
+    from responder import ThreatResponder
+
+try:
+    from ..utils import config
+except ImportError:
+    # Fallback for when running as script
+    utils_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'utils')
+    sys.path.append(utils_path)
+    import config
+
+# Try to import GUI components
+try:
+    from ..ui.main_gui import run_gui, DeadboltMainWindow
+    from PyQt5.QtWidgets import QApplication
+    GUI_AVAILABLE = True
+except ImportError:
+    try:
+        # Fallback for when running as script  
+        ui_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'ui')
+        sys.path.append(ui_path)
+        from main_gui import run_gui, DeadboltMainWindow
+        from PyQt5.QtWidgets import QApplication
+        GUI_AVAILABLE = True
+    except ImportError as e:
+        print(f"GUI components not available: {e}")
+        print("Running in CLI mode only.")
+        GUI_AVAILABLE = False
 
 class DeadboltDefender:
     """Main class that orchestrates all ransomware defense components."""
@@ -26,6 +62,10 @@ class DeadboltDefender:
         self.debug_mode = debug_mode
         self.is_running = False
         self.shutdown_event = threading.Event()
+        
+        # Set up project paths
+        self.project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        self.logs_dir = os.path.join(self.project_root, 'logs')
         
         # Initialize logging
         self._setup_logging()
@@ -49,14 +89,14 @@ class DeadboltDefender:
     def _setup_logging(self):
         """Setup comprehensive logging system."""
         # Create logs directory if it doesn't exist
-        os.makedirs('logs', exist_ok=True)
+        os.makedirs(self.logs_dir, exist_ok=True)
         
         # Main logger
         self.logger = logging.getLogger('deadbolt_main')
         self.logger.setLevel(logging.DEBUG if self.debug_mode else logging.INFO)
         
         # File handler
-        file_handler = logging.FileHandler(os.path.join('logs', 'main.log'))
+        file_handler = logging.FileHandler(os.path.join(self.logs_dir, 'main.log'))
         file_formatter = logging.Formatter(
             '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
         )
@@ -88,7 +128,7 @@ class DeadboltDefender:
             'process_info': threat_info.get('process_info', [])
         }
         
-        with open(os.path.join('logs', 'threats.json'), 'a') as f:
+        with open(os.path.join(self.logs_dir, 'threats.json'), 'a') as f:
             f.write(json.dumps(threat_log) + '\n')
     
     def _responder_callback(self, response_info):
@@ -104,7 +144,7 @@ class DeadboltDefender:
             'target_pids': response_info.get('suspicious_pids', [])
         }
         
-        with open(os.path.join('logs', 'responses.json'), 'a') as f:
+        with open(os.path.join(self.logs_dir, 'responses.json'), 'a') as f:
             f.write(json.dumps(response_log) + '\n')
     
     def start(self):
@@ -334,9 +374,17 @@ def main():
     parser.add_argument('--debug', action='store_true', help='Enable debug mode')
     parser.add_argument('--daemon', action='store_true', help='Run as daemon (background)')
     parser.add_argument('--interactive', action='store_true', help='Run in interactive mode')
+    parser.add_argument('--gui', action='store_true', help='Run with graphical interface')
     parser.add_argument('--status', action='store_true', help='Show status and exit')
     
     args = parser.parse_args()
+    
+    # If no specific mode is chosen, default to GUI if available, otherwise daemon
+    if not any([args.daemon, args.interactive, args.gui, args.status]):
+        if GUI_AVAILABLE:
+            args.gui = True
+        else:
+            args.daemon = True
     
     global defender
     defender = DeadboltDefender(debug_mode=args.debug)
@@ -353,24 +401,69 @@ def main():
             defender.stop()
         return
     
-    if args.interactive:
+    if args.gui and GUI_AVAILABLE:
+        # GUI mode
+        print("Starting Deadbolt Defender with GUI...")
+        try:
+            app = QApplication(sys.argv)
+            window = DeadboltMainWindow()
+            
+            # Integrate the defender with the GUI
+            window.defender = defender
+            
+            # Override GUI start/stop methods to use our defender
+            original_start = window.start_monitoring
+            original_stop = window.stop_monitoring
+            
+            def gui_start_monitoring():
+                if defender.start():
+                    window.status_label.setText("Status: Monitoring")
+                    window.status_label.setStyleSheet("font-weight: bold; color: green;")
+                else:
+                    window.status_label.setText("Status: Error")
+                    window.status_label.setStyleSheet("font-weight: bold; color: red;")
+            
+            def gui_stop_monitoring():
+                defender.stop()
+                window.status_label.setText("Status: Stopped")
+                window.status_label.setStyleSheet("font-weight: bold; color: red;")
+            
+            window.start_monitoring = gui_start_monitoring
+            window.stop_monitoring = gui_stop_monitoring
+            
+            # Start the defender automatically with GUI
+            defender.start()
+            
+            window.show()
+            app.exec_()
+            
+        except Exception as e:
+            print(f"Error starting GUI: {e}")
+            print("Falling back to CLI mode...")
+            args.daemon = True
+        finally:
+            if defender.is_running:
+                defender.stop()
+    
+    elif args.interactive:
         # Interactive mode
         defender.run_interactive()
         return
     
-    # Default: daemon mode
-    if defender.start():
-        print("Deadbolt Defender started. Press Ctrl+C to stop.")
-        try:
-            while defender.is_running:
-                time.sleep(1)
-        except KeyboardInterrupt:
-            pass
-        finally:
-            defender.stop()
     else:
-        print("Failed to start Deadbolt Defender")
-        sys.exit(1)
+        # Default: daemon mode
+        if defender.start():
+            print("Deadbolt Defender started. Press Ctrl+C to stop.")
+            try:
+                while defender.is_running:
+                    time.sleep(1)
+            except KeyboardInterrupt:
+                pass
+            finally:
+                defender.stop()
+        else:
+            print("Failed to start Deadbolt Defender")
+            sys.exit(1)
 
 if __name__ == "__main__":
     main()

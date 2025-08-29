@@ -9,8 +9,8 @@ import logging
 import re
 from datetime import datetime
 
-# Add parent directory to path so we can import modules
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Add parent directories to path so we can import modules
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 # Set matplotlib backend before importing matplotlib modules
 import matplotlib
@@ -32,11 +32,39 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 
 # Import Deadbolt modules
-from logger import log_event, get_log_path, LOG_DIR, log_alert
-from config import TARGET_DIRS, RULES, SUSPICIOUS_PATTERNS, ACTIONS
-from core.watcher import start_watcher
-from ui.alerts import alert_manager, AlertManager
-from ui.dashboard import DashboardData, start_dashboard_monitor, get_dashboard_data
+from ..utils.logger import log_event, get_log_path, LOG_DIR, log_alert
+try:
+    from ..utils import config
+    from ..utils.config import TARGET_DIRS, RULES, SUSPICIOUS_PATTERNS, ACTIONS
+except ImportError:
+    # Fallback if config module is not available
+    TARGET_DIRS = []
+    RULES = {'mass_delete': {'count': 10, 'interval': 5}, 'mass_rename': {'count': 10, 'interval': 5}}
+    SUSPICIOUS_PATTERNS = {'extensions': [], 'filenames': []}
+    ACTIONS = {'log_only': False, 'kill_process': True, 'shutdown': False, 'dry_run': False}
+
+# Try to import watcher (may not be available during GUI standalone testing)
+try:
+    from ..core import watcher
+    def start_watcher(path):
+        # This is a simplified version - the real integration happens in main.py
+        print(f"Starting watcher for {path}")
+        return type('MockWatcher', (), {'stop': lambda: None})()
+except ImportError:
+    def start_watcher(path):
+        print(f"Mock watcher started for {path}")
+        return type('MockWatcher', (), {'stop': lambda: None})()
+
+from .alerts import alert_manager, AlertManager
+from .dashboard import DashboardData, start_dashboard_monitor, get_dashboard_data
+
+# Import config manager for saving settings
+try:
+    from ..utils.config_manager import config_manager
+    CONFIG_MANAGER_AVAILABLE = True
+except ImportError:
+    CONFIG_MANAGER_AVAILABLE = False
+    print("Config manager not available - settings will not persist")
 
 # Global variables
 active_watchers = []
@@ -213,32 +241,32 @@ class DeadboltMainWindow(QMainWindow):
         # Top row with summary cards
         summary_layout = QHBoxLayout()
         
-        # High alerts card
-        high_alerts_group = QGroupBox("High Severity Alerts")
-        high_alerts_layout = QVBoxLayout(high_alerts_group)
-        self.high_alerts_label = QLabel("0")
-        self.high_alerts_label.setStyleSheet("font-size: 24pt; font-weight: bold; color: red;")
-        self.high_alerts_label.setAlignment(Qt.AlignCenter)
-        high_alerts_layout.addWidget(self.high_alerts_label)
-        summary_layout.addWidget(high_alerts_group)
+        # Threats detected card
+        threats_group = QGroupBox("Threats Detected")
+        threats_layout = QVBoxLayout(threats_group)
+        self.threats_label = QLabel("0")
+        self.threats_label.setStyleSheet("font-size: 24pt; font-weight: bold; color: red;")
+        self.threats_label.setAlignment(Qt.AlignCenter)
+        threats_layout.addWidget(self.threats_label)
+        summary_layout.addWidget(threats_group)
         
-        # Medium alerts card
-        medium_alerts_group = QGroupBox("Medium Severity Alerts")
-        medium_alerts_layout = QVBoxLayout(medium_alerts_group)
-        self.medium_alerts_label = QLabel("0")
-        self.medium_alerts_label.setStyleSheet("font-size: 24pt; font-weight: bold; color: orange;")
-        self.medium_alerts_label.setAlignment(Qt.AlignCenter)
-        medium_alerts_layout.addWidget(self.medium_alerts_label)
-        summary_layout.addWidget(medium_alerts_group)
+        # Threats blocked card
+        blocked_group = QGroupBox("Threats Blocked")
+        blocked_layout = QVBoxLayout(blocked_group)
+        self.blocked_label = QLabel("0")
+        self.blocked_label.setStyleSheet("font-size: 24pt; font-weight: bold; color: green;")
+        self.blocked_label.setAlignment(Qt.AlignCenter)
+        blocked_layout.addWidget(self.blocked_label)
+        summary_layout.addWidget(blocked_group)
         
-        # Low alerts card
-        low_alerts_group = QGroupBox("Low Severity Alerts")
-        low_alerts_layout = QVBoxLayout(low_alerts_group)
-        self.low_alerts_label = QLabel("0")
-        self.low_alerts_label.setStyleSheet("font-size: 24pt; font-weight: bold; color: blue;")
-        self.low_alerts_label.setAlignment(Qt.AlignCenter)
-        low_alerts_layout.addWidget(self.low_alerts_label)
-        summary_layout.addWidget(low_alerts_group)
+        # Processes terminated card
+        processes_group = QGroupBox("Processes Terminated")
+        processes_layout = QVBoxLayout(processes_group)
+        self.processes_label = QLabel("0")
+        self.processes_label.setStyleSheet("font-size: 24pt; font-weight: bold; color: orange;")
+        self.processes_label.setAlignment(Qt.AlignCenter)
+        processes_layout.addWidget(self.processes_label)
+        summary_layout.addWidget(processes_group)
         
         # Total events card
         events_group = QGroupBox("Total Events")
@@ -251,18 +279,54 @@ class DeadboltMainWindow(QMainWindow):
         
         layout.addLayout(summary_layout)
         
+        # Second row with system health indicators
+        health_layout = QHBoxLayout()
+        
+        # System health card
+        health_group = QGroupBox("System Health")
+        health_form = QVBoxLayout(health_group)
+        
+        self.detector_status = QLabel("Detector: Inactive")
+        self.responder_status = QLabel("Responder: Inactive")
+        self.watcher_status = QLabel("Watcher: Inactive")
+        
+        health_form.addWidget(self.detector_status)
+        health_form.addWidget(self.responder_status)
+        health_form.addWidget(self.watcher_status)
+        
+        health_layout.addWidget(health_group)
+        
+        # Alert distribution card
+        alert_dist_group = QGroupBox("Alert Severity Distribution")
+        alert_dist_layout = QVBoxLayout(alert_dist_group)
+        
+        self.high_alerts_label = QLabel("High: 0")
+        self.high_alerts_label.setStyleSheet("color: red; font-weight: bold;")
+        self.medium_alerts_label = QLabel("Medium: 0")
+        self.medium_alerts_label.setStyleSheet("color: orange; font-weight: bold;")
+        self.low_alerts_label = QLabel("Low: 0")
+        self.low_alerts_label.setStyleSheet("color: blue; font-weight: bold;")
+        
+        alert_dist_layout.addWidget(self.high_alerts_label)
+        alert_dist_layout.addWidget(self.medium_alerts_label)
+        alert_dist_layout.addWidget(self.low_alerts_label)
+        
+        health_layout.addWidget(alert_dist_group)
+        
+        layout.addLayout(health_layout)
+        
         # Middle row with charts
         charts_layout = QHBoxLayout()
         
-        # Alerts by time chart
-        time_chart_group = QGroupBox("Alerts by Hour")
+        # Threats by time chart
+        time_chart_group = QGroupBox("Threats by Hour")
         time_chart_layout = QVBoxLayout(time_chart_group)
         try:
             self.time_chart = MplCanvas(width=5, height=4, dpi=100)
             # Initialize with empty data
-            self.time_chart.axes.bar(range(24), [0] * 24, color='#5555FF')
+            self.time_chart.axes.bar(range(24), [0] * 24, color='#FF5555')
             self.time_chart.axes.set_xlabel('Hour of Day')
-            self.time_chart.axes.set_ylabel('Number of Alerts')
+            self.time_chart.axes.set_ylabel('Number of Threats')
             self.time_chart.axes.set_xticks(range(0, 24, 3))
             time_chart_layout.addWidget(self.time_chart)
         except Exception as e:
@@ -288,17 +352,34 @@ class DeadboltMainWindow(QMainWindow):
         
         layout.addLayout(charts_layout)
         
-        # Bottom row with recent alerts table
-        alerts_group = QGroupBox("Recent Alerts")
-        alerts_layout = QVBoxLayout(alerts_group)
+        # Bottom row with recent activity tables
+        tables_layout = QHBoxLayout()
         
-        self.alerts_table = QTableWidget()
-        self.alerts_table.setColumnCount(3)
-        self.alerts_table.setHorizontalHeaderLabels(["Time", "Severity", "Message"])
-        self.alerts_table.horizontalHeader().setSectionResizeMode(2, QHeaderView.Stretch)
-        alerts_layout.addWidget(self.alerts_table)
+        # Recent threats table
+        threats_table_group = QGroupBox("Recent Threats")
+        threats_table_layout = QVBoxLayout(threats_table_group)
         
-        layout.addWidget(alerts_group)
+        self.threats_table = QTableWidget()
+        self.threats_table.setColumnCount(3)
+        self.threats_table.setHorizontalHeaderLabels(["Time", "Type", "Description"])
+        self.threats_table.horizontalHeader().setSectionResizeMode(2, QHeaderView.Stretch)
+        threats_table_layout.addWidget(self.threats_table)
+        
+        tables_layout.addWidget(threats_table_group)
+        
+        # Recent responses table
+        responses_table_group = QGroupBox("Recent Responses")
+        responses_table_layout = QVBoxLayout(responses_table_group)
+        
+        self.responses_table = QTableWidget()
+        self.responses_table.setColumnCount(3)
+        self.responses_table.setHorizontalHeaderLabels(["Time", "Action", "Details"])
+        self.responses_table.horizontalHeader().setSectionResizeMode(2, QHeaderView.Stretch)
+        responses_table_layout.addWidget(self.responses_table)
+        
+        tables_layout.addWidget(responses_table_group)
+        
+        layout.addLayout(tables_layout)
     
     def setup_logs_tab(self):
         layout = QVBoxLayout(self.logs_tab)
@@ -707,8 +788,12 @@ class DeadboltMainWindow(QMainWindow):
         )
         
         if dir_path and dir_path not in TARGET_DIRS:
-            # Add to TARGET_DIRS (would need to update config file in a real implementation)
+            # Add to TARGET_DIRS
             TARGET_DIRS.append(dir_path)
+            
+            # Save configuration if config manager is available
+            if CONFIG_MANAGER_AVAILABLE:
+                config_manager.update_target_dirs(TARGET_DIRS)
             
             # Update the table
             row_position = self.dirs_table.rowCount()
@@ -716,7 +801,7 @@ class DeadboltMainWindow(QMainWindow):
             self.dirs_table.setItem(row_position, 0, QTableWidgetItem(dir_path))
             self.dirs_table.setItem(row_position, 1, QTableWidgetItem("Added (restart monitoring)"))
             
-            log_event("INFO", f"Added directory to monitor: {dir_path}")
+            log_event("INFO", f"Added directory to monitor via GUI: {dir_path}")
     
     def remove_directory(self):
         # Get selected row
@@ -728,37 +813,67 @@ class DeadboltMainWindow(QMainWindow):
         row = selected_rows[0].row()
         dir_path = self.dirs_table.item(row, 0).text()
         
-        # Remove from TARGET_DIRS (would need to update config file in a real implementation)
+        # Remove from TARGET_DIRS
         if dir_path in TARGET_DIRS:
             TARGET_DIRS.remove(dir_path)
+            
+            # Save configuration if config manager is available
+            if CONFIG_MANAGER_AVAILABLE:
+                config_manager.update_target_dirs(TARGET_DIRS)
         
         # Remove from table
         self.dirs_table.removeRow(row)
         
-        log_event("INFO", f"Removed directory from monitoring: {dir_path}")
+        log_event("INFO", f"Removed directory from monitoring via GUI: {dir_path}")
     
     def save_rules(self):
         try:
-            # Update RULES dictionary (would need to update config file in a real implementation)
-            RULES["mass_delete"]["count"] = int(self.mass_delete_input.text())
-            RULES["mass_delete"]["interval"] = int(self.mass_delete_interval.text())
-            RULES["mass_rename"]["count"] = int(self.mass_rename_input.text())
-            RULES["mass_rename"]["interval"] = int(self.mass_rename_interval.text())
+            mass_delete_count = int(self.mass_delete_input.text())
+            mass_delete_interval = int(self.mass_delete_interval.text())
+            mass_rename_count = int(self.mass_rename_input.text())
+            mass_rename_interval = int(self.mass_rename_interval.text())
             
-            log_event("INFO", "Detection rules updated")
-            QMessageBox.information(self, "Success", "Detection rules updated successfully.")
+            if CONFIG_MANAGER_AVAILABLE:
+                # Use config manager to save settings
+                if config_manager.update_rules(mass_delete_count, mass_delete_interval, 
+                                               mass_rename_count, mass_rename_interval):
+                    QMessageBox.information(self, "Success", "Detection rules updated and saved successfully.")
+                else:
+                    QMessageBox.warning(self, "Warning", "Rules updated but failed to save to file.")
+            else:
+                # Update RULES dictionary (temporary - won't persist)
+                RULES["mass_delete"]["count"] = mass_delete_count
+                RULES["mass_delete"]["interval"] = mass_delete_interval
+                RULES["mass_rename"]["count"] = mass_rename_count
+                RULES["mass_rename"]["interval"] = mass_rename_interval
+                QMessageBox.information(self, "Success", "Detection rules updated (temporary - not saved to file).")
+            
+            log_event("INFO", "Detection rules updated via GUI")
+            
         except ValueError:
             QMessageBox.critical(self, "Error", "Please enter valid numbers for all thresholds.")
     
     def save_actions(self):
-        # Update ACTIONS dictionary (would need to update config file in a real implementation)
-        ACTIONS["log_only"] = self.log_only_check.isChecked()
-        ACTIONS["kill_process"] = self.kill_process_check.isChecked()
-        ACTIONS["shutdown"] = self.shutdown_check.isChecked()
-        ACTIONS["dry_run"] = self.dry_run_check.isChecked()
+        log_only = self.log_only_check.isChecked()
+        kill_process = self.kill_process_check.isChecked()
+        shutdown = self.shutdown_check.isChecked()
+        dry_run = self.dry_run_check.isChecked()
         
-        log_event("INFO", "Response actions updated")
-        QMessageBox.information(self, "Success", "Response actions updated successfully.")
+        if CONFIG_MANAGER_AVAILABLE:
+            # Use config manager to save settings
+            if config_manager.update_actions(log_only, kill_process, shutdown, dry_run):
+                QMessageBox.information(self, "Success", "Response actions updated and saved successfully.")
+            else:
+                QMessageBox.warning(self, "Warning", "Actions updated but failed to save to file.")
+        else:
+            # Update ACTIONS dictionary (temporary - won't persist)
+            ACTIONS["log_only"] = log_only
+            ACTIONS["kill_process"] = kill_process
+            ACTIONS["shutdown"] = shutdown
+            ACTIONS["dry_run"] = dry_run
+            QMessageBox.information(self, "Success", "Response actions updated (temporary - not saved to file).")
+        
+        log_event("INFO", "Response actions updated via GUI")
     
     def load_initial_data(self):
         # Load monitored directories
@@ -838,11 +953,31 @@ class DeadboltMainWindow(QMainWindow):
     
     def refresh_dashboard(self):
         try:
-            # Update alert counts
-            self.high_alerts_label.setText(str(self.stats.get('alerts_high', 0)))
-            self.medium_alerts_label.setText(str(self.stats.get('alerts_medium', 0)))
-            self.low_alerts_label.setText(str(self.stats.get('alerts_low', 0)))
+            # Update main statistics
+            self.threats_label.setText(str(self.stats.get('threats_detected', 0)))
+            self.blocked_label.setText(str(self.stats.get('threats_blocked', 0)))
+            self.processes_label.setText(str(self.stats.get('processes_terminated', 0)))
             self.events_label.setText(str(self.stats.get('events_total', 0)))
+            
+            # Update alert distribution
+            self.high_alerts_label.setText(f"High: {self.stats.get('alerts_high', 0)}")
+            self.medium_alerts_label.setText(f"Medium: {self.stats.get('alerts_medium', 0)}")
+            self.low_alerts_label.setText(f"Low: {self.stats.get('alerts_low', 0)}")
+            
+            # Update system health indicators
+            health = self.stats.get('system_health', {})
+            
+            detector_active = health.get('detector_active', False)
+            self.detector_status.setText(f"Detector: {'Active' if detector_active else 'Inactive'}")
+            self.detector_status.setStyleSheet(f"color: {'green' if detector_active else 'red'}; font-weight: bold;")
+            
+            responder_active = health.get('responder_active', False)
+            self.responder_status.setText(f"Responder: {'Active' if responder_active else 'Inactive'}")
+            self.responder_status.setStyleSheet(f"color: {'green' if responder_active else 'red'}; font-weight: bold;")
+            
+            watcher_active = health.get('watcher_active', False)
+            self.watcher_status.setText(f"Watcher: {'Active' if watcher_active else 'Inactive'}")
+            self.watcher_status.setStyleSheet(f"color: {'green' if watcher_active else 'red'}; font-weight: bold;")
             
             # Update time chart - with error handling
             try:
@@ -855,10 +990,11 @@ class DeadboltMainWindow(QMainWindow):
                         alerts_by_time = [0] * 24
                     elif len(alerts_by_time) < 24:
                         alerts_by_time.extend([0] * (24 - len(alerts_by_time)))
-                    self.time_chart.axes.bar(hours, alerts_by_time, color='#5555FF')
+                    self.time_chart.axes.bar(hours, alerts_by_time, color='#FF5555')
                     self.time_chart.axes.set_xlabel('Hour of Day')
-                    self.time_chart.axes.set_ylabel('Number of Alerts')
+                    self.time_chart.axes.set_ylabel('Number of Threats')
                     self.time_chart.axes.set_xticks(range(0, 24, 3))
+                    self.time_chart.axes.set_title('Threat Activity by Hour')
                     self.time_chart.draw()
             except Exception as e:
                 print(f"Error updating time chart: {str(e)}")
@@ -871,60 +1007,77 @@ class DeadboltMainWindow(QMainWindow):
                         self.event_chart.axes.clear()
                         labels = list(events_by_type.keys())
                         sizes = list(events_by_type.values())
-                        self.event_chart.axes.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90)
-                        self.event_chart.axes.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle
+                        colors = ['#FF9999', '#66B2FF', '#99FF99', '#FFCC99', '#FF99CC', '#99FFCC']
+                        self.event_chart.axes.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90, colors=colors[:len(labels)])
+                        self.event_chart.axes.axis('equal')
+                        self.event_chart.axes.set_title('Event Types Distribution')
                         self.event_chart.draw()
                     else:
                         # If no event data, show a default pie chart
                         self.event_chart.axes.clear()
-                        self.event_chart.axes.pie([1], labels=['No Data'], autopct='%1.1f%%', startangle=90)
+                        self.event_chart.axes.pie([1], labels=['No Data'], autopct='%1.1f%%', startangle=90, colors=['#CCCCCC'])
                         self.event_chart.axes.axis('equal')
+                        self.event_chart.axes.set_title('Event Types Distribution')
                         self.event_chart.draw()
             except Exception as e:
                 print(f"Error updating event chart: {str(e)}")
-                # Try to reinitialize the chart if there was an error
-                try:
-                    if hasattr(self, 'event_chart') and self.event_chart is not None:
-                        self.event_chart.axes.clear()
-                        self.event_chart.axes.pie([1], labels=['No Data'], autopct='%1.1f%%', startangle=90)
-                        self.event_chart.axes.axis('equal')
-                        self.event_chart.draw()
-                except Exception as e2:
-                    print(f"Failed to reinitialize event chart: {str(e2)}")
             
-            # Update recent alerts table if available
+            # Update recent threats table
             try:
-                if hasattr(self, 'alerts_table'):
-                    recent_alerts = self.stats.get('recent_alerts', [])
-                    if recent_alerts and isinstance(recent_alerts, list):
-                        self.alerts_table.setRowCount(0)  # Clear existing rows
-                        for alert in reversed(recent_alerts):
+                if hasattr(self, 'threats_table'):
+                    recent_threats = self.stats.get('recent_threats', [])
+                    if recent_threats and isinstance(recent_threats, list):
+                        self.threats_table.setRowCount(0)  # Clear existing rows
+                        for i, threat in enumerate(recent_threats[:10]):  # Show last 10
                             try:
-                                row_position = self.alerts_table.rowCount()
-                                self.alerts_table.insertRow(row_position)
+                                self.threats_table.insertRow(i)
                                 
                                 # Add timestamp
-                                time_item = QTableWidgetItem(alert.get('timestamp', ''))
-                                self.alerts_table.setItem(row_position, 0, time_item)
+                                time_item = QTableWidgetItem(threat.get('timestamp', ''))
+                                self.threats_table.setItem(i, 0, time_item)
                                 
-                                # Add severity with color coding
-                                severity = alert.get('severity', 'LOW')
-                                severity_item = QTableWidgetItem(severity)
-                                if severity == "HIGH":
-                                    severity_item.setBackground(QColor(255, 150, 150))  # Red
-                                elif severity == "MEDIUM":
-                                    severity_item.setBackground(QColor(255, 200, 150))  # Orange
-                                else:
-                                    severity_item.setBackground(QColor(200, 200, 255))  # Blue
-                                self.alerts_table.setItem(row_position, 1, severity_item)
+                                # Add type
+                                type_item = QTableWidgetItem(threat.get('type', ''))
+                                self.threats_table.setItem(i, 1, type_item)
                                 
-                                # Add message
-                                message_item = QTableWidgetItem(alert.get('message', ''))
-                                self.alerts_table.setItem(row_position, 2, message_item)
+                                # Add description
+                                desc_item = QTableWidgetItem(threat.get('description', ''))
+                                self.threats_table.setItem(i, 2, desc_item)
+                                
                             except Exception as e:
-                                print(f"Error adding alert to table: {str(e)}")
+                                print(f"Error adding threat to table: {str(e)}")
             except Exception as e:
-                print(f"Error updating alerts table: {str(e)}")
+                print(f"Error updating threats table: {str(e)}")
+            
+            # Update recent responses table
+            try:
+                if hasattr(self, 'responses_table'):
+                    response_history = self.stats.get('response_history', [])
+                    if response_history and isinstance(response_history, list):
+                        self.responses_table.setRowCount(0)  # Clear existing rows
+                        for i, response in enumerate(response_history[:10]):  # Show last 10
+                            try:
+                                self.responses_table.insertRow(i)
+                                
+                                # Add timestamp
+                                time_item = QTableWidgetItem(response.get('timestamp', ''))
+                                self.responses_table.setItem(i, 0, time_item)
+                                
+                                # Add action
+                                action_item = QTableWidgetItem(response.get('action', ''))
+                                if response.get('severity') == 'CRITICAL':
+                                    action_item.setBackground(QColor(255, 200, 200))  # Light red
+                                self.responses_table.setItem(i, 1, action_item)
+                                
+                                # Add details
+                                details_item = QTableWidgetItem(response.get('details', ''))
+                                self.responses_table.setItem(i, 2, details_item)
+                                
+                            except Exception as e:
+                                print(f"Error adding response to table: {str(e)}")
+            except Exception as e:
+                print(f"Error updating responses table: {str(e)}")
+                
         except Exception as e:
             print(f"Error in refresh_dashboard: {str(e)}")
 

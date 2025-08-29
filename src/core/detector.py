@@ -4,6 +4,7 @@ Advanced behavior-based detection engine that analyzes suspicious activities and
 """
 
 import os
+import sys
 import time
 import logging
 import threading
@@ -11,7 +12,15 @@ import psutil
 from datetime import datetime, timedelta
 from collections import defaultdict
 from win10toast import ToastNotifier
-import config
+
+# Try relative import first, fallback to direct import
+try:
+    from ..utils import config
+except ImportError:
+    import sys
+    utils_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'utils')
+    sys.path.append(utils_path)
+    import config
 
 class ThreatDetector:
     """Advanced threat detection engine with behavior analysis."""
@@ -25,7 +34,13 @@ class ThreatDetector:
         
         # Initialize logging
         self.logger = logging.getLogger(__name__)
-        handler = logging.FileHandler(os.path.join('logs', 'detector.log'))
+        
+        # Set up project paths
+        project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        logs_dir = os.path.join(project_root, 'logs')
+        os.makedirs(logs_dir, exist_ok=True)
+        
+        handler = logging.FileHandler(os.path.join(logs_dir, 'detector.log'))
         formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
         handler.setFormatter(formatter)
         self.logger.addHandler(handler)
@@ -33,19 +48,17 @@ class ThreatDetector:
         
         self.logger.info("Threat Detector initialized")
         
-        # Threat scoring weights - FOCUSED ON FILE SYSTEM ONLY
+        # Threat scoring weights - BEHAVIOR-BASED DETECTION ONLY
         self.threat_weights = {
             'mass_delete': 10,
             'mass_rename': 8,
-            'mass_modification': 12,
-            'suspicious_extension': 6,
-            'suspicious_filename': 9
-            # 'process_behavior': COMPLETELY DISABLED
+            'mass_modification': 12
+            # REMOVED: suspicious_extension, suspicious_filename - behavior-only detection
         }
         
-        # Notification cooldown to prevent spam
+        # Notification cooldown to prevent spam - but allow critical notifications
         self.last_notification_time = 0
-        self.notification_cooldown = 30  # 30 seconds between notifications
+        self.notification_cooldown = 10  # Reduced to 10 seconds for better responsiveness
         
         # Process behavior monitoring
         self.process_monitor_thread = None
@@ -162,9 +175,9 @@ class ThreatDetector:
                 
     def _determine_response_level(self, threat_score, threat_type):
         """Determine the appropriate response level based on threat score and type."""
-        # Critical threats requiring immediate action
+        # Critical threats requiring immediate action - BEHAVIOR-BASED ONLY
         if (threat_score >= 30 or 
-            threat_type in ['mass_modification', 'suspicious_filename'] or
+            threat_type == 'mass_modification' or
             any(score > 20 for score in self.process_suspicion_scores.values())):
             return 'CRITICAL'
         
@@ -182,7 +195,7 @@ class ThreatDetector:
             return 'LOW'
             
     def _send_notification(self, threat_info, threat_score, response_level):
-        """Send Windows notification with cooldown to prevent spam."""
+        """Send multiple types of notifications for maximum visibility."""
         try:
             current_time = time.time()
             
@@ -193,22 +206,80 @@ class ThreatDetector:
             
             threat_type = threat_info.get('type', 'Unknown Threat')
             
-            # CRITICAL notifications only for active ransomware behavior
-            if response_level == 'CRITICAL' and threat_type == 'mass_modification':
-                title = "🚨 RANSOMWARE DETECTED & BLOCKED!"
-                message = f"Mass file encryption stopped!\n\nFiles protected: {threat_info.get('count', 'Multiple')}\nThreat neutralized automatically."
-                duration = 15
+            # CRITICAL notifications for ALL ransomware behavior types
+            if response_level == 'CRITICAL':
+                if threat_type == 'mass_modification':
+                    title = "🚨 RANSOMWARE DETECTED & BLOCKED!"
+                    message = f"Mass file encryption stopped!\n\nFiles protected: {threat_info.get('count', 'Multiple')}\nThreat neutralized automatically."
+                elif threat_type == 'mass_delete':
+                    title = "🚨 RANSOMWARE DETECTED & BLOCKED!"
+                    message = f"Mass file deletion stopped!\n\nFiles protected: {threat_info.get('count', 'Multiple')}\nThreat neutralized automatically."
+                elif threat_type == 'mass_rename':
+                    title = "🚨 RANSOMWARE DETECTED & BLOCKED!"
+                    message = f"Mass file renaming stopped!\n\nFiles protected: {threat_info.get('count', 'Multiple')}\nThreat neutralized automatically."
+                else:
+                    title = "🚨 RANSOMWARE DETECTED & BLOCKED!"
+                    message = f"Suspicious behavior stopped!\n\nThreat neutralized automatically."
                 
-                # Send notification
-                self.toaster.show_toast(
-                    title=title,
-                    msg=message,
-                    duration=duration,
-                    threaded=True
-                )
+                # MULTI-CHANNEL ALERT SYSTEM for maximum visibility
+                
+                # 1. CONSOLE ALERT (Always visible)
+                alert_msg = f"\n" + "="*60 + "\n"
+                alert_msg += f"🚨🚨🚨 DEADBOLT ALERT 🚨🚨🚨\n"
+                alert_msg += f"TIME: {datetime.now().strftime('%H:%M:%S')}\n"
+                alert_msg += f"THREAT: {threat_type.upper()}\n"
+                alert_msg += f"SCORE: {threat_score}\n"
+                alert_msg += f"STATUS: BLOCKED & NEUTRALIZED\n"
+                alert_msg += f"FILES PROTECTED: {threat_info.get('count', 'Multiple')}\n"
+                alert_msg += "="*60 + "\n"
+                print(alert_msg)
+                
+                # 2. SYSTEM BEEP (Audio alert)
+                try:
+                    import winsound
+                    # Emergency beep pattern
+                    for _ in range(3):
+                        winsound.Beep(1000, 200)  # 1000Hz, 200ms
+                        time.sleep(0.1)
+                except ImportError:
+                    pass  # winsound not available
+                
+                # 3. WINDOWS TOAST NOTIFICATION
+                try:
+                    self.toaster.show_toast(
+                        title=title,
+                        msg=message,
+                        duration=20,  # Longer duration
+                        threaded=True
+                    )
+                except Exception as toast_error:
+                    self.logger.warning(f"Toast notification failed: {toast_error}")
+                
+                # 4. POPUP DIALOG (Most visible)
+                try:
+                    import tkinter as tk
+                    from tkinter import messagebox
+                    
+                    def show_alert():
+                        root = tk.Tk()
+                        root.withdraw()  # Hide main window
+                        root.attributes('-topmost', True)  # Always on top
+                        messagebox.showwarning(
+                            "🚨 DEADBOLT RANSOMWARE ALERT 🚨",
+                            f"{message}\n\nTime: {datetime.now().strftime('%H:%M:%S')}\nThreat Score: {threat_score}"
+                        )
+                        root.destroy()
+                    
+                    # Run popup in separate thread to not block
+                    import threading
+                    popup_thread = threading.Thread(target=show_alert, daemon=True)
+                    popup_thread.start()
+                    
+                except Exception as popup_error:
+                    self.logger.warning(f"Popup alert failed: {popup_error}")
                 
                 self.last_notification_time = current_time
-                self.logger.info(f"Notification sent - Level: {response_level}, Score: {threat_score}")
+                self.logger.critical(f"MULTI-CHANNEL ALERT SENT - Level: {response_level}, Score: {threat_score}")
             else:
                 # Only log other notifications, don't send them
                 self.logger.info(f"Non-critical notification suppressed - Level: {response_level}, Score: {threat_score}")
@@ -217,20 +288,26 @@ class ThreatDetector:
             self.logger.error(f"Failed to send notification: {e}")
             
     def _trigger_response(self, threat_info, response_level):
-        """Trigger response - SMART PROCESS FILTERING."""
+        """Trigger response - SMART PROCESS FILTERING + EMERGENCY RESPONSE."""
         try:
             suspicious_pids = []
             process_info = threat_info.get('process_info', [])
             
-            # SMART FILTERING: Only target processes that are actually suspicious
+            # AGGRESSIVE TARGETING: Target ALL non-system processes when CRITICAL threat detected
             for pid, process_name in process_info:
                 # Skip system processes that should never be killed
                 if self._is_system_process(process_name):
+                    self.logger.info(f"Skipping system process: {process_name} (PID: {pid})")
                     continue
-                    
-                # Only target processes with significant suspicion scores
-                if self.process_suspicion_scores.get(pid, 0) > 10:
+                
+                # For CRITICAL threats, target ALL suspicious processes regardless of score
+                if response_level == 'CRITICAL':
                     suspicious_pids.append(pid)
+                    self.logger.info(f"Added suspicious process to target list: {process_name} (PID: {pid})")
+                # For other threats, only target processes with significant suspicion scores
+                elif self.process_suspicion_scores.get(pid, 0) > 10:
+                    suspicious_pids.append(pid)
+                    self.logger.info(f"Added suspicious process to target list: {process_name} (PID: {pid})")
             
             # Prepare response info
             response_info = {
@@ -242,11 +319,12 @@ class ThreatDetector:
             
             self.logger.critical(f"Triggering {response_level} response - Target PIDs: {suspicious_pids}")
             
-            # Only call responder if we have actual targets
-            if suspicious_pids:
+            # ALWAYS call responder for CRITICAL threats (even with empty PIDs) to activate emergency response
+            if response_level == 'CRITICAL' or suspicious_pids:
+                self.logger.critical(f"Invoking responder for {response_level} threat")
                 self.responder_callback(response_info)
             else:
-                self.logger.info("No legitimate targets identified for response")
+                self.logger.info("No legitimate targets identified for response and threat level not critical")
             
         except Exception as e:
             self.logger.error(f"Failed to trigger response: {e}")
@@ -259,6 +337,7 @@ class ThreatDetector:
             'idleschedule.exe', 'idlescheduleeventaction.exe', 'backgroundtaskhost.exe',
             'searchfilterhost.exe', 'searchindexer.exe', 'qoder.exe', 'code.exe',
             'chrome.exe', 'firefox.exe', 'msedge.exe', 'notepad.exe'
+            # REMOVED: python.exe to allow detection of Python-based ransomware
         }
         return process_name.lower() in system_processes
             

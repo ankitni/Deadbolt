@@ -13,7 +13,14 @@ import psutil
 from datetime import datetime
 import ctypes
 from ctypes import wintypes
-import config
+
+# Try relative import first, fallback to direct import
+try:
+    from ..utils import config
+except ImportError:
+    utils_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'utils')
+    sys.path.append(utils_path)
+    import config
 
 class ThreatResponder:
     """Advanced threat response system with multiple termination methods."""
@@ -24,7 +31,13 @@ class ThreatResponder:
         
         # Initialize logging
         self.logger = logging.getLogger(__name__)
-        handler = logging.FileHandler(os.path.join('logs', 'responder.log'))
+        
+        # Set up project paths
+        self.project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        logs_dir = os.path.join(self.project_root, 'logs')
+        os.makedirs(logs_dir, exist_ok=True)
+        
+        handler = logging.FileHandler(os.path.join(logs_dir, 'responder.log'))
         formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
         handler.setFormatter(formatter)
         self.logger.addHandler(handler)
@@ -38,7 +51,7 @@ class ThreatResponder:
             self.logger.warning("Running without administrator privileges - some process termination may fail")
         
         # Path to C++ killer
-        self.cpp_killer_path = os.path.join(os.getcwd(), "DeadboltKiller.exe")
+        self.cpp_killer_path = os.path.join(self.project_root, "bin", "DeadboltKiller.exe")
         self._ensure_cpp_killer()
         
     def _check_admin_privileges(self):
@@ -50,7 +63,7 @@ class ThreatResponder:
     
     def _ensure_cpp_killer(self):
         """Ensure the C++ killer is compiled and available."""
-        cpp_source = "DeadboltKiller.cpp"
+        cpp_source = os.path.join(self.project_root, "src", "core", "DeadboltKiller.cpp")
         
         if not os.path.exists(self.cpp_killer_path):
             if os.path.exists(cpp_source):
@@ -58,7 +71,7 @@ class ThreatResponder:
                 try:
                     # Try to compile with g++
                     result = subprocess.run([
-                        "g++", "-o", "DeadboltKiller.exe", cpp_source, 
+                        "g++", "-o", self.cpp_killer_path, cpp_source, 
                         "-lpsapi", "-static-libgcc", "-static-libstdc++"
                     ], capture_output=True, text=True, timeout=30)
                     
@@ -117,7 +130,8 @@ class ThreatResponder:
         actions_taken = response_record['actions_taken']
         
         # Step 1: Try Python-based termination first
-        if config.ACTIONS.get('kill_process', True):
+        if config.ACTIONS.get('kill_process', True) and suspicious_pids:
+            self.logger.critical(f"Attempting to terminate {len(suspicious_pids)} suspicious processes")
             terminated_pids = self._terminate_processes_python(suspicious_pids)
             if terminated_pids:
                 actions_taken.append(f'python_kill_{len(terminated_pids)}_processes')
@@ -126,13 +140,16 @@ class ThreatResponder:
             # Step 2: For critical threats or if Python termination failed, use C++ killer
             remaining_pids = [pid for pid in suspicious_pids if self._is_process_running(pid)]
             
-            if (response_level == 'CRITICAL' or remaining_pids) and os.path.exists(self.cpp_killer_path):
+            if remaining_pids and os.path.exists(self.cpp_killer_path):
+                self.logger.critical(f"Python termination incomplete - {len(remaining_pids)} processes remain. Invoking C++ killer.")
                 self._invoke_cpp_killer(remaining_pids, response_record)
                 actions_taken.append('cpp_killer_invoked')
-            
-            # Step 3: Emergency measures for critical threats
-            if response_level == 'CRITICAL':
-                self._emergency_response(response_record)
+            elif not remaining_pids and terminated_pids:
+                self.logger.info("All target processes successfully terminated by Python method")
+        
+        # Step 3: Emergency measures for critical threats (active threat hunting)
+        if response_level == 'CRITICAL':
+            self._emergency_response(response_record)
         
         # Step 4: Additional protective measures
         if response_level in ['HIGH', 'CRITICAL']:
@@ -240,58 +257,114 @@ class ThreatResponder:
             response_record['actions_taken'].append('cpp_killer_error')
     
     def _emergency_response(self, response_record):
-        """Execute emergency response measures for critical threats - IMPROVED FILTERING."""
-        self.logger.critical("EXECUTING EMERGENCY RESPONSE MEASURES")
+        """Execute emergency response measures for critical threats - ACTIVE THREAT HUNTING."""
+        self.logger.critical("EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING")
         
         try:
-            # Focus on actual suspicious processes, not system processes
-            emergency_targets = []
-            current_time = time.time()
+            # Step 1: Identify actively suspicious processes
+            emergency_targets = self._identify_active_threats()
             
-            # Safe system processes that should never be killed
-            protected_processes = {
-                'taskmgr.exe', 'explorer.exe', 'winlogon.exe', 'csrss.exe', 'lsass.exe',
-                'services.exe', 'svchost.exe', 'dwm.exe', 'searchprotocolhost.exe',
-                'idleschedule.exe', 'idlescheduleeventaction.exe', 'backgroundtaskhost.exe',
-                'searchfilterhost.exe', 'searchindexer.exe', 'qoder.exe', 'code.exe',
-                'chrome.exe', 'firefox.exe', 'msedge.exe', 'notepad.exe', 'python.exe'
-            }
+            # Step 2: Terminate identified threats
+            if emergency_targets:
+                self.logger.critical(f"Active threats identified: {len(emergency_targets)} processes")
+                for pid, name, reason in emergency_targets:
+                    self.logger.critical(f"TARGET: {name} (PID: {pid}) - Reason: {reason}")
+                
+                target_pids = [pid for pid, name, reason in emergency_targets]
+                terminated = self._terminate_processes_python(target_pids)
+                
+                # If Python termination fails, use C++ killer immediately
+                remaining_pids = [pid for pid in target_pids if self._is_process_running(pid)]
+                if remaining_pids and os.path.exists(self.cpp_killer_path):
+                    self.logger.critical(f"Python termination incomplete - invoking C++ killer for {len(remaining_pids)} remaining processes")
+                    self._invoke_cpp_killer(remaining_pids, response_record)
+                
+                response_record['actions_taken'].append(f'emergency_active_hunt_{len(terminated)}_terminated')
+            else:
+                self.logger.info("No active threats identified during emergency scan")
+                response_record['actions_taken'].append('emergency_scan_no_threats')
             
-            for proc in psutil.process_iter(['pid', 'name', 'create_time', 'cpu_percent']):
+        except Exception as e:
+            self.logger.error(f"Error in emergency response: {e}")
+            response_record['actions_taken'].append('emergency_response_error')
+    
+    def _identify_active_threats(self):
+        """Identify processes that are actively exhibiting threatening behavior."""
+        threats = []
+        current_time = time.time()
+        
+        # Threat indicators
+        suspicious_names = {
+            'ransomware', 'encrypt', 'crypt', 'locker', 'virus', 'malware',
+            'trojan', 'backdoor', 'stealer', 'miner', 'bot'
+        }
+        
+        try:
+            for proc in psutil.process_iter(['pid', 'name', 'create_time', 'cpu_percent', 'memory_percent']):
                 try:
                     proc_info = proc.info
                     pid = proc_info['pid']
-                    process_name = proc_info.get('name', '').lower()
+                    name = proc_info.get('name', '').lower()
+                    create_time = proc_info.get('create_time', current_time)
+                    cpu_percent = proc_info.get('cpu_percent', 0) or 0
+                    memory_percent = proc_info.get('memory_percent', 0) or 0
                     
-                    # Skip system processes and our own
-                    if (pid < 1000 or 
-                        pid == os.getpid() or 
-                        process_name in protected_processes):
+                    # Skip our own process and critical system processes
+                    if (pid == os.getpid() or pid < 500 or
+                        name in ['explorer.exe', 'dwm.exe', 'winlogon.exe', 'services.exe',
+                                'svchost.exe', 'lsass.exe', 'csrss.exe', 'qoder.exe',
+                                'chrome.exe', 'firefox.exe', 'msedge.exe', 'notepad.exe']):
+                        # REMOVED: python.exe to enable detection of Python-based ransomware
                         continue
                     
-                    # Only target suspicious processes (newer, unknown executables with odd behavior)
-                    process_age = current_time - proc_info.get('create_time', current_time)
-                    cpu_percent = proc_info.get('cpu_percent', 0)
+                    threat_score = 0
+                    reasons = []
                     
-                    # Target: Recent processes (last 2 minutes) with suspicious names/behavior
-                    if (process_age < 120 and  # Last 2 minutes only
-                        cpu_percent > 50 and  # High CPU usage
-                        ('.exe' in process_name and 
-                         process_name not in protected_processes)):
-                        emergency_targets.append(pid)
+                    # Check 1: Suspicious process name
+                    if any(sus_name in name for sus_name in suspicious_names):
+                        threat_score += 50
+                        reasons.append(f"Suspicious name: {name}")
+                    
+                    # Check 2: Recently created process (last 5 minutes)
+                    process_age = current_time - create_time
+                    if process_age < 300:  # 5 minutes
+                        threat_score += 20
+                        reasons.append(f"Recently created: {process_age:.1f}s ago")
+                    
+                    # Check 3: High CPU usage
+                    if cpu_percent > 70:
+                        threat_score += 30
+                        reasons.append(f"High CPU: {cpu_percent:.1f}%")
+                    
+                    # Check 4: High memory usage
+                    if memory_percent > 15:
+                        threat_score += 15
+                        reasons.append(f"High memory: {memory_percent:.1f}%")
+                    
+                    # Check 5: Unusual executable locations
+                    try:
+                        exe_path = proc.exe().lower()
+                        suspicious_paths = ['temp', 'downloads', 'appdata\\local\\temp', 'users\\public']
+                        if any(sus_path in exe_path for sus_path in suspicious_paths):
+                            threat_score += 25
+                            reasons.append(f"Suspicious location: {exe_path}")
+                    except (psutil.AccessDenied, psutil.NoSuchProcess):
+                        pass
+                    
+                    # If threat score is high enough, mark as target
+                    if threat_score >= 40:  # Threshold for emergency action
+                        threats.append((pid, name, "; ".join(reasons)))
                         
                 except (psutil.NoSuchProcess, psutil.AccessDenied):
                     continue
             
-            if emergency_targets:
-                self.logger.critical(f"Emergency termination targets: {emergency_targets}")
-                terminated = self._terminate_processes_python(emergency_targets)
-                response_record['actions_taken'].append(f'emergency_kill_{len(terminated)}_processes')
-            else:
-                self.logger.info("No emergency targets identified - system protected")
+            # Sort by threat level (highest first)
+            threats.sort(key=lambda x: len(x[2]), reverse=True)
+            return threats[:5]  # Limit to top 5 threats
             
         except Exception as e:
-            self.logger.error(f"Error in emergency response: {e}")
+            self.logger.error(f"Error identifying active threats: {e}")
+            return []
     
     def _implement_protective_measures(self, response_record):
         """Implement additional protective measures."""

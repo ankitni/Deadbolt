@@ -1,253 +1,249 @@
-# Deadbolt Ransomware Defender
+# Deadbolt 5 - Ransomware Protection System
 
-A comprehensive behavior-based ransomware detection and prevention system for Windows.
+## 🛡️ **Organized Project Structure**
 
-## 🛡️ Features
+DeadBolt 5 is a behavior-based ransomware detection and prevention system for Windows, now with a clean, organized project structure.
 
-- **Real-time File System Monitoring**: Monitors directories for suspicious file operations
-- **Behavior-based Detection**: Uses smart rules to detect ransomware patterns:
-  - Mass file deletion
-  - Mass file renaming/moving
-  - Mass file modifications (potential encryption)
-  - Suspicious file extensions (.encrypted, .locked, etc.)
-  - Suspicious filenames (ransom notes)
-- **Advanced Process Analysis**: Monitors process behavior patterns
-- **Multi-layer Response System**: 
-  - Python-based process termination
-  - C++ advanced process killer
-  - Emergency protective measures
-- **Real-time Notifications**: Windows toast notifications for immediate alerts
-- **Comprehensive Logging**: Detailed logs in the `logs` folder
+## 📁 **Project Organization**
 
-## 📋 Requirements
-
-- Windows 10/11
-- Python 3.7 or later
-- Administrator privileges (recommended for full protection)
-
-### Python Dependencies
 ```
-watchdog
-psutil
-win10toast
-python-dotenv
+deadbolt-5/
+├── src/                     # Source code
+│   ├── core/               # Core security components
+│   │   ├── main.py         # System orchestrator
+│   │   ├── detector.py     # Threat detection engine
+│   │   ├── responder.py    # Response handler
+│   │   ├── watcher.py      # File system monitor
+│   │   └── DeadboltKiller.cpp # C++ process termination
+│   ├── ui/                 # User interface
+│   │   ├── main_gui.py     # Main GUI application
+│   │   ├── dashboard.py    # Real-time dashboard
+│   │   └── alerts.py       # Alert management
+│   └── utils/              # Utility modules
+│       ├── config.py       # Configuration constants
+│       ├── config_manager.py # Config management
+│       └── logger.py       # Logging utilities
+├── tests/                   # Test suite
+│   ├── unit/               # Unit tests
+│   ├── integration/        # Integration tests
+│   └── *.py               # Test scripts
+├── scripts/                # Control scripts
+│   ├── build.bat          # Build and setup
+│   ├── start_defender.bat # Start system
+│   ├── start_gui.bat      # Start GUI
+│   └── stop_defender.bat  # Stop system
+├── config/                 # Configuration files
+│   └── deadbolt_config.json
+├── logs/                   # Log files
+├── bin/                    # Compiled binaries
+│   └── DeadboltKiller.exe
+├── docs/                   # Documentation
+├── deadbolt.py            # Main entry point
+├── requirements.txt       # Dependencies
+└── README.md             # This file
 ```
 
-### Optional: C++ Compiler
-For the advanced DeadboltKiller component:
-- MinGW-w64 (g++)
-- OR Microsoft Visual Studio (cl)
+## 🚀 **Quick Start**
 
-## 🚀 Quick Start
-
-### Option 1: Easy Start (Recommended)
-1. Right-click on `start_defender.bat` and select "Run as administrator"
-2. The script will automatically:
-   - Check and install Python dependencies
-   - Compile the C++ killer (if compiler available)
-   - Start the defender in background mode
-
-### Option 2: Manual Installation
-1. Install Python dependencies:
-   ```bash
-   pip install watchdog psutil win10toast python-dotenv
-   ```
-
-2. (Optional) Compile the C++ killer:
-   ```bash
-   g++ -o DeadboltKiller.exe DeadboltKiller.cpp -lpsapi -static-libgcc -static-libstdc++
-   ```
-
-3. Start the defender:
-   ```bash
-   python main.py
-   ```
-
-## 🎮 Usage
-
-### Batch Scripts (Recommended)
-- **`start_defender.bat`** - Start the defender (run as administrator)
-- **`stop_defender.bat`** - Stop the defender
-- **`status_defender.bat`** - Check defender status
-- **`interactive_defender.bat`** - Run in interactive mode for testing
-
-### Command Line Options
+### 1. Build and Setup
 ```bash
-# Start in daemon mode (background)
-python main.py --daemon
-
-# Start in interactive mode
-python main.py --interactive
-
-# Enable debug logging
-python main.py --debug
-
-# Check status
-python main.py --status
+# Run the build script (as administrator)
+scripts\build.bat
 ```
 
-### Interactive Commands
-When running in interactive mode, you can use:
-- `status` - Show system status
-- `threats` - Show detected threats
-- `responses` - Show response history
-- `help` - Show available commands
-- `stop` - Stop the defender
+### 2. Start the System
 
-## ⚙️ Configuration
+#### GUI Mode (Recommended)
+```bash
+python deadbolt.py --gui
+# OR
+scripts\start_gui.bat
+```
 
-Edit `config.py` to customize:
+#### Daemon Mode (Background)
+```bash
+python deadbolt.py --daemon
+# OR  
+scripts\start_defender.bat
+```
+
+#### Interactive Mode
+```bash
+python deadbolt.py --interactive
+```
+
+## 📋 **System Requirements**
+
+- **OS**: Windows 10/11
+- **Python**: 3.7+
+- **Privileges**: Administrator (recommended)
+- **Dependencies**: See requirements.txt
+
+## 🎯 **Core Features**
+
+### 🔍 **Advanced Detection**
+- Real-time file system monitoring
+- Behavior-based threat detection
+- Mass modification/deletion detection
+- Suspicious file pattern recognition
+- Zero-day ransomware protection
+
+### ⚡ **Multi-Layer Response**
+- Python primary response system
+- C++ fallback termination engine
+- Smart target identification
+- False positive prevention
+- Emergency response protocols
+
+### 📊 **Live Dashboard**
+- **Real-time statistics**: Threats detected, blocked, processes terminated
+- **System health monitoring**: All components status
+- **Recent activity tracking**: Threats and responses with timestamps
+- **Interactive configuration**: Paths, rules, and actions
+- **Live log monitoring**: Filtering and search capabilities
+
+### 🛠️ **Configuration Management**
+- Persistent settings storage
+- Directory path management
+- Detection rule customization
+- Response action configuration
+
+## 📈 **Dashboard Statistics**
+
+The GUI now displays **actual data from log files**:
+
+- **📊 Total Events**: Real count from system logs
+- **🎯 Threats Detected**: Actual threats identified
+- **🛡️ Threats Blocked**: Real blocked attempts
+- **⚡ Processes Terminated**: Actual termination count
+- **🚨 Alert Distribution**: High/Medium/Low severity breakdown
+- **💾 System Health**: Live component status monitoring
+
+## 🔧 **Project Benefits**
+
+### 📁 **Organized Structure**
+- Clear separation of concerns
+- Modular architecture
+- Easy maintenance and testing
+- Professional codebase organization
+
+### 🔄 **Import Management**
+- Proper Python package structure
+- Relative imports for better dependency management
+- Clean module interfaces
+- Reduced import conflicts
+
+### 🛠️ **Development Workflow**
+- Dedicated test directory structure
+- Build and deployment scripts
+- Configuration management
+- Documentation organization
+
+### 📦 **Deployment Ready**
+- Single entry point (deadbolt.py)
+- Requirements management
+- Binary organization
+- Configuration externalization
+
+## ⚙️ **Configuration**
 
 ### Monitored Directories
-```python
-TARGET_DIRS = [
-    r"C:\Users\MADHURIMA\Documents",
-    r"C:\Users\MADHURIMA\Desktop",
-    # Add more directories as needed
-]
+Edit `config/deadbolt_config.json`:
+```json
+{
+  "target_dirs": [
+    "C:\\Users\\MADHURIMA\\Documents",
+    "C:\\Users\\MADHURIMA\\Desktop"
+  ]
+}
 ```
 
 ### Detection Rules
-```python
-RULES = {
-    "mass_delete": {
-        "count": 10,  # Number of deletions
-        "interval": 5  # Within 5 seconds
-    },
-    "mass_rename": {
-        "count": 10,  # Number of renames
-        "interval": 5  # Within 5 seconds
-    }
+```json
+{
+  "rules": {
+    "mass_delete": {"count": 10, "interval": 5},
+    "mass_rename": {"count": 10, "interval": 5}
+  }
 }
 ```
 
 ### Response Actions
-```python
-ACTIONS = {
-    "kill_process": True,    # Enable process termination
-    "dry_run": False,        # Set to True for testing
-    "log_only": False        # Set to True to only log threats
+```json
+{
+  "actions": {
+    "kill_process": true,
+    "dry_run": false,
+    "log_only": false
+  }
 }
 ```
 
-## 📊 System Architecture
+## 🧪 **Testing**
 
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   File System   │    │   Threat       │    │   Response      │
-│   Watcher       │───▶│   Detector     │───▶│   Handler       │
-│   (watcher.py)  │    │   (detector.py)│    │   (responder.py)│
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-         │                       │                       │
-         ▼                       ▼                       ▼
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Watchdog      │    │   Behavior      │    │   Python +      │
-│   Monitoring    │    │   Analysis      │    │   C++ Killer    │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
+```bash
+# Run integration tests
+python tests/test_gui_integration.py
+
+# Run statistics validation
+python tests/test_gui_statistics.py
+
+# Run system validation
+python tests/final_validation.py
 ```
 
-## 🔍 How It Works
+## 📝 **Log Files**
 
-1. **Monitoring Phase**:
-   - `watcher.py` monitors file system events using the Watchdog library
-   - Tracks file creations, deletions, modifications, and renames
-   - Monitors process behavior in the background
+The system generates comprehensive logs:
 
-2. **Detection Phase**:
-   - `detector.py` analyzes events for suspicious patterns
-   - Calculates threat scores based on multiple factors
-   - Identifies potentially malicious processes
+- `logs/main.log` - System orchestration events
+- `logs/detector.log` - Threat detection analysis (4.15 MB)
+- `logs/responder.log` - Response actions taken (2.69 MB)  
+- `logs/watcher.log` - File system monitoring (2.62 MB)
+- `logs/deadbolt.log` - General application events
 
-3. **Response Phase**:
-   - `responder.py` takes action based on threat level
-   - Attempts Python-based process termination first
-   - Falls back to C++ advanced killer for resistant processes
-   - Sends real-time notifications to user
+## 🏗️ **Architecture**
 
-## 📁 File Structure
-
-```
-deadbolt 5/
-├── main.py                 # Main orchestrator
-├── watcher.py             # File system watcher
-├── detector.py            # Threat detection engine
-├── responder.py           # Response handler
-├── config.py              # Configuration settings
-├── DeadboltKiller.cpp     # C++ advanced process killer
-├── start_defender.bat     # Start script
-├── stop_defender.bat      # Stop script
-├── status_defender.bat    # Status check script
-├── interactive_defender.bat # Interactive mode script
-├── logs/                  # Log directory
-│   ├── main.log          # Main system log
-│   ├── watcher.log       # File system events
-│   ├── detector.log      # Threat detection log
-│   ├── responder.log     # Response actions log
-│   ├── threats.json      # Detected threats (JSON)
-│   └── responses.json    # Response history (JSON)
-└── ui/                   # UI components (existing)
-    ├── main_gui.py
-    ├── dashboard.py
-    └── alerts.py
+```mermaid
+graph TD
+    A[File System Watcher] --> B[Threat Detector]
+    B --> C[Response Handler]
+    C --> D[Process Termination]
+    
+    E[GUI Dashboard] --> F[Real-time Statistics]
+    F --> G[Log Analysis]
+    G --> H[Live Updates]
+    
+    I[Configuration Manager] --> J[Persistent Settings]
+    J --> K[Rule Management]
 ```
 
-## 🚨 Alert Levels
+## 🔐 **Security Features**
 
-- **LOW**: Logging only, no action taken
-- **MEDIUM**: Enhanced monitoring, user notification
-- **HIGH**: Process analysis, potential termination
-- **CRITICAL**: Immediate response, emergency measures
+- **Safe Process Filtering**: Avoids system processes
+- **Configurable Thresholds**: Adjustable detection sensitivity
+- **Notification Cooldown**: Prevents alert spam
+- **Comprehensive Logging**: Complete audit trail
+- **Multi-layer Fallback**: Multiple termination methods
 
-## 🔒 Security Features
+## 📞 **Support**
 
-- **Administrative Privilege Detection**: Warns if not running with proper privileges
-- **Process Resistance Handling**: Multiple termination methods for stubborn processes
-- **Emergency Response**: Broad protective measures for critical threats
-- **Safe Process Filtering**: Avoids terminating system processes and itself
+- **Documentation**: Check `docs/` directory
+- **Examples**: See `examples/` directory
+- **Issues**: Review log files in `logs/`
+- **Configuration**: Modify `config/deadbolt_config.json`
 
-## 🐛 Troubleshooting
+## 🎉 **What's New in Organized Structure**
 
-### Common Issues
-
-1. **"Access Denied" errors**:
-   - Run as administrator
-   - Check Windows Defender exclusions
-
-2. **Python import errors**:
-   - Install required packages: `pip install watchdog psutil win10toast python-dotenv`
-
-3. **C++ killer not available**:
-   - Install MinGW-w64 or Visual Studio
-   - System will work without it, but with reduced capability
-
-4. **No notifications**:
-   - Check Windows notification settings
-   - Ensure win10toast is properly installed
-
-### Log Files
-Check the `logs` directory for detailed information:
-- `main.log` - Overall system status
-- `detector.log` - Threat analysis details
-- `responder.log` - Response actions
-- `threats.json` - Raw threat data
-- `responses.json` - Response history
-
-## ⚠️ Important Notes
-
-1. **This is a defensive tool** - Use only for legitimate system protection
-2. **Test in dry-run mode first** - Set `dry_run: True` in config.py
-3. **Monitor logs regularly** - Check for false positives
-4. **Keep backups** - This tool cannot recover encrypted files
-5. **Administrative privileges** - Required for optimal protection
-
-## 🤝 Contributing
-
-This is a security tool. Please test thoroughly before making changes and ensure all modifications maintain system safety.
-
-## 📄 License
-
-This tool is provided for educational and legitimate security purposes only.
+1. **📁 Clean Module Organization**: Proper separation of core, UI, and utilities
+2. **📊 Real Statistics Display**: GUI shows actual data from log analysis  
+3. **🔄 Better Import Management**: Relative imports and proper package structure
+4. **🛠️ Enhanced Build System**: Automated setup and compilation scripts
+5. **📝 Comprehensive Documentation**: Clear project structure and usage guides
+6. **🧪 Organized Testing**: Dedicated test directories and validation scripts
+7. **⚙️ Configuration Management**: Externalized settings with persistence
+8. **📦 Deployment Ready**: Single entry point and clean binary organization
 
 ---
 
-**⚡ Remember: Prevention is better than cure. Keep your system updated and maintain regular backups!**
+**Ready to launch**: `python deadbolt.py --gui` 🚀

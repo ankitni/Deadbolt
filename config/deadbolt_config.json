@@ -1,0 +1,23 @@
+{
+  "TARGET_DIRS": [
+    "C:\\Users\\MADHURIMA\\Documents\\testtxt",
+    "C:\\Users\\MADHURIMA\\Documents"
+  ],
+  "RULES": {
+    "mass_delete": {
+      "count": 15,
+      "interval": 10
+    },
+    "mass_rename": {
+      "count": 12,
+      "interval": 8
+    }
+  },
+  "ACTIONS": {
+    "log_only": false,
+    "kill_process": true,
+    "shutdown": false,
+    "dry_run": false
+  },
+  "saved_at": "2025-08-30 02:51:54.451292"
+}
