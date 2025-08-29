@@ -35,19 +35,19 @@ SUSPICIOUS_PATTERNS = {
     "filenames": ["DECRYPT", "RANSOM", "README", "HOW_TO", "HELP_DECRYPT", "RESTORE"]
 }
 
-# Detection rules with thresholds - BEHAVIOR-BASED ONLY
+# Detection rules with thresholds - AGGRESSIVE BEHAVIOR-BASED DETECTION
 RULES = {
     "mass_delete": {
-        "count": int(os.getenv("MASS_DELETE_COUNT", "5")),  # 5 deletions in 5 seconds
-        "interval": int(os.getenv("MASS_DELETE_INTERVAL", "5"))
+        "count": int(os.getenv("MASS_DELETE_COUNT", "3")),  # 3 deletions in 2 seconds - FASTER
+        "interval": int(os.getenv("MASS_DELETE_INTERVAL", "2"))
     },
     "mass_rename": {
-        "count": int(os.getenv("MASS_RENAME_COUNT", "5")),  # 5 renames in 5 seconds  
-        "interval": int(os.getenv("MASS_RENAME_INTERVAL", "5"))
+        "count": int(os.getenv("MASS_RENAME_COUNT", "3")),  # 3 renames in 2 seconds - FASTER
+        "interval": int(os.getenv("MASS_RENAME_INTERVAL", "2"))  
     },
     "mass_modification": {
-        "count": int(os.getenv("MASS_MODIFICATION_COUNT", "8")),  # 8 modifications in 5 seconds
-        "interval": int(os.getenv("MASS_MODIFICATION_INTERVAL", "5"))
+        "count": int(os.getenv("MASS_MODIFICATION_COUNT", "4")),  # 4 modifications in 2 seconds - MUCH FASTER
+        "interval": int(os.getenv("MASS_MODIFICATION_INTERVAL", "2"))
     }
 }
 

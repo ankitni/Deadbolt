@@ -163,7 +163,7 @@ class ThreatResponder:
             self.logger.info("All suspicious processes successfully terminated")
     
     def _terminate_processes_python(self, pids):
-        """Attempt to terminate processes using Python/psutil."""
+        """AGGRESSIVE termination for ransomware - INSTANT FORCE KILL."""
         terminated = []
         
         for pid in pids:
@@ -174,37 +174,42 @@ class ThreatResponder:
                 proc = psutil.Process(pid)
                 process_name = proc.name()
                 
-                self.logger.info(f"Attempting Python termination of {process_name} (PID: {pid})")
+                self.logger.info(f"INSTANT KILL of {process_name} (PID: {pid})")
                 
-                # Try graceful termination first
-                proc.terminate()
+                # SKIP graceful termination - IMMEDIATE FORCE KILL for speed
+                proc.kill()  # Force kill immediately
                 
-                # Wait up to 3 seconds for graceful termination
+                # Wait only 1 second for force kill confirmation
                 try:
-                    proc.wait(timeout=3)
+                    proc.wait(timeout=1)
                     terminated.append(pid)
-                    self.logger.info(f"Successfully terminated {process_name} (PID: {pid}) gracefully")
-                    continue
+                    self.logger.info(f"Successfully FORCE-KILLED {process_name} (PID: {pid})")
                 except psutil.TimeoutExpired:
-                    pass
-                
-                # Force kill if still running
-                if proc.is_running():
-                    proc.kill()
-                    # Wait up to 2 seconds for force kill
+                    # Try alternative termination methods
                     try:
-                        proc.wait(timeout=2)
-                        terminated.append(pid)
-                        self.logger.info(f"Successfully force-killed {process_name} (PID: {pid})")
-                    except psutil.TimeoutExpired:
-                        self.logger.error(f"Failed to kill {process_name} (PID: {pid}) - process resistant")
+                        # Use system-level termination
+                        if os.name == 'nt':  # Windows
+                            subprocess.run(["taskkill", "/F", "/PID", str(pid)], 
+                                         capture_output=True, timeout=2)
+                        else:  # Unix-like
+                            subprocess.run(["kill", "-9", str(pid)], 
+                                         capture_output=True, timeout=2)
+                        
+                        # Check if it worked
+                        if not self._is_process_running(pid):
+                            terminated.append(pid)
+                            self.logger.info(f"Successfully SYSTEM-KILLED {process_name} (PID: {pid})")
+                        else:
+                            self.logger.error(f"RESISTANT PROCESS - Could not kill {process_name} (PID: {pid})")
+                    except Exception as sys_kill_error:
+                        self.logger.error(f"System kill failed for {process_name} (PID: {pid}): {sys_kill_error}")
                 
             except psutil.NoSuchProcess:
                 # Process already terminated
                 terminated.append(pid)
                 self.logger.info(f"Process {pid} already terminated")
             except psutil.AccessDenied:
-                self.logger.error(f"Access denied when trying to terminate PID {pid}")
+                self.logger.error(f"Access denied when trying to terminate PID {pid} - ADMIN PRIVILEGES REQUIRED")
             except Exception as e:
                 self.logger.error(f"Error terminating process {pid}: {e}")
         

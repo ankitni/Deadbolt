@@ -134,3 +134,31 @@ BEHAVIOR TEST STARTED: 2025-08-30 03:49:51.331727
 2025-08-30 04:20:49,119 - INFO - Attempting Python termination of conhost.exe (PID: 20292)
 2025-08-30 04:20:49,141 - INFO - Successfully terminated conhost.exe (PID: 20292) gracefully
 2025-08-30 04:20:49,141 - INFO - Attempting Python termination of python.exe (PID: 14824)
+2025-08-30 04:51:21,432 - INFO - Threat Responder initialized
+2025-08-30 04:51:36,646 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-08-30 04:51:36,646 - CRITICAL - Threat Type: mass_delete
+2025-08-30 04:51:36,646 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-08-30 04:51:36,646 - CRITICAL - Target PIDs: [19852, 12276, 19960, 12352, 4952, 21172, 8428, 10376]
+2025-08-30 04:51:36,646 - CRITICAL - Attempting to terminate 8 suspicious processes
+2025-08-30 04:51:36,646 - INFO - INSTANT KILL of smartscreen.exe (PID: 19852)
+2025-08-30 04:51:36,655 - INFO - Successfully FORCE-KILLED smartscreen.exe (PID: 19852)
+2025-08-30 04:51:36,655 - INFO - INSTANT KILL of cmd.exe (PID: 12276)
+2025-08-30 04:51:36,668 - INFO - Successfully FORCE-KILLED cmd.exe (PID: 12276)
+2025-08-30 04:51:36,668 - INFO - INSTANT KILL of python.exe (PID: 19960)
+2025-08-30 04:54:29,317 - INFO - Threat Responder initialized
+2025-08-30 04:54:41,993 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-08-30 04:54:41,994 - CRITICAL - Threat Type: mass_modification
+2025-08-30 04:54:41,994 - CRITICAL - Description: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-30 04:54:41,994 - CRITICAL - Target PIDs: [11028, 10376, 8428, 3108, 15016, 8288, 12352, 6204]
+2025-08-30 04:54:41,994 - CRITICAL - Attempting to terminate 8 suspicious processes
+2025-08-30 04:54:41,994 - INFO - INSTANT KILL of python.exe (PID: 11028)
+2025-08-30 04:54:42,007 - INFO - Successfully FORCE-KILLED python.exe (PID: 11028)
+2025-08-30 04:54:42,009 - INFO - INSTANT KILL of audiodg.exe (PID: 10376)
+2025-08-30 04:54:42,034 - INFO - Successfully FORCE-KILLED audiodg.exe (PID: 10376)
+2025-08-30 04:54:42,035 - INFO - INSTANT KILL of powershell.exe (PID: 8428)
+2025-08-30 04:54:42,062 - INFO - Successfully FORCE-KILLED powershell.exe (PID: 8428)
+2025-08-30 04:54:42,062 - INFO - INSTANT KILL of cmd.exe (PID: 3108)
+2025-08-30 04:54:42,075 - INFO - Successfully FORCE-KILLED cmd.exe (PID: 3108)
+2025-08-30 04:54:42,075 - INFO - INSTANT KILL of smartscreen.exe (PID: 15016)
+2025-08-30 04:54:42,086 - INFO - Successfully FORCE-KILLED smartscreen.exe (PID: 15016)
+2025-08-30 04:54:42,087 - INFO - INSTANT KILL of python.exe (PID: 8288)

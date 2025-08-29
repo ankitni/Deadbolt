@@ -168,3 +168,37 @@ FINAL VERIFICATION TEST: 03:59:07
 2025-08-30 04:20:49,118 - INFO - Added suspicious process to target list: powershell.exe (PID: 19100)
 2025-08-30 04:20:49,118 - CRITICAL - Triggering CRITICAL response - Target PIDs: [20292, 14824, 12664, 18528, 13948, 2496, 7068, 12616, 17880, 19100]
 2025-08-30 04:20:49,118 - CRITICAL - Invoking responder for CRITICAL threat
+2025-08-30 04:51:21,435 - INFO - Threat Detector initialized
+2025-08-30 04:51:21,435 - INFO - Threat detection monitoring started (file system only)
+2025-08-30 04:51:35,595 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-08-30 04:51:35,595 - INFO - Threat analysis complete - Score: 30.0, Response: CRITICAL
+2025-08-30 04:51:36,644 - CRITICAL - MULTI-CHANNEL ALERT SENT - Level: CRITICAL, Score: 30.0
+2025-08-30 04:51:36,644 - INFO - Added suspicious process to target list: smartscreen.exe (PID: 19852)
+2025-08-30 04:51:36,644 - INFO - Added suspicious process to target list: cmd.exe (PID: 12276)
+2025-08-30 04:51:36,644 - INFO - Added suspicious process to target list: python.exe (PID: 19960)
+2025-08-30 04:51:36,644 - INFO - Added suspicious process to target list: conhost.exe (PID: 12352)
+2025-08-30 04:51:36,644 - INFO - Added suspicious process to target list: cmd.exe (PID: 4952)
+2025-08-30 04:51:36,644 - INFO - Skipping system process: chrome.exe (PID: 12972)
+2025-08-30 04:51:36,644 - INFO - Skipping system process: chrome.exe (PID: 15516)
+2025-08-30 04:51:36,646 - INFO - Added suspicious process to target list: conhost.exe (PID: 21172)
+2025-08-30 04:51:36,646 - INFO - Added suspicious process to target list: powershell.exe (PID: 8428)
+2025-08-30 04:51:36,646 - INFO - Added suspicious process to target list: audiodg.exe (PID: 10376)
+2025-08-30 04:51:36,646 - CRITICAL - Triggering CRITICAL response - Target PIDs: [19852, 12276, 19960, 12352, 4952, 21172, 8428, 10376]
+2025-08-30 04:51:36,646 - CRITICAL - Invoking responder for CRITICAL threat
+2025-08-30 04:54:29,317 - INFO - Threat Detector initialized
+2025-08-30 04:54:29,317 - INFO - Threat detection monitoring started (file system only)
+2025-08-30 04:54:40,956 - WARNING - Analyzing threat: mass_modification - Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-30 04:54:40,958 - INFO - Threat analysis complete - Score: 60.0, Response: CRITICAL
+2025-08-30 04:54:41,991 - CRITICAL - MULTI-CHANNEL ALERT SENT - Level: CRITICAL, Score: 60.0
+2025-08-30 04:54:41,992 - INFO - Added suspicious process to target list: python.exe (PID: 11028)
+2025-08-30 04:54:41,992 - INFO - Added suspicious process to target list: audiodg.exe (PID: 10376)
+2025-08-30 04:54:41,993 - INFO - Added suspicious process to target list: powershell.exe (PID: 8428)
+2025-08-30 04:54:41,993 - INFO - Added suspicious process to target list: cmd.exe (PID: 3108)
+2025-08-30 04:54:41,993 - INFO - Added suspicious process to target list: smartscreen.exe (PID: 15016)
+2025-08-30 04:54:41,993 - INFO - Skipping system process: chrome.exe (PID: 15516)
+2025-08-30 04:54:41,993 - INFO - Added suspicious process to target list: python.exe (PID: 8288)
+2025-08-30 04:54:41,993 - INFO - Added suspicious process to target list: conhost.exe (PID: 12352)
+2025-08-30 04:54:41,993 - INFO - Added suspicious process to target list: conhost.exe (PID: 6204)
+2025-08-30 04:54:41,993 - INFO - Skipping system process: chrome.exe (PID: 12972)
+2025-08-30 04:54:41,993 - CRITICAL - Triggering CRITICAL response - Target PIDs: [11028, 10376, 8428, 3108, 15016, 8288, 12352, 6204]
+2025-08-30 04:54:41,993 - CRITICAL - Invoking responder for CRITICAL threat

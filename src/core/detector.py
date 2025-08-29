@@ -48,17 +48,17 @@ class ThreatDetector:
         
         self.logger.info("Threat Detector initialized")
         
-        # Threat scoring weights - BEHAVIOR-BASED DETECTION ONLY
+        # Threat scoring weights - AGGRESSIVE BEHAVIOR-BASED DETECTION
         self.threat_weights = {
-            'mass_delete': 10,
-            'mass_rename': 8,
-            'mass_modification': 12
+            'mass_delete': 15,      # Increased from 10 - more aggressive
+            'mass_rename': 12,      # Increased from 8 - more aggressive  
+            'mass_modification': 20  # Increased from 12 - CRITICAL for encryption
             # REMOVED: suspicious_extension, suspicious_filename - behavior-only detection
         }
         
-        # Notification cooldown to prevent spam - but allow critical notifications
+        # Notification cooldown to prevent spam - REDUCED for faster response
         self.last_notification_time = 0
-        self.notification_cooldown = 10  # Reduced to 10 seconds for better responsiveness
+        self.notification_cooldown = 3  # Reduced to 3 seconds for RAPID response
         
         # Process behavior monitoring
         self.process_monitor_thread = None
@@ -174,20 +174,19 @@ class ThreatDetector:
                 self.logger.critical(f"Highly suspicious process detected: {process_name} (PID: {pid}) - Score: {self.process_suspicion_scores[pid]}")
                 
     def _determine_response_level(self, threat_score, threat_type):
-        """Determine the appropriate response level based on threat score and type."""
-        # Critical threats requiring immediate action - BEHAVIOR-BASED ONLY
-        if (threat_score >= 30 or 
-            threat_type == 'mass_modification' or
-            any(score > 20 for score in self.process_suspicion_scores.values())):
+        """AGGRESSIVE response level determination for instant ransomware protection."""
+        # INSTANT CRITICAL response for ANY mass file operations - NO TOLERANCE
+        if (threat_score >= 15 or  # Lowered from 30 for faster response
+            threat_type in ['mass_modification', 'mass_delete', 'mass_rename'] or  # ALL mass operations are CRITICAL
+            any(score > 15 for score in self.process_suspicion_scores.values())):
             return 'CRITICAL'
         
-        # High threats requiring rapid response
-        elif (threat_score >= 20 or 
-              threat_type in ['mass_delete', 'mass_rename']):
+        # High threats requiring rapid response  
+        elif threat_score >= 10:  # Lowered threshold
             return 'HIGH'
         
         # Medium threats requiring monitoring
-        elif threat_score >= 10:
+        elif threat_score >= 5:  # Lowered threshold
             return 'MEDIUM'
         
         # Low level threats for logging
