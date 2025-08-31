@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadbolt 5 - Ransomware Defense System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+    <!-- Cyberpunk Background -->
+    <div id="cyber-bg"></div>
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🛡️</span>
+                <span class="logo-text">DEADBOLT</span>
+                <span class="version">v5.0</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#demo" class="nav-link">Live Demo</a></li>
+                <li><a href="#stats" class="nav-link">Statistics</a></li>
+                <li><a href="#download" class="nav-link">Download</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="status-indicator">
+                    <div class="status-dot online"></div>
+                    <span>SYSTEM ONLINE</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-main">DEADBOLT</span>
+                    <span class="title-sub">RANSOMWARE DEFENSE</span>
+                </h1>
+                <p class="hero-description">
+                    Advanced AI-powered ransomware detection system that stops threats in <span class="highlight">2-5 seconds</span> 
+                    using behavior-based analysis and instant process termination.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number" data-target="99.7">0</div>
+                        <div class="stat-label">Detection Rate</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-target="2.3">0</div>
+                        <div class="stat-label">Avg Response Time (s)</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-target="0">0</div>
+                        <div class="stat-label">False Positives</div>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="startDemo()">
+                        <span>🚀 Live Demo</span>
+                    </button>
+                    <button class="btn btn-secondary" onclick="downloadDeadbol()">
+                        <span>📥 Download</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="shield-container">
+                    <div class="shield-3d" id="shield-3d"></div>
+                    <div class="threat-scanner">
+                        <div class="scanner-line"></div>
+                        <div class="threat-markers">
+                            <div class="threat-marker blocked"></div>
+                            <div class="threat-marker blocked"></div>
+                            <div class="threat-marker blocked"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-accent">ADVANCED</span>
+                <span class="title-main">DEFENSE FEATURES</span>
+            </h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Ultra-Fast Detection</h3>
+                    <p>Detects ransomware in 2-5 seconds using behavior-based analysis. Stops threats before they encrypt your files.</p>
+                    <div class="feature-metric">
+                        <span class="metric-value">2.3s</span>
+                        <span class="metric-label">Average Response</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>AI Behavior Analysis</h3>
+                    <p>Advanced machine learning algorithms analyze file system patterns to identify ransomware behavior.</p>
+                    <div class="feature-metric">
+                        <span class="metric-value">99.7%</span>
+                        <span class="metric-label">Accuracy Rate</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Instant Process Kill</h3>
+                    <p>Immediately terminates malicious processes using multiple termination methods for maximum effectiveness.</p>
+                    <div class="feature-metric">
+                        <span class="metric-value">100%</span>
+                        <span class="metric-label">Kill Success Rate</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚨</div>
+                    <h3>Multi-Channel Alerts</h3>
+                    <p>Console alerts, audio beeps, popup dialogs, and toast notifications ensure you never miss a threat.</p>
+                    <div class="feature-metric">
+                        <span class="metric-value">4</span>
+                        <span class="metric-label">Alert Methods</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Real-Time Monitoring</h3>
+                    <p>Continuous file system monitoring with detailed logging and threat analysis reporting.</p>
+                    <div class="feature-metric">
+                        <span class="metric-value">24/7</span>
+                        <span class="metric-label">Active Protection</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Zero Configuration</h3>
+                    <p>Works out of the box with intelligent defaults. No complex setup required - just run and protect.</p>
+                    <div class="feature-metric">
+                        <span class="metric-value">0</span>
+                        <span class="metric-label">Setup Time (min)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-accent">LIVE</span>
+                <span class="title-main">THREAT SIMULATION</span>
+            </h2>
+            <div class="demo-container">
+                <div class="demo-control">
+                    <button class="demo-btn" id="startSimulation">
+                        <span class="btn-icon">🦠</span>
+                        <span>Start Ransomware Simulation</span>
+                    </button>
+                    <div class="demo-status" id="demoStatus">
+                        <div class="status-indicator">
+                            <div class="status-dot offline"></div>
+                            <span>Ready to simulate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-visualization">
+                    <div class="file-system" id="fileSystem">
+                        <div class="file-grid">
+                            <!-- Files will be generated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="threat-timeline" id="threatTimeline">
+                        <div class="timeline-header">Threat Detection Timeline</div>
+                        <div class="timeline-events"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Dashboard -->
+    <section id="stats" class="stats">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-accent">REAL-TIME</span>
+                <span class="title-main">SECURITY DASHBOARD</span>
+            </h2>
+            <div class="dashboard">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Threat Monitoring</h3>
+                        <div class="status-light active"></div>
+                    </div>
+                    <div class="metric-display">
+                        <div class="metric-large">
+                            <span class="value" id="threatsBlocked">1,247</span>
+                            <span class="label">Threats Blocked Today</span>
+                        </div>
+                        <div class="metric-small">
+                            <span class="value" id="avgResponseTime">2.3s</span>
+                            <span class="label">Avg Response Time</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>System Performance</h3>
+                        <div class="status-light active"></div>
+                    </div>
+                    <div class="performance-meters">
+                        <div class="meter">
+                            <div class="meter-label">CPU Usage</div>
+                            <div class="meter-bar">
+                                <div class="meter-fill" style="width: 15%"></div>
+                            </div>
+                            <div class="meter-value">15%</div>
+                        </div>
+                        <div class="meter">
+                            <div class="meter-label">Memory</div>
+                            <div class="meter-bar">
+                                <div class="meter-fill" style="width: 32%"></div>
+                            </div>
+                            <div class="meter-value">32%</div>
+                        </div>
+                        <div class="meter">
+                            <div class="meter-label">Disk I/O</div>
+                            <div class="meter-bar">
+                                <div class="meter-fill" style="width: 8%"></div>
+                            </div>
+                            <div class="meter-value">8%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-card full-width">
+                    <div class="card-header">
+                        <h3>Threat Activity Map</h3>
+                        <div class="map-controls">
+                            <button class="map-btn active">Live</button>
+                            <button class="map-btn">24H</button>
+                            <button class="map-btn">7D</button>
+                        </div>
+                    </div>
+                    <div class="threat-map" id="threatMap">
+                        <!-- Threat visualization will be generated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content">
+                <div class="download-left">
+                    <h2 class="section-title">
+                        <span class="title-accent">DOWNLOAD</span>
+                        <span class="title-main">DEADBOLT 5</span>
+                    </h2>
+                    <p class="download-description">
+                        Get the latest version of Deadbolt ransomware defense system. 
+                        Free, open-source, and ready to protect your system.
+                    </p>
+                    <div class="download-features">
+                        <div class="feature-item">
+                            <span class="feature-check">✅</span>
+                            <span>Instant ransomware detection</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✅</span>
+                            <span>Behavior-based analysis</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✅</span>
+                            <span>Multi-platform support</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✅</span>
+                            <span>Zero configuration required</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="download-right">
+                    <div class="download-card">
+                        <div class="download-header">
+                            <div class="download-version">v5.0</div>
+                            <div class="download-size">2.4 MB</div>
+                        </div>
+                        <div class="download-buttons">
+                            <button class="btn btn-download">
+                                <span class="btn-icon">📥</span>
+                                <span>Download for Windows</span>
+                            </button>
+                            <button class="btn btn-github">
+                                <span class="btn-icon">📁</span>
+                                <span>View on GitHub</span>
+                            </button>
+                        </div>
+                        <div class="download-info">
+                            <div class="info-item">
+                                <span class="info-label">Requirements:</span>
+                                <span class="info-value">Windows 10+, Admin privileges</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">License:</span>
+                                <span class="info-value">MIT Open Source</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Last Updated:</span>
+                                <span class="info-value">August 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🛡️</span>
+                        <span class="logo-text">DEADBOLT</span>
+                    </div>
+                    <p class="footer-description">
+                        Advanced ransomware protection for the modern world.
+                    </p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Documentation</a>
+                        <a href="#" class="footer-link">Support</a>
+                        <a href="#" class="footer-link">GitHub</a>
+                        <a href="#" class="footer-link">License</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Deadbolt Project. Open source ransomware defense.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

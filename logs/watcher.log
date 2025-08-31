@@ -138,3 +138,183 @@ BEHAVIOR TEST STARTED: 2025-08-30 03:49:51.331727
 2025-08-30 04:54:40,956 - INFO - Recent process info for modified: 10 unique processes identified
 2025-08-30 04:54:40,956 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
 2025-08-30 04:54:40,956 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-30 04:59:55,775 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-30 04:59:55,775 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-30 04:59:55,775 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-30 04:59:55,775 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-30 04:59:55,775 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-30 04:59:55,775 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-30 04:59:55,775 - INFO - File system watcher started successfully
+2025-08-30 04:59:55,775 - INFO - File system watcher started successfully
+2025-08-30 05:06:08,514 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-30 05:06:08,514 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-30 05:06:08,514 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-30 05:06:08,514 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-30 05:06:08,515 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-30 05:06:08,515 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-30 05:06:08,517 - INFO - File system watcher started successfully
+2025-08-30 05:06:08,517 - INFO - File system watcher started successfully
+2025-08-30 05:06:39,343 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-30 05:06:39,343 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-30 05:06:39,343 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-30 05:06:39,343 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-30 05:06:39,343 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-30 05:06:39,343 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-30 05:06:39,345 - INFO - File system watcher started successfully
+2025-08-30 05:06:39,345 - INFO - File system watcher started successfully
+2025-08-30 05:09:35,031 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-30 05:09:35,031 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-30 05:09:35,031 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-30 05:09:35,031 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-30 05:09:35,032 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-30 05:09:35,032 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-30 05:09:35,033 - INFO - File system watcher started successfully
+2025-08-30 05:09:35,033 - INFO - File system watcher started successfully
+2025-08-30 05:10:09,181 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-30 05:10:09,181 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-30 05:10:09,182 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-30 05:10:09,182 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-30 05:10:09,182 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-30 05:10:09,182 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-30 05:10:09,183 - INFO - File system watcher started successfully
+2025-08-30 05:10:09,183 - INFO - File system watcher started successfully
+2025-08-30 05:23:43,693 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-30 05:23:43,693 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-30 05:23:43,693 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-30 05:23:43,693 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-30 05:23:43,694 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-30 05:23:43,694 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-30 05:23:43,695 - INFO - File system watcher started successfully
+2025-08-30 05:23:43,695 - INFO - File system watcher started successfully
+2025-08-30 05:30:15,956 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-30 05:30:15,956 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-30 05:30:15,956 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-30 05:30:15,956 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-30 05:30:15,956 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-30 05:30:15,956 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-30 05:30:15,957 - INFO - File system watcher started successfully
+2025-08-30 05:30:15,957 - INFO - File system watcher started successfully
+2025-08-30 05:30:27,184 - INFO - Recent process info for modified: 10 unique processes identified
+2025-08-30 05:30:27,184 - INFO - Recent process info for modified: 10 unique processes identified
+2025-08-30 05:30:27,184 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-30 05:30:27,184 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 00:54:14,967 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 00:54:14,967 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 00:54:14,967 - ERROR - Failed to start file system watcher: module 'config' has no attribute 'TARGET_DIRS'
+2025-08-31 00:54:14,967 - ERROR - Failed to start file system watcher: module 'config' has no attribute 'TARGET_DIRS'
+2025-08-31 01:01:08,535 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 01:01:08,535 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 01:01:08,535 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-31 01:01:08,535 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-31 01:01:08,536 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-31 01:01:08,536 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-31 01:01:08,538 - INFO - File system watcher started successfully
+2025-08-31 01:01:08,538 - INFO - File system watcher started successfully
+2025-08-31 01:01:22,607 - INFO - Recent process info for modified: 10 unique processes identified
+2025-08-31 01:01:22,607 - INFO - Recent process info for modified: 10 unique processes identified
+2025-08-31 01:01:22,607 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 01:01:22,607 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 01:38:23,466 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 01:38:23,466 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 01:38:23,466 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-31 01:38:23,466 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-31 01:38:23,466 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-31 01:38:23,466 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-31 01:38:23,468 - INFO - File system watcher started successfully
+2025-08-31 01:38:23,468 - INFO - File system watcher started successfully
+2025-08-31 02:11:30,870 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 02:11:30,870 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 02:11:30,870 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-31 02:11:30,870 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-31 02:11:30,870 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-31 02:11:30,870 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-31 02:11:30,872 - INFO - File system watcher started successfully
+2025-08-31 02:11:30,872 - INFO - File system watcher started successfully
+2025-08-31 02:11:55,401 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 02:11:55,401 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 02:11:55,402 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-31 02:11:55,402 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-31 02:11:55,404 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-31 02:11:55,404 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-31 02:11:55,409 - INFO - File system watcher started successfully
+2025-08-31 02:11:55,409 - INFO - File system watcher started successfully
+2025-08-31 02:12:26,253 - INFO - Recent process info for modified: 10 unique processes identified
+2025-08-31 02:12:26,253 - INFO - Recent process info for modified: 10 unique processes identified
+2025-08-31 02:12:26,253 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 02:12:26,253 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 02:12:29,638 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 02:12:29,638 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 02:12:29,640 - ERROR - Failed to start file system watcher: module 'config' has no attribute 'TARGET_DIRS'
+2025-08-31 02:12:29,640 - ERROR - Failed to start file system watcher: module 'config' has no attribute 'TARGET_DIRS'
+2025-08-31 02:20:22,059 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 02:20:22,059 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 02:20:22,059 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-31 02:20:22,059 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-31 02:20:22,059 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-31 02:20:22,059 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-31 02:20:22,059 - INFO - File system watcher started successfully
+2025-08-31 02:20:22,059 - INFO - File system watcher started successfully
+2025-08-31 02:20:40,720 - INFO - Recent process info for modified: 11 unique processes identified
+2025-08-31 02:20:40,720 - INFO - Recent process info for modified: 11 unique processes identified
+2025-08-31 02:20:40,720 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 02:20:40,720 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 18:22:30,903 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 18:22:30,903 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 18:22:30,903 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-31 18:22:30,903 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-31 18:22:30,903 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-31 18:22:30,903 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-31 18:22:30,906 - INFO - File system watcher started successfully
+2025-08-31 18:22:30,906 - INFO - File system watcher started successfully
+2025-08-31 18:22:47,653 - INFO - Recent process info for modified: 10 unique processes identified
+2025-08-31 18:22:47,653 - INFO - Recent process info for modified: 10 unique processes identified
+2025-08-31 18:22:47,653 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 18:22:47,653 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 18:23:42,755 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 18:23:42,755 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 18:23:42,755 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-31 18:23:42,755 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-31 18:23:42,755 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-31 18:23:42,755 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-31 18:23:42,757 - INFO - File system watcher started successfully
+2025-08-31 18:23:42,757 - INFO - File system watcher started successfully
+2025-08-31 18:23:58,212 - INFO - Recent process info for modified: 10 unique processes identified
+2025-08-31 18:23:58,212 - INFO - Recent process info for modified: 10 unique processes identified
+2025-08-31 18:23:58,212 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 18:23:58,212 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 18:24:01,378 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 18:24:01,378 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 18:24:01,378 - ERROR - Failed to start file system watcher: module 'config' has no attribute 'TARGET_DIRS'
+2025-08-31 18:24:01,378 - ERROR - Failed to start file system watcher: module 'config' has no attribute 'TARGET_DIRS'
+2025-08-31 18:34:13,072 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 18:34:13,072 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 18:34:13,072 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-31 18:34:13,072 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-31 18:34:13,072 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-31 18:34:13,072 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-31 18:34:13,074 - INFO - File system watcher started successfully
+2025-08-31 18:34:13,074 - INFO - File system watcher started successfully
+2025-08-31 18:34:34,051 - INFO - Recent process info for modified: 10 unique processes identified
+2025-08-31 18:34:34,051 - INFO - Recent process info for modified: 10 unique processes identified
+2025-08-31 18:34:34,051 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 18:34:34,051 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 18:34:39,099 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 18:34:39,099 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 18:34:39,101 - ERROR - Failed to start file system watcher: module 'config' has no attribute 'TARGET_DIRS'
+2025-08-31 18:34:39,101 - ERROR - Failed to start file system watcher: module 'config' has no attribute 'TARGET_DIRS'
+2025-08-31 18:35:56,880 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 18:35:56,880 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-08-31 18:35:56,881 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-31 18:35:56,881 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-08-31 18:35:56,881 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-31 18:35:56,881 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-08-31 18:35:56,881 - INFO - File system watcher started successfully
+2025-08-31 18:35:56,881 - INFO - File system watcher started successfully
+2025-08-31 18:36:07,759 - INFO - Recent process info for modified: 10 unique processes identified
+2025-08-31 18:36:07,759 - INFO - Recent process info for modified: 10 unique processes identified
+2025-08-31 18:36:07,759 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 18:36:07,759 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 18:36:10,968 - INFO - Recent process info for modified: 10 unique processes identified
+2025-08-31 18:36:10,968 - INFO - Recent process info for modified: 10 unique processes identified
+2025-08-31 18:36:10,968 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 18:36:10,968 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)

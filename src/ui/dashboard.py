@@ -11,7 +11,17 @@ import time
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-from ..utils.logger import get_log_path, LOG_DIR
+# Import utils with fallback handling
+try:
+    from ..utils.logger import get_log_path, LOG_DIR
+except ImportError:
+    try:
+        from utils.logger import get_log_path, LOG_DIR
+    except ImportError:
+        # Fallback if logger not available
+        def get_log_path():
+            return os.path.join(os.getcwd(), 'logs', 'deadbolt.log')
+        LOG_DIR = os.path.join(os.getcwd(), 'logs')
 
 class DashboardData:
     """Class to extract and analyze log data for the dashboard"""
@@ -22,6 +32,7 @@ class DashboardData:
             'detector': os.path.join(LOG_DIR, 'detector.log'),
             'responder': os.path.join(LOG_DIR, 'responder.log'),
             'watcher': os.path.join(LOG_DIR, 'watcher.log'),
+            'ml_detector': os.path.join(LOG_DIR, 'ml_detector.log'),  # Add ML detector log
             'deadbolt': get_log_path()  # Main deadbolt log
         }
         self.stats = {
@@ -42,7 +53,9 @@ class DashboardData:
             'system_health': {
                 'detector_active': False,
                 'responder_active': False,
-                'watcher_active': False
+                'watcher_active': False,
+                'ml_active': False,
+                'ml_monitoring': False
             }
         }
         self.lock = threading.Lock()
@@ -94,7 +107,9 @@ class DashboardData:
             'system_health': {
                 'detector_active': False,
                 'responder_active': False,
-                'watcher_active': False
+                'watcher_active': False,
+                'ml_active': False,
+                'ml_monitoring': False
             }
         })
     
@@ -175,8 +190,12 @@ class DashboardData:
             elif log_name == 'watcher':
                 self._analyze_watcher_log(level, message, timestamp_str)
             
+            # ML detector log analysis
+            elif log_name == 'ml_detector':
+                self._analyze_ml_detector_log(level, message, timestamp_str)
+            
             # Main log analysis
-            elif log_name == 'main':
+            elif log_name in ['main', 'deadbolt']:
                 self._analyze_main_log(level, message, timestamp_str)
             
             # System health indicators
@@ -264,6 +283,66 @@ class DashboardData:
         # File system events
         if "RANSOMWARE ALERT" in message:
             self.stats['threats_detected'] += 1
+    
+    def _analyze_ml_detector_log(self, level, message, timestamp_str):
+        """Analyze ML detector-specific log entries"""
+        # ML threat detection
+        if 'ML HIGH THREAT DETECTED' in message:
+            self.stats['threats_detected'] += 1
+            self.stats['recent_threats'].append({
+                'timestamp': timestamp_str,
+                'type': 'ML_HIGH_THREAT',
+                'description': 'ML detected high-confidence threat',
+                'severity': 'CRITICAL'
+            })
+        
+        if 'ML Model detected malicious behavior' in message:
+            self.stats['threats_detected'] += 1
+            # Extract confidence if available
+            conf_match = re.search(r'Confidence: ([0-9.]+)', message)
+            confidence = conf_match.group(1) if conf_match else 'Unknown'
+            self.stats['recent_threats'].append({
+                'timestamp': timestamp_str,
+                'type': 'ML_MALICIOUS',
+                'description': f'ML detected malicious behavior (Confidence: {confidence})',
+                'severity': 'CRITICAL'
+            })
+        
+        if 'IRC PATTERN DETECTED' in message:
+            self.stats['threats_detected'] += 1
+            self.stats['recent_threats'].append({
+                'timestamp': timestamp_str,
+                'type': 'IRC_PATTERN',
+                'description': 'IRC communication pattern detected',
+                'severity': 'WARNING'
+            })
+        
+        if 'ML-ENHANCED ALERT SENT' in message:
+            self.stats['threats_blocked'] += 1
+            self.stats['response_history'].append({
+                'timestamp': timestamp_str,
+                'action': 'ML-Enhanced Alert Sent',
+                'details': message,
+                'severity': 'CRITICAL'
+            })
+        
+        if 'Triggering ML-enhanced' in message:
+            self.stats['response_history'].append({
+                'timestamp': timestamp_str,
+                'action': 'ML-Enhanced Response Triggered',
+                'details': message,
+                'severity': 'CRITICAL'
+            })
+        
+        # ML system status
+        if 'ML model loaded successfully' in message:
+            self.stats['system_health']['ml_active'] = True
+        
+        if 'ML-Enhanced threat detection monitoring started' in message:
+            self.stats['system_health']['ml_monitoring'] = True
+        
+        if 'ML-Enhanced threat detection monitoring stopped' in message:
+            self.stats['system_health']['ml_monitoring'] = False
     
     def _analyze_main_log(self, level, message, timestamp_str):
         """Analyze main log entries"""

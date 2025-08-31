@@ -17,10 +17,21 @@ from ctypes import wintypes
 # Try relative import first, fallback to direct import
 try:
     from ..utils import config
+    from ..ui.alerts import alert_manager
 except ImportError:
     utils_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'utils')
     sys.path.append(utils_path)
     import config
+    try:
+        from ui.alerts import alert_manager
+    except ImportError:
+        # Create fallback alert manager if not available
+        class FallbackAlertManager:
+            def show_alert(self, *args, **kwargs):
+                pass
+            def show_ransomware_alert(self, *args, **kwargs):
+                pass
+        alert_manager = FallbackAlertManager()
 
 class ThreatResponder:
     """Advanced threat response system with multiple termination methods."""
@@ -102,6 +113,29 @@ class ThreatResponder:
             self.logger.critical(f"Description: {threat_info.get('description', 'No description')}")
             self.logger.critical(f"Target PIDs: {suspicious_pids}")
             
+            # Send notification for critical threats
+            if response_level in ['CRITICAL', 'HIGH']:
+                try:
+                    threat_type = threat_info.get('type', 'Unknown Threat')
+                    file_count = threat_info.get('count', 'Multiple')
+                    
+                    # Use enhanced AlertManager for notifications
+                    if response_level == 'CRITICAL':
+                        alert_manager.show_alert(
+                            title="CRITICAL THREAT RESPONSE ACTIVATED",
+                            message=f"Threat Type: {threat_type}\nTargeting {len(suspicious_pids)} processes\nResponse in progress...",
+                            severity="HIGH",
+                            force_notification=True
+                        )
+                    else:
+                        alert_manager.show_alert(
+                            title="Threat Response Activated",
+                            message=f"Threat Type: {threat_type}\nResponse Level: {response_level}",
+                            severity="MEDIUM"
+                        )
+                except Exception as e:
+                    self.logger.error(f"Failed to send threat response notification: {e}")
+            
             # Record response
             response_record = {
                 'timestamp': current_time,
@@ -155,12 +189,35 @@ class ThreatResponder:
         if response_level in ['HIGH', 'CRITICAL']:
             self._implement_protective_measures(response_record)
         
-        # Log final status
+        # Log final status and send completion notification
         final_remaining = [pid for pid in suspicious_pids if self._is_process_running(pid)]
         if final_remaining:
             self.logger.error(f"Failed to terminate {len(final_remaining)} processes: {final_remaining}")
+            # Send failure notification for critical threats
+            if response_level == 'CRITICAL':
+                try:
+                    alert_manager.show_alert(
+                        title="Threat Response Incomplete",
+                        message=f"Failed to terminate {len(final_remaining)} resistant processes\nManual intervention may be required",
+                        severity="HIGH",
+                        force_notification=True
+                    )
+                except Exception as e:
+                    self.logger.error(f"Failed to send failure notification: {e}")
         else:
             self.logger.info("All suspicious processes successfully terminated")
+            # Send success notification for critical threats
+            if response_level == 'CRITICAL':
+                try:
+                    threat_type = response_record['threat_info'].get('type', 'Unknown Threat')
+                    alert_manager.show_alert(
+                        title="Threat Neutralized Successfully",
+                        message=f"All suspicious processes terminated\nThreat Type: {threat_type}\nSystem secured",
+                        severity="MEDIUM",
+                        force_notification=True
+                    )
+                except Exception as e:
+                    self.logger.error(f"Failed to send success notification: {e}")
     
     def _terminate_processes_python(self, pids):
         """AGGRESSIVE termination for ransomware - INSTANT FORCE KILL."""

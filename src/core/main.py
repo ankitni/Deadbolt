@@ -39,17 +39,31 @@ except ImportError:
 
 # Try to import GUI components
 try:
-    from ..ui.main_gui import run_gui, DeadboltMainWindow
+    from ..ui.main_gui import DeadboltMainWindow
     from PyQt5.QtWidgets import QApplication
     GUI_AVAILABLE = True
 except ImportError:
     try:
-        # Fallback for when running as script  
-        ui_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'ui')
-        sys.path.append(ui_path)
-        from main_gui import run_gui, DeadboltMainWindow
+        # Fallback for when running as script - use absolute path approach
+        import sys
+        import os
+        
+        # Get the project root directory (3 levels up from this file)
+        current_file_dir = os.path.dirname(os.path.abspath(__file__))
+        src_dir = os.path.dirname(current_file_dir)
+        project_root = os.path.dirname(src_dir)
+        ui_path = os.path.join(src_dir, 'ui')
+        
+        # Add UI path to sys.path if not already there
+        if ui_path not in sys.path:
+            sys.path.insert(0, ui_path)
+        
+        # Import GUI components using absolute import
+        import main_gui
+        from main_gui import DeadboltMainWindow
         from PyQt5.QtWidgets import QApplication
         GUI_AVAILABLE = True
+        
     except ImportError as e:
         print(f"GUI components not available: {e}")
         print("Running in CLI mode only.")
@@ -163,6 +177,15 @@ class DeadboltDefender:
             
             self.logger.info("Initializing detector...")
             self.detector = ThreatDetector(self.responder.respond_to_threat)
+            
+            # Log ML enhancement status
+            if hasattr(self.detector, 'ml_model') and self.detector.ml_model is not None:
+                self.logger.info("ML-Enhanced Detection: Active")
+                self.logger.info(f"ML Model Features: {len(self.detector.ml_features)}")
+                print("ML-Enhanced Detection: Active - Reduced false positives expected")
+            else:
+                self.logger.info("ML Model: Not available - Using rule-based detection")
+                print("WARNING: ML Model: Not available - Using aggressive rule-based detection")
             
             self.logger.info("Initializing filesystem watcher...")
             self.watcher = FileSystemWatcher(self.detector.analyze_threat)

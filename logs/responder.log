@@ -162,3 +162,176 @@ BEHAVIOR TEST STARTED: 2025-08-30 03:49:51.331727
 2025-08-30 04:54:42,075 - INFO - INSTANT KILL of smartscreen.exe (PID: 15016)
 2025-08-30 04:54:42,086 - INFO - Successfully FORCE-KILLED smartscreen.exe (PID: 15016)
 2025-08-30 04:54:42,087 - INFO - INSTANT KILL of python.exe (PID: 8288)
+2025-08-30 04:59:55,771 - INFO - Threat Responder initialized
+2025-08-30 04:59:55,773 - WARNING - Running without administrator privileges - some process termination may fail
+2025-08-30 05:06:08,512 - INFO - Threat Responder initialized
+2025-08-30 05:06:08,513 - WARNING - Running without administrator privileges - some process termination may fail
+2025-08-30 05:06:39,340 - INFO - Threat Responder initialized
+2025-08-30 05:09:35,029 - INFO - Threat Responder initialized
+2025-08-30 05:09:35,030 - WARNING - Running without administrator privileges - some process termination may fail
+2025-08-30 05:10:09,179 - INFO - Threat Responder initialized
+2025-08-30 05:23:43,691 - INFO - Threat Responder initialized
+2025-08-30 05:23:43,691 - WARNING - Running without administrator privileges - some process termination may fail
+2025-08-30 05:30:15,953 - INFO - Threat Responder initialized
+2025-08-30 05:30:28,706 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-08-30 05:30:28,706 - CRITICAL - Threat Type: mass_modification
+2025-08-30 05:30:28,706 - CRITICAL - Description: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-30 05:30:28,706 - CRITICAL - Target PIDs: [14368, 5028, 19808, 9364, 12312, 20968, 13352, 18748]
+2025-08-30 05:30:28,706 - CRITICAL - Attempting to terminate 8 suspicious processes
+2025-08-30 05:30:28,706 - INFO - INSTANT KILL of cmd.exe (PID: 14368)
+2025-08-30 05:30:28,722 - INFO - Successfully FORCE-KILLED cmd.exe (PID: 14368)
+2025-08-30 05:30:28,723 - INFO - INSTANT KILL of conhost.exe (PID: 5028)
+2025-08-30 05:30:28,743 - INFO - Successfully FORCE-KILLED conhost.exe (PID: 5028)
+2025-08-30 05:30:28,744 - INFO - INSTANT KILL of conhost.exe (PID: 19808)
+2025-08-30 05:30:28,762 - INFO - Successfully FORCE-KILLED conhost.exe (PID: 19808)
+2025-08-30 05:30:28,763 - INFO - INSTANT KILL of python.exe (PID: 9364)
+2025-08-30 05:30:28,787 - INFO - Successfully FORCE-KILLED python.exe (PID: 9364)
+2025-08-30 05:30:28,787 - INFO - INSTANT KILL of conhost.exe (PID: 12312)
+2025-08-30 05:30:28,811 - INFO - Successfully FORCE-KILLED conhost.exe (PID: 12312)
+2025-08-30 05:30:28,811 - INFO - INSTANT KILL of powershell.exe (PID: 20968)
+2025-08-30 05:30:28,830 - INFO - Successfully FORCE-KILLED powershell.exe (PID: 20968)
+2025-08-30 05:30:28,830 - INFO - INSTANT KILL of python.exe (PID: 13352)
+2025-08-31 00:54:14,179 - INFO - Threat Responder initialized
+2025-08-31 01:01:07,689 - INFO - Threat Responder initialized
+2025-08-31 01:01:23,556 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-08-31 01:01:23,556 - CRITICAL - Threat Type: mass_modification
+2025-08-31 01:01:23,556 - CRITICAL - Description: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 01:01:23,556 - CRITICAL - Target PIDs: [19376, 3316, 23172, 6244, 2272, 21008, 2648, 20912, 9712, 6588]
+2025-08-31 01:01:23,556 - CRITICAL - Attempting to terminate 10 suspicious processes
+2025-08-31 01:01:23,556 - INFO - INSTANT KILL of smartscreen.exe (PID: 19376)
+2025-08-31 01:01:23,574 - INFO - Successfully FORCE-KILLED smartscreen.exe (PID: 19376)
+2025-08-31 01:01:23,574 - INFO - INSTANT KILL of cmd.exe (PID: 3316)
+2025-08-31 01:01:23,594 - INFO - Successfully FORCE-KILLED cmd.exe (PID: 3316)
+2025-08-31 01:01:23,594 - INFO - INSTANT KILL of python.exe (PID: 23172)
+2025-08-31 01:01:23,613 - INFO - Successfully FORCE-KILLED python.exe (PID: 23172)
+2025-08-31 01:01:23,613 - INFO - INSTANT KILL of WmiPrvSE.exe (PID: 6244)
+2025-08-31 01:01:23,644 - INFO - Successfully FORCE-KILLED WmiPrvSE.exe (PID: 6244)
+2025-08-31 01:01:23,644 - INFO - INSTANT KILL of powershell.exe (PID: 2272)
+2025-08-31 01:01:23,670 - INFO - Successfully FORCE-KILLED powershell.exe (PID: 2272)
+2025-08-31 01:01:23,671 - INFO - INSTANT KILL of cmd.exe (PID: 21008)
+2025-08-31 01:01:23,687 - INFO - Successfully FORCE-KILLED cmd.exe (PID: 21008)
+2025-08-31 01:01:23,687 - INFO - INSTANT KILL of conhost.exe (PID: 2648)
+2025-08-31 01:01:23,706 - INFO - Successfully FORCE-KILLED conhost.exe (PID: 2648)
+2025-08-31 01:01:23,706 - INFO - INSTANT KILL of powershell.exe (PID: 20912)
+2025-08-31 01:01:23,739 - INFO - Successfully FORCE-KILLED powershell.exe (PID: 20912)
+2025-08-31 01:01:23,739 - INFO - INSTANT KILL of python.exe (PID: 9712)
+2025-08-31 01:38:22,522 - INFO - Threat Responder initialized
+2025-08-31 01:38:22,522 - WARNING - Running without administrator privileges - some process termination may fail
+2025-08-31 02:11:30,070 - INFO - Threat Responder initialized
+2025-08-31 02:11:55,379 - INFO - Threat Responder initialized
+2025-08-31 02:11:55,380 - WARNING - Running without administrator privileges - some process termination may fail
+2025-08-31 02:12:27,214 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-08-31 02:12:27,214 - CRITICAL - Threat Type: mass_modification
+2025-08-31 02:12:27,214 - CRITICAL - Description: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 02:12:27,214 - CRITICAL - Target PIDs: [18104, 17748, 14620, 21492, 18444, 15772, 19564, 14148, 13820]
+2025-08-31 02:12:27,214 - CRITICAL - Attempting to terminate 9 suspicious processes
+2025-08-31 02:12:27,214 - INFO - INSTANT KILL of python.exe (PID: 18104)
+2025-08-31 02:12:27,296 - INFO - Successfully FORCE-KILLED python.exe (PID: 18104)
+2025-08-31 02:12:27,296 - INFO - INSTANT KILL of python.exe (PID: 17748)
+2025-08-31 02:12:28,748 - INFO - Threat Responder initialized
+2025-08-31 02:20:21,262 - INFO - Threat Responder initialized
+2025-08-31 02:20:41,680 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-08-31 02:20:41,680 - CRITICAL - Threat Type: mass_modification
+2025-08-31 02:20:41,680 - CRITICAL - Description: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 02:20:41,680 - CRITICAL - Target PIDs: [13148, 7860, 23436, 2952, 13768, 9224, 19536]
+2025-08-31 02:20:41,680 - CRITICAL - Attempting to terminate 7 suspicious processes
+2025-08-31 02:20:41,682 - INFO - INSTANT KILL of audiodg.exe (PID: 13148)
+2025-08-31 02:20:41,707 - INFO - Successfully FORCE-KILLED audiodg.exe (PID: 13148)
+2025-08-31 02:20:41,707 - INFO - INSTANT KILL of python.exe (PID: 7860)
+2025-08-31 02:20:41,721 - INFO - Successfully FORCE-KILLED python.exe (PID: 7860)
+2025-08-31 02:20:41,721 - INFO - INSTANT KILL of WmiPrvSE.exe (PID: 23436)
+2025-08-31 02:20:41,745 - INFO - Successfully FORCE-KILLED WmiPrvSE.exe (PID: 23436)
+2025-08-31 02:20:41,746 - INFO - INSTANT KILL of conhost.exe (PID: 2952)
+2025-08-31 02:20:41,790 - INFO - Successfully FORCE-KILLED conhost.exe (PID: 2952)
+2025-08-31 02:20:41,790 - INFO - INSTANT KILL of smartscreen.exe (PID: 13768)
+2025-08-31 02:20:41,814 - INFO - Successfully FORCE-KILLED smartscreen.exe (PID: 13768)
+2025-08-31 02:20:41,814 - INFO - INSTANT KILL of python.exe (PID: 9224)
+2025-08-31 18:22:30,110 - INFO - Threat Responder initialized
+2025-08-31 18:22:48,622 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-08-31 18:22:48,622 - CRITICAL - Threat Type: mass_modification
+2025-08-31 18:22:48,622 - CRITICAL - Description: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 18:22:48,622 - CRITICAL - Target PIDs: [16272, 18812, 16472, 16300, 15968, 3488, 18224, 18124, 1516]
+2025-08-31 18:22:48,622 - CRITICAL - Attempting to terminate 9 suspicious processes
+2025-08-31 18:22:48,622 - INFO - INSTANT KILL of conhost.exe (PID: 16272)
+2025-08-31 18:22:48,638 - INFO - Successfully FORCE-KILLED conhost.exe (PID: 16272)
+2025-08-31 18:22:48,638 - INFO - INSTANT KILL of python.exe (PID: 18812)
+2025-08-31 18:23:41,925 - INFO - Threat Responder initialized
+2025-08-31 18:23:59,165 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-08-31 18:23:59,166 - CRITICAL - Threat Type: mass_modification
+2025-08-31 18:23:59,166 - CRITICAL - Description: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 18:23:59,166 - CRITICAL - Target PIDs: [16472, 11312, 18196, 19968, 15796, 11692, 7460, 18360, 13224]
+2025-08-31 18:23:59,166 - CRITICAL - Attempting to terminate 9 suspicious processes
+2025-08-31 18:23:59,166 - INFO - INSTANT KILL of WmiPrvSE.exe (PID: 16472)
+2025-08-31 18:23:59,180 - INFO - Successfully FORCE-KILLED WmiPrvSE.exe (PID: 16472)
+2025-08-31 18:23:59,180 - INFO - INSTANT KILL of python.exe (PID: 11312)
+2025-08-31 18:23:59,188 - INFO - Successfully FORCE-KILLED python.exe (PID: 11312)
+2025-08-31 18:23:59,188 - INFO - INSTANT KILL of python.exe (PID: 18196)
+2025-08-31 18:24:00,532 - INFO - Threat Responder initialized
+2025-08-31 18:31:46,977 - INFO - Threat Responder initialized
+2025-08-31 18:31:46,977 - WARNING - Running without administrator privileges - some process termination may fail
+2025-08-31 18:32:25,482 - INFO - Threat Responder initialized
+2025-08-31 18:32:25,484 - WARNING - Running without administrator privileges - some process termination may fail
+2025-08-31 18:32:28,496 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-08-31 18:32:28,496 - CRITICAL - Threat Type: mass_modification
+2025-08-31 18:32:28,496 - CRITICAL - Description: Mass file encryption detected - 25 files modified in 2 seconds
+2025-08-31 18:32:28,496 - CRITICAL - Target PIDs: [1234, 5678]
+2025-08-31 18:32:29,426 - CRITICAL - Attempting to terminate 2 suspicious processes
+2025-08-31 18:32:29,426 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-08-31 18:32:29,954 - INFO - No active threats identified during emergency scan
+2025-08-31 18:32:29,954 - INFO - Implementing protective measures
+2025-08-31 18:32:29,962 - INFO - All suspicious processes successfully terminated
+2025-08-31 18:32:35,810 - INFO - Threat Responder initialized
+2025-08-31 18:32:35,810 - INFO - Threat Responder initialized
+2025-08-31 18:32:35,810 - WARNING - Running without administrator privileges - some process termination may fail
+2025-08-31 18:32:35,810 - WARNING - Running without administrator privileges - some process termination may fail
+2025-08-31 18:32:35,812 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-08-31 18:32:35,812 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-08-31 18:32:35,812 - CRITICAL - Threat Type: mass_encryption
+2025-08-31 18:32:35,812 - CRITICAL - Threat Type: mass_encryption
+2025-08-31 18:32:35,812 - CRITICAL - Description: Ransomware detected encrypting user files
+2025-08-31 18:32:35,812 - CRITICAL - Description: Ransomware detected encrypting user files
+2025-08-31 18:32:35,812 - CRITICAL - Target PIDs: [9999, 8888]
+2025-08-31 18:32:35,812 - CRITICAL - Target PIDs: [9999, 8888]
+2025-08-31 18:32:36,742 - CRITICAL - Attempting to terminate 2 suspicious processes
+2025-08-31 18:32:36,742 - CRITICAL - Attempting to terminate 2 suspicious processes
+2025-08-31 18:32:36,742 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-08-31 18:32:36,742 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-08-31 18:32:37,022 - INFO - No active threats identified during emergency scan
+2025-08-31 18:32:37,022 - INFO - No active threats identified during emergency scan
+2025-08-31 18:32:37,022 - INFO - Implementing protective measures
+2025-08-31 18:32:37,022 - INFO - Implementing protective measures
+2025-08-31 18:32:37,030 - INFO - All suspicious processes successfully terminated
+2025-08-31 18:32:37,030 - INFO - All suspicious processes successfully terminated
+2025-08-31 18:34:12,253 - INFO - Threat Responder initialized
+2025-08-31 18:34:35,964 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-08-31 18:34:35,964 - CRITICAL - Threat Type: mass_modification
+2025-08-31 18:34:35,964 - CRITICAL - Description: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 18:34:35,964 - CRITICAL - Target PIDs: [14276, 9016, 10164, 22668, 9168, 5436, 9324, 8240, 20644]
+2025-08-31 18:34:36,912 - CRITICAL - Attempting to terminate 9 suspicious processes
+2025-08-31 18:34:36,912 - INFO - INSTANT KILL of python.exe (PID: 14276)
+2025-08-31 18:34:38,202 - INFO - Threat Responder initialized
+2025-08-31 18:35:56,028 - INFO - Threat Responder initialized
+2025-08-31 18:36:09,735 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-08-31 18:36:09,735 - CRITICAL - Threat Type: mass_modification
+2025-08-31 18:36:09,735 - CRITICAL - Description: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 18:36:09,735 - CRITICAL - Target PIDs: [20644, 17276, 11412, 14112, 16572, 20428, 5436, 18672]
+2025-08-31 18:36:10,681 - CRITICAL - Attempting to terminate 8 suspicious processes
+2025-08-31 18:36:10,681 - INFO - INSTANT KILL of smartscreen.exe (PID: 20644)
+2025-08-31 18:36:10,688 - INFO - Successfully FORCE-KILLED smartscreen.exe (PID: 20644)
+2025-08-31 18:36:10,688 - INFO - INSTANT KILL of cmd.exe (PID: 17276)
+2025-08-31 18:36:10,698 - INFO - Successfully FORCE-KILLED cmd.exe (PID: 17276)
+2025-08-31 18:36:10,698 - INFO - INSTANT KILL of WindowsTerminal.exe (PID: 11412)
+2025-08-31 18:36:10,772 - INFO - Successfully FORCE-KILLED WindowsTerminal.exe (PID: 11412)
+2025-08-31 18:36:10,793 - INFO - Process 14112 already terminated
+2025-08-31 18:36:10,795 - INFO - INSTANT KILL of cmd.exe (PID: 20428)
+2025-08-31 18:36:10,805 - INFO - Successfully FORCE-KILLED cmd.exe (PID: 20428)
+2025-08-31 18:36:10,805 - INFO - INSTANT KILL of WmiPrvSE.exe (PID: 5436)
+2025-08-31 18:36:10,810 - INFO - Successfully FORCE-KILLED WmiPrvSE.exe (PID: 5436)
+2025-08-31 18:36:10,810 - INFO - INSTANT KILL of conhost.exe (PID: 18672)
+2025-08-31 18:36:10,828 - INFO - Successfully FORCE-KILLED conhost.exe (PID: 18672)
+2025-08-31 18:36:10,828 - INFO - Python termination successful for 7 processes
+2025-08-31 18:36:10,838 - INFO - All target processes successfully terminated by Python method
+2025-08-31 18:36:10,838 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-08-31 18:36:10,858 - INFO - No active threats identified during emergency scan
+2025-08-31 18:36:10,858 - INFO - Implementing protective measures
+2025-08-31 18:36:10,888 - INFO - All suspicious processes successfully terminated

@@ -202,3 +202,32 @@ FINAL VERIFICATION TEST: 03:59:07
 2025-08-30 04:54:41,993 - INFO - Skipping system process: chrome.exe (PID: 12972)
 2025-08-30 04:54:41,993 - CRITICAL - Triggering CRITICAL response - Target PIDs: [11028, 10376, 8428, 3108, 15016, 8288, 12352, 6204]
 2025-08-30 04:54:41,993 - CRITICAL - Invoking responder for CRITICAL threat
+2025-08-30 04:59:55,773 - INFO - Threat Detector initialized
+2025-08-30 04:59:55,773 - INFO - Threat detection monitoring started (file system only)
+2025-08-30 05:06:08,514 - INFO - Threat Detector initialized
+2025-08-30 05:06:08,514 - INFO - Threat detection monitoring started (file system only)
+2025-08-30 05:06:39,342 - INFO - Threat Detector initialized
+2025-08-30 05:06:39,342 - INFO - Threat detection monitoring started (file system only)
+2025-08-30 05:09:35,031 - INFO - Threat Detector initialized
+2025-08-30 05:09:35,031 - INFO - Threat detection monitoring started (file system only)
+2025-08-30 05:10:09,181 - INFO - Threat Detector initialized
+2025-08-30 05:10:09,181 - INFO - Threat detection monitoring started (file system only)
+2025-08-30 05:23:43,693 - INFO - Threat Detector initialized
+2025-08-30 05:23:43,693 - INFO - Threat detection monitoring started (file system only)
+2025-08-30 05:30:15,955 - INFO - Threat Detector initialized
+2025-08-30 05:30:15,956 - INFO - Threat detection monitoring started (file system only)
+2025-08-30 05:30:27,184 - WARNING - Analyzing threat: mass_modification - Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-30 05:30:27,185 - INFO - Threat analysis complete - Score: 60.0, Response: CRITICAL
+2025-08-30 05:30:28,703 - CRITICAL - MULTI-CHANNEL ALERT SENT - Level: CRITICAL, Score: 60.0
+2025-08-30 05:30:28,703 - INFO - Added suspicious process to target list: cmd.exe (PID: 14368)
+2025-08-30 05:30:28,703 - INFO - Added suspicious process to target list: conhost.exe (PID: 5028)
+2025-08-30 05:30:28,705 - INFO - Added suspicious process to target list: conhost.exe (PID: 19808)
+2025-08-30 05:30:28,705 - INFO - Skipping system process: SearchFilterHost.exe (PID: 2044)
+2025-08-30 05:30:28,705 - INFO - Added suspicious process to target list: python.exe (PID: 9364)
+2025-08-30 05:30:28,705 - INFO - Skipping system process: SearchProtocolHost.exe (PID: 20900)
+2025-08-30 05:30:28,705 - INFO - Added suspicious process to target list: conhost.exe (PID: 12312)
+2025-08-30 05:30:28,705 - INFO - Added suspicious process to target list: powershell.exe (PID: 20968)
+2025-08-30 05:30:28,705 - INFO - Added suspicious process to target list: python.exe (PID: 13352)
+2025-08-30 05:30:28,705 - INFO - Added suspicious process to target list: python.exe (PID: 18748)
+2025-08-30 05:30:28,705 - CRITICAL - Triggering CRITICAL response - Target PIDs: [14368, 5028, 19808, 9364, 12312, 20968, 13352, 18748]
+2025-08-30 05:30:28,705 - CRITICAL - Invoking responder for CRITICAL threat

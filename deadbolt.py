@@ -21,8 +21,8 @@ def main():
     """Main entry point for Deadbolt system"""
     try:
         # Import the main function from core module
-        import main as core_main
-        return core_main.main()
+        from core.main import main as core_main
+        return core_main()
     except ImportError as e:
         print(f"Import error: {e}")
         print("Please ensure all dependencies are installed.")

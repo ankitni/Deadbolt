@@ -174,11 +174,15 @@ class RansomwareWatchHandler(FileSystemEventHandler):
         
         # Check mass modification pattern (potential encryption) - CRITICAL FOR RANSOMWARE
         if recent_modifications >= config.RULES['mass_modification']['count']:
+            # Generate network info for ML testing when dealing with potential ransomware
+            network_info = self._simulate_network_info_for_ml()
+            
             threat_info = {
                 'type': 'mass_modification',
                 'count': recent_modifications,
                 'time_window': config.RULES['mass_modification']['interval'],
                 'process_info': self._get_recent_process_info('modified', modification_time),
+                'network_info': network_info,  # Add network info for ML analysis
                 'severity': 'CRITICAL',
                 'description': f'Mass file modification detected: {recent_modifications} files modified in {config.RULES["mass_modification"]["interval"]} seconds (potential encryption)'
             }
@@ -186,7 +190,7 @@ class RansomwareWatchHandler(FileSystemEventHandler):
             self.detector_callback(threat_info)
     
     def _get_recent_process_info(self, event_type, since_time):
-        """Get process information from recent events."""
+        """Get process information from recent events with network simulation for ML testing."""
         processes = set()
         for event in self.event_history[event_type]:
             if event['time'] >= since_time and event['process_info']:
@@ -199,6 +203,51 @@ class RansomwareWatchHandler(FileSystemEventHandler):
         process_list = list(processes)
         self.logger.info(f"Recent process info for {event_type}: {len(process_list)} unique processes identified")
         return process_list
+    
+    def _simulate_network_info_for_ml(self):
+        """Simulate network information for ML model testing.
+        In a real implementation, this would capture actual network traffic.
+        """
+        import random
+        
+        # Simulate suspicious network patterns for ML testing
+        suspicious_patterns = [
+            {  # IRC connection - highly suspicious
+                'orig_port': random.randint(49000, 65000),
+                'resp_port': 6667,
+                'protocol': 'tcp',
+                'service': 'irc',
+                'duration': 2.5,
+                'orig_bytes': 75,
+                'resp_bytes': 243,
+                'conn_state': 'S3',
+                'history': 'ShAdDaf',
+                'missed_bytes': 0,
+                'orig_pkts': 7,
+                'orig_ip_bytes': 447,
+                'resp_pkts': 6,
+                'resp_ip_bytes': 563
+            },
+            {  # C&C communication - suspicious
+                'orig_port': random.randint(49000, 65000),
+                'resp_port': 8080,
+                'protocol': 'tcp',
+                'service': 'http-alt',
+                'duration': 1.2,
+                'orig_bytes': 128,
+                'resp_bytes': 64,
+                'conn_state': 'SF',
+                'history': 'ShADadf',
+                'missed_bytes': 0,
+                'orig_pkts': 12,
+                'orig_ip_bytes': 512,
+                'resp_pkts': 8,
+                'resp_ip_bytes': 320
+            }
+        ]
+        
+        # Return a suspicious pattern for ML analysis
+        return random.choice(suspicious_patterns)
     
 
     

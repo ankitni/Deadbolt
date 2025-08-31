@@ -1,0 +1,35 @@
+{
+  "total_predictions": 11,
+  "malicious_detected": 11,
+  "benign_classified": 0,
+  "high_confidence_alerts": 11,
+  "network_patterns_analyzed": 0,
+  "model_accuracy_score": 0.0,
+  "last_prediction_time": "2025-08-31T18:36:10.990777",
+  "prediction_history": [
+    "0.99983895",
+    "0.9999654",
+    "0.999979",
+    "0.9999759",
+    "0.9999759",
+    "0.9999759",
+    "0.9999759",
+    "0.9998641",
+    "0.9999759",
+    "0.9999759",
+    "0.9999759"
+  ],
+  "confidence_distribution": {
+    "high": 11,
+    "medium": 0,
+    "low": 0
+  },
+  "threat_types_detected": {
+    "irc": 5,
+    "http": 1,
+    "unknown": 1,
+    "http-alt": 3
+  },
+  "false_positive_rate": 0.0,
+  "average_confidence": 0.999927818775177
+}
