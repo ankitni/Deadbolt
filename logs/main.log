@@ -426,3 +426,85 @@ FINAL TEST STARTED: 2025-08-30 03:36:07
 2025-08-31 18:39:56,888 - deadbolt_main - ERROR - Filesystem watcher is not healthy
 2025-08-31 18:40:56,888 - deadbolt_main - ERROR - Filesystem watcher is not healthy
 2025-08-31 18:41:56,890 - deadbolt_main - ERROR - Filesystem watcher is not healthy
+2025-08-31 18:42:56,891 - deadbolt_main - ERROR - Filesystem watcher is not healthy
+2025-08-31 18:43:56,892 - deadbolt_main - ERROR - Filesystem watcher is not healthy
+2025-08-31 18:44:56,892 - deadbolt_main - ERROR - Filesystem watcher is not healthy
+2025-08-31 18:45:56,893 - deadbolt_main - ERROR - Filesystem watcher is not healthy
+2025-08-31 18:45:56,893 - deadbolt_main - INFO - Status update - Uptime: 601s, Threats: 0, Responses: 0
+2025-08-31 18:45:56,894 - deadbolt_main - INFO - Threat summary: {'mass_modification': 2}
+2025-08-31 18:45:56,905 - deadbolt_main - INFO - Response stats: {'total_responses': 1, 'recent_responses_1h': 1, 'response_levels': {'CRITICAL': 1}, 'last_response': datetime.datetime(2025, 8, 31, 18, 36, 9, 735465)}
+2025-08-31 18:46:56,906 - deadbolt_main - ERROR - Filesystem watcher is not healthy
+2025-08-31 18:47:56,906 - deadbolt_main - ERROR - Filesystem watcher is not healthy
+2025-08-31 18:48:56,907 - deadbolt_main - ERROR - Filesystem watcher is not healthy
+2025-08-31 18:49:56,907 - deadbolt_main - ERROR - Filesystem watcher is not healthy
+2025-08-31 18:50:56,911 - deadbolt_main - ERROR - Filesystem watcher is not healthy
+2025-08-31 18:51:30,399 - deadbolt_main - INFO - Logging system initialized
+2025-08-31 18:51:30,399 - deadbolt_main - INFO - Deadbolt Defender initialized
+2025-08-31 18:51:30,399 - deadbolt_main - INFO - Starting Deadbolt Ransomware Defender...
+2025-08-31 18:51:30,399 - deadbolt_main - INFO - Initializing responder...
+2025-08-31 18:51:30,403 - deadbolt_main - INFO - Initializing detector...
+2025-08-31 18:51:31,568 - deadbolt_main - INFO - ML-Enhanced Detection: Active
+2025-08-31 18:51:31,568 - deadbolt_main - INFO - ML Model Features: 49
+2025-08-31 18:51:31,570 - deadbolt_main - INFO - Initializing filesystem watcher...
+2025-08-31 18:51:31,570 - deadbolt_main - INFO - Starting detector monitoring...
+2025-08-31 18:51:31,570 - deadbolt_main - INFO - Starting filesystem monitoring...
+2025-08-31 18:51:31,574 - deadbolt_main - INFO - Status monitoring started
+2025-08-31 18:51:31,574 - deadbolt_main - INFO - Deadbolt Defender started successfully
+2025-08-31 18:51:31,574 - deadbolt_main - INFO - Monitoring directories: ['C:\\Users\\MADHURIMA\\Documents\\testtxt', 'C:\\Users\\MADHURIMA\\Documents']
+2025-08-31 18:51:31,574 - deadbolt_main - INFO - Rules: {'mass_delete': {'count': 3, 'interval': 2}, 'mass_rename': {'count': 3, 'interval': 2}, 'mass_modification': {'count': 4, 'interval': 2}}
+2025-08-31 18:51:31,574 - deadbolt_main - INFO - Actions enabled: {'log_only': False, 'kill_process': True, 'shutdown': False, 'dry_run': False}
+2025-08-31 18:51:41,576 - deadbolt_main - INFO - Stopping Deadbolt Defender...
+2025-08-31 18:51:41,576 - deadbolt_main - INFO - Stopping filesystem watcher...
+2025-08-31 18:51:41,576 - deadbolt_main - INFO - Stopping detector...
+2025-08-31 18:51:41,576 - deadbolt_main - INFO - Shutdown complete. Uptime: 11.2 seconds
+2025-08-31 18:51:41,576 - deadbolt_main - INFO - Final stats: {'threats_detected': 0, 'responses_triggered': 0, 'files_monitored': 0, 'uptime_seconds': 11.177604}
+2025-08-31 18:51:41,579 - deadbolt_main - INFO - Logging system initialized
+2025-08-31 18:51:41,579 - deadbolt_main - INFO - Logging system initialized
+2025-08-31 18:51:41,580 - deadbolt_main - INFO - Deadbolt Defender initialized
+2025-08-31 18:51:41,580 - deadbolt_main - INFO - Deadbolt Defender initialized
+2025-08-31 18:51:56,911 - deadbolt_main - ERROR - Filesystem watcher is not healthy
+2025-08-31 18:52:56,912 - deadbolt_main - ERROR - Filesystem watcher is not healthy
+2025-08-31 18:53:56,912 - deadbolt_main - ERROR - Filesystem watcher is not healthy
+2025-08-31 18:54:07,330 - deadbolt_main - INFO - Logging system initialized
+2025-08-31 18:54:07,330 - deadbolt_main - INFO - Deadbolt Defender initialized
+2025-08-31 18:54:07,902 - deadbolt_main - INFO - Starting Deadbolt Ransomware Defender...
+2025-08-31 18:54:07,902 - deadbolt_main - INFO - Initializing responder...
+2025-08-31 18:54:07,908 - deadbolt_main - INFO - Initializing detector...
+2025-08-31 18:54:08,815 - deadbolt_main - INFO - ML-Enhanced Detection: Active
+2025-08-31 18:54:08,815 - deadbolt_main - INFO - ML Model Features: 49
+2025-08-31 18:54:08,815 - deadbolt_main - INFO - Initializing filesystem watcher...
+2025-08-31 18:54:08,815 - deadbolt_main - INFO - Starting detector monitoring...
+2025-08-31 18:54:08,815 - deadbolt_main - INFO - Starting filesystem monitoring...
+2025-08-31 18:54:08,819 - deadbolt_main - INFO - Status monitoring started
+2025-08-31 18:54:08,819 - deadbolt_main - INFO - Deadbolt Defender started successfully
+2025-08-31 18:54:08,819 - deadbolt_main - INFO - Status update - Uptime: 1s, Threats: 0, Responses: 0
+2025-08-31 18:54:08,819 - deadbolt_main - INFO - Monitoring directories: ['C:\\Users\\MADHURIMA\\Documents\\testtxt', 'C:\\Users\\MADHURIMA\\Documents']
+2025-08-31 18:54:08,819 - deadbolt_main - INFO - Response stats: {'total_responses': 0, 'critical_responses': 0, 'successful_terminations': 0, 'failed_terminations': 0}
+2025-08-31 18:54:08,819 - deadbolt_main - INFO - Rules: {'mass_delete': {'count': 3, 'interval': 2}, 'mass_rename': {'count': 3, 'interval': 2}, 'mass_modification': {'count': 4, 'interval': 2}}
+2025-08-31 18:54:08,819 - deadbolt_main - INFO - Actions enabled: {'log_only': False, 'kill_process': True, 'shutdown': False, 'dry_run': False}
+2025-08-31 18:54:56,913 - deadbolt_main - ERROR - Filesystem watcher is not healthy
+2025-08-31 18:55:56,914 - deadbolt_main - ERROR - Filesystem watcher is not healthy
+2025-08-31 18:55:56,914 - deadbolt_main - INFO - Status update - Uptime: 1201s, Threats: 0, Responses: 0
+2025-08-31 18:55:56,914 - deadbolt_main - INFO - Threat summary: {'mass_modification': 2}
+2025-08-31 18:55:56,925 - deadbolt_main - INFO - Response stats: {'total_responses': 1, 'recent_responses_1h': 1, 'response_levels': {'CRITICAL': 1}, 'last_response': datetime.datetime(2025, 8, 31, 18, 36, 9, 735465)}
+2025-08-31 18:56:56,927 - deadbolt_main - ERROR - Filesystem watcher is not healthy
+2025-08-31 18:57:05,625 - deadbolt_main - INFO - Logging system initialized
+2025-08-31 18:57:05,625 - deadbolt_main - INFO - Deadbolt Defender initialized
+2025-08-31 18:57:05,625 - deadbolt_main - INFO - Starting in daemon mode (continuous background protection)
+2025-08-31 18:57:05,625 - deadbolt_main - INFO - Starting Deadbolt Ransomware Defender...
+2025-08-31 18:57:05,625 - deadbolt_main - INFO - Initializing responder...
+2025-08-31 18:57:05,631 - deadbolt_main - INFO - Initializing detector...
+2025-08-31 18:57:06,456 - deadbolt_main - INFO - ML-Enhanced Detection: Active
+2025-08-31 18:57:06,456 - deadbolt_main - INFO - ML Model Features: 49
+2025-08-31 18:57:06,456 - deadbolt_main - INFO - Initializing filesystem watcher...
+2025-08-31 18:57:06,458 - deadbolt_main - INFO - Starting detector monitoring...
+2025-08-31 18:57:06,458 - deadbolt_main - INFO - Starting filesystem monitoring...
+2025-08-31 18:57:06,461 - deadbolt_main - INFO - Status monitoring started
+2025-08-31 18:57:06,461 - deadbolt_main - INFO - Deadbolt Defender started successfully
+2025-08-31 18:57:06,461 - deadbolt_main - INFO - Status update - Uptime: 1s, Threats: 0, Responses: 0
+2025-08-31 18:57:06,461 - deadbolt_main - INFO - Monitoring directories: ['C:\\Users\\MADHURIMA\\Documents\\testtxt', 'C:\\Users\\MADHURIMA\\Documents']
+2025-08-31 18:57:06,461 - deadbolt_main - INFO - Response stats: {'total_responses': 0, 'critical_responses': 0, 'successful_terminations': 0, 'failed_terminations': 0}
+2025-08-31 18:57:06,461 - deadbolt_main - INFO - Rules: {'mass_delete': {'count': 3, 'interval': 2}, 'mass_rename': {'count': 3, 'interval': 2}, 'mass_modification': {'count': 4, 'interval': 2}}
+2025-08-31 18:57:06,461 - deadbolt_main - INFO - Actions enabled: {'log_only': False, 'kill_process': True, 'shutdown': False, 'dry_run': False}
+2025-08-31 18:57:56,927 - deadbolt_main - ERROR - Filesystem watcher is not healthy
+2025-08-31 18:58:56,928 - deadbolt_main - ERROR - Filesystem watcher is not healthy

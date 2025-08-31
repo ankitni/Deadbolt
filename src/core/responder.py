@@ -454,6 +454,41 @@ class ThreatResponder:
         except Exception as e:
             self.logger.error(f"Error implementing protective measures: {e}")
     
+    def get_response_history(self, limit=10):
+        """Get recent response history."""
+        try:
+            return self.response_history[-limit:] if self.response_history else []
+        except Exception as e:
+            self.logger.error(f"Error getting response history: {e}")
+            return []
+    
+    def get_response_stats(self):
+        """Get response statistics."""
+        try:
+            if not self.response_history:
+                return {
+                    'total_responses': 0,
+                    'critical_responses': 0,
+                    'successful_terminations': 0,
+                    'failed_terminations': 0
+                }
+            
+            total = len(self.response_history)
+            critical = len([r for r in self.response_history if r.get('response_level') == 'CRITICAL'])
+            successful = len([r for r in self.response_history if 'python_kill' in str(r.get('actions_taken', []))])
+            failed = total - successful
+            
+            return {
+                'total_responses': total,
+                'critical_responses': critical,
+                'successful_terminations': successful,
+                'failed_terminations': failed,
+                'success_rate': (successful / total * 100) if total > 0 else 0.0
+            }
+        except Exception as e:
+            self.logger.error(f"Error getting response stats: {e}")
+            return {'error': str(e)}
+    
     def _is_process_running(self, pid):
         """Check if a process is still running."""
         try:
@@ -461,31 +496,6 @@ class ThreatResponder:
             return proc.is_running()
         except (psutil.NoSuchProcess, psutil.AccessDenied):
             return False
-    
-    def get_response_history(self, limit=10):
-        """Get recent response history."""
-        return self.response_history[-limit:] if self.response_history else []
-    
-    def get_response_stats(self):
-        """Get response statistics."""
-        if not self.response_history:
-            return {}
-        
-        total_responses = len(self.response_history)
-        recent_responses = [r for r in self.response_history 
-                          if (datetime.now() - r['timestamp']).total_seconds() < 3600]
-        
-        level_counts = {}
-        for response in self.response_history:
-            level = response.get('response_level', 'UNKNOWN')
-            level_counts[level] = level_counts.get(level, 0) + 1
-        
-        return {
-            'total_responses': total_responses,
-            'recent_responses_1h': len(recent_responses),
-            'response_levels': level_counts,
-            'last_response': self.response_history[-1]['timestamp'] if self.response_history else None
-        }
 
 def main():
     """Test the responder independently."""

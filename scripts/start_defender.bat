@@ -47,8 +47,12 @@ echo [Time] Start time: %DATE% %TIME%
 echo [ML] ML Enhancement: Integrated
 echo.
 
-REM Start ML-Enhanced Deadbolt in daemon mode
-echo [Launching] Launching with ML-Enhanced Detection...
+REM Start ML-Enhanced Deadbolt in daemon mode (continuous background protection)
+echo [Launching] Starting continuous background protection...
+echo [🛡️] Deadbolt will run continuously until manually stopped
+echo [🔄] Protection will remain active across multiple detections
+echo [⚡] Real-time monitoring: ACTIVE
+echo.
 python deadbolt.py --daemon
 
 REM Alternative startup method if main fails

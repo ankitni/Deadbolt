@@ -313,75 +313,86 @@ class DeadboltDefender:
         
         return status
     
-    def run_interactive(self):
-        """Run in interactive mode with user commands."""
-        self.logger.info("Starting in interactive mode")
+    def run_daemon(self):
+        """Run in daemon mode - continuous background protection."""
+        self.logger.info("Starting in daemon mode (continuous background protection)")
         
         if not self.start():
             print("Failed to start Deadbolt Defender")
-            return
+            return False
         
-        print("Deadbolt Ransomware Defender is now running...")
-        print("Commands: status, threats, responses, stop, help")
+        print("Deadbolt Ransomware Defender is now running in background...")
+        print("Protection is ACTIVE - monitoring for ransomware threats")
+        print("Press Ctrl+C to stop.")
+        print("")
+        print("🛡️ Status: PROTECTED")
+        print(f"📁 Monitoring: {len(getattr(config, 'TARGET_DIRS', []))} directories")
+        print(f"🤖 ML Enhanced: {'Yes' if hasattr(self.detector, 'ml_model') and self.detector.ml_model else 'No'}")
+        print(f"⚡ Real-time Protection: ACTIVE")
+        print("")
         
         try:
+            # Continuous monitoring loop - never exit unless interrupted
             while self.is_running:
-                try:
-                    command = input("> ").strip().lower()
-                    
-                    if command == "stop" or command == "quit" or command == "exit":
-                        break
-                    elif command == "status":
-                        status = self.get_status()
-                        print(f"Running: {status['running']}")
-                        print(f"Uptime: {status['stats']['uptime_seconds']:.1f} seconds")
-                        print(f"Threats detected: {status['stats']['threats_detected']}")
-                        print(f"Responses triggered: {status['stats']['responses_triggered']}")
-                        print(f"Components: {status['components']}")
-                    elif command == "threats":
-                        if self.detector:
-                            suspicious = self.detector.get_suspicious_processes()
-                            if suspicious:
-                                print(f"Suspicious processes ({len(suspicious)}):")
-                                for proc in suspicious[:5]:  # Show top 5
-                                    print(f"  {proc['name']} (PID: {proc['pid']}) - Score: {proc['score']}")
-                            else:
-                                print("No suspicious processes detected")
-                                
-                            threat_summary = self.detector.get_threat_summary()
-                            if threat_summary:
-                                print(f"Threat summary: {threat_summary}")
-                        else:
-                            print("Detector not available")
-                    elif command == "responses":
-                        if self.responder:
-                            history = self.responder.get_response_history(5)
-                            if history:
-                                print(f"Recent responses ({len(history)}):")
-                                for response in history:
-                                    print(f"  {response['timestamp']}: {response['response_level']} - {response['actions_taken']}")
-                            else:
-                                print("No responses triggered yet")
-                        else:
-                            print("Responder not available")
-                    elif command == "help":
-                        print("Available commands:")
-                        print("  status    - Show system status")
-                        print("  threats   - Show detected threats")
-                        print("  responses - Show response history")
-                        print("  stop      - Stop the defender")
-                        print("  help      - Show this help")
-                    elif command:
-                        print(f"Unknown command: {command}. Type 'help' for available commands.")
-                        
-                except EOFError:
-                    break
-                except KeyboardInterrupt:
+                # Keep the system alive and responsive
+                self.shutdown_event.wait(timeout=5.0)  # Check every 5 seconds
+                
+                if self.shutdown_event.is_set():
                     break
                     
+                # Verify components are still healthy
+                if not self._health_check():
+                    self.logger.error("Component health check failed - restarting components")
+                    self._restart_failed_components()
+                    
+        except KeyboardInterrupt:
+            print("\n🛑 Shutdown signal received...")
+        except Exception as e:
+            self.logger.error(f"Error in daemon loop: {e}")
         finally:
             self.stop()
-            print("Deadbolt Defender stopped.")
+            print("🛡️ Deadbolt Defender stopped.")
+            
+        return True
+        
+    def _health_check(self):
+        """Check if all components are healthy."""
+        try:
+            watcher_ok = self.watcher and self.watcher.is_alive()
+            detector_ok = self.detector is not None
+            responder_ok = self.responder is not None
+            
+            if not watcher_ok:
+                self.logger.warning("File system watcher is not responding")
+                return False
+                
+            return True
+        except Exception as e:
+            self.logger.error(f"Health check failed: {e}")
+            return False
+    
+    def _restart_failed_components(self):
+        """Restart failed components to maintain protection."""
+        try:
+            self.logger.info("Attempting to restart failed components")
+            
+            # Restart watcher if needed
+            if not (self.watcher and self.watcher.is_alive()):
+                self.logger.info("Restarting file system watcher")
+                if self.watcher:
+                    try:
+                        self.watcher.stop_monitoring()
+                    except:
+                        pass
+                
+                from .watcher import FileSystemWatcher
+                self.watcher = FileSystemWatcher(self.detector.analyze_threat)
+                self.watcher.start_monitoring()
+                
+            return True
+        except Exception as e:
+            self.logger.error(f"Failed to restart components: {e}")
+            return False
 
 def signal_handler(signum, frame):
     """Handle shutdown signals."""
@@ -425,8 +436,8 @@ def main():
         return
     
     if args.gui and GUI_AVAILABLE:
-        # GUI mode
-        print("Starting Deadbolt Defender with GUI...")
+        # GUI mode with integrated backend
+        print("Starting Deadbolt Defender with GUI and Backend...")
         try:
             app = QApplication(sys.argv)
             window = DeadboltMainWindow()
@@ -435,37 +446,72 @@ def main():
             window.defender = defender
             
             # Override GUI start/stop methods to use our defender
-            original_start = window.start_monitoring
-            original_stop = window.stop_monitoring
+            original_start = getattr(window, 'start_monitoring', None)
+            original_stop = getattr(window, 'stop_monitoring', None)
             
             def gui_start_monitoring():
                 if defender.start():
-                    window.status_label.setText("Status: Monitoring")
-                    window.status_label.setStyleSheet("font-weight: bold; color: green;")
+                    if hasattr(window, 'status_label'):
+                        window.status_label.setText("Status: 🛡️ MONITORING")
+                        window.status_label.setStyleSheet("font-weight: bold; color: green;")
+                    print("🛡️ Backend protection started with GUI")
                 else:
-                    window.status_label.setText("Status: Error")
-                    window.status_label.setStyleSheet("font-weight: bold; color: red;")
+                    if hasattr(window, 'status_label'):
+                        window.status_label.setText("Status: ❌ ERROR")
+                        window.status_label.setStyleSheet("font-weight: bold; color: red;")
+                    print("❌ Failed to start backend protection")
             
             def gui_stop_monitoring():
                 defender.stop()
-                window.status_label.setText("Status: Stopped")
-                window.status_label.setStyleSheet("font-weight: bold; color: red;")
+                if hasattr(window, 'status_label'):
+                    window.status_label.setText("Status: 🛑 STOPPED")
+                    window.status_label.setStyleSheet("font-weight: bold; color: red;")
+                print("🛑 Backend protection stopped")
             
+            # Connect GUI methods to defender
             window.start_monitoring = gui_start_monitoring
             window.stop_monitoring = gui_stop_monitoring
             
-            # Start the defender automatically with GUI
-            defender.start()
+            # Auto-start the backend when GUI launches
+            print("🚀 Auto-starting backend protection...")
+            if defender.start():
+                print("✅ Backend protection is ACTIVE")
+                if hasattr(window, 'status_label'):
+                    window.status_label.setText("Status: 🛡️ PROTECTED")
+                    window.status_label.setStyleSheet("font-weight: bold; color: green;")
+            else:
+                print("⚠️ Backend protection failed to start")
+            
+            # Start background status updater
+            def update_gui_status():
+                while defender.is_running:
+                    try:
+                        status = defender.get_status()
+                        # Update GUI with real-time status
+                        if hasattr(window, 'refresh_dashboard'):
+                            try:
+                                window.refresh_dashboard()
+                            except:
+                                pass
+                        time.sleep(5)  # Update every 5 seconds
+                    except:
+                        time.sleep(5)
+            
+            status_thread = threading.Thread(target=update_gui_status, daemon=True)
+            status_thread.start()
             
             window.show()
             app.exec_()
             
         except Exception as e:
             print(f"Error starting GUI: {e}")
-            print("Falling back to CLI mode...")
+            import traceback
+            traceback.print_exc()
+            print("Falling back to daemon mode...")
             args.daemon = True
         finally:
             if defender.is_running:
+                print("🛡️ Stopping backend protection...")
                 defender.stop()
     
     elif args.interactive:
@@ -474,17 +520,10 @@ def main():
         return
     
     else:
-        # Default: daemon mode
-        if defender.start():
-            print("Deadbolt Defender started. Press Ctrl+C to stop.")
-            try:
-                while defender.is_running:
-                    time.sleep(1)
-            except KeyboardInterrupt:
-                pass
-            finally:
-                defender.stop()
-        else:
+        # Default: daemon mode - continuous background protection
+        print("Starting Deadbolt Defender in daemon mode...")
+        success = defender.run_daemon()
+        if not success:
             print("Failed to start Deadbolt Defender")
             sys.exit(1)
 

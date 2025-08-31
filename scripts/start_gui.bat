@@ -1,127 +1,76 @@
 @echo off
-REM Deadbolt Ransomware Defender - GUI Launcher
+REM Enhanced Deadbolt GUI Launcher with Integrated Backend Protection
 echo ===============================================
 echo    🛡️  Deadbolt 5 Ransomware Defender
-echo    🖥️  Starting with Graphical Interface
+echo    🖥️  GUI + Backend Protection
 echo ===============================================
 echo.
 
-REM Check if running as administrator
+REM Check administrator privileges
 net session >nul 2>&1
 if %errorLevel% == 0 (
-    echo [✅] Running with Administrator privileges
-    echo [🛡️] Full protection capabilities enabled
-    echo.
+    echo [✅] Administrator privileges: ENABLED
+    echo [🛡️] Full protection capabilities: ACTIVE
 ) else (
-    echo [⚠️] Not running as Administrator
-    echo [💡] For full protection, right-click and "Run as Administrator"
-    echo.
+    echo [⚠️] Administrator privileges: LIMITED
+    echo [💡] For full protection: Right-click → "Run as Administrator"
 )
+echo.
 
-REM Change to project directory
+REM Navigate to project directory
 cd /d "%~dp0.."
-
-echo [🚀] Starting Deadbolt Defender GUI...
-echo [📂] Project directory: %CD%
+echo [📁] Project directory: %CD%
 echo [⏰] Start time: %DATE% %TIME%
 echo.
 
-REM Check if PyQt5 is available
-echo [🔍] Checking GUI dependencies...
-python -c "import PyQt5, pyqtgraph, matplotlib; print('All GUI dependencies available')" 2>nul
+REM Verify dependencies
+echo [🔍] Checking dependencies...
+python -c "import PyQt5, matplotlib, win10toast; print('[✅] All dependencies available')" 2>nul
 if %errorLevel% neq 0 (
-    echo [❌] Missing GUI dependencies! Installing...
-    echo [📦] Installing PyQt5, pyqtgraph, matplotlib...
-    pip install PyQt5 pyqtgraph matplotlib
+    echo [📦] Installing missing dependencies...
+    pip install PyQt5 matplotlib win10toast plyer
     if %errorLevel% neq 0 (
-        echo [❌] Failed to install dependencies. Please install manually:
-        echo     pip install PyQt5 pyqtgraph matplotlib
-        pause
-        exit /b 1
+        echo [❌] Dependency installation failed
+        echo Manual installation: pip install -r requirements.txt
+        pause & exit /b 1
     )
-    echo [✅] GUI dependencies installed successfully
-else (
-    echo [✅] All GUI dependencies found
+    echo [✅] Dependencies installed
+) else (
+    echo [✅] Dependencies verified
 )
 
-REM Start Deadbolt with GUI - try multiple methods
-echo [🖥️] Launching full-featured graphical interface...
+REM Check ML model status  
+echo [🤖] ML Enhancement status...
+python -c "import os; print('[✅] ML Model: Available') if os.path.exists('ml/best_iot_ransomware_model.joblib') else print('[⚠️] ML Model: Missing - Rule-based fallback')"
 echo.
 
-REM Method 1: Dedicated full GUI launcher (primary method)
-echo [🚀] Method 1: Using dedicated full GUI launcher...
-python run_full_gui.py
-if %errorLevel% == 0 (
-    echo [✅] Full GUI started successfully
-    goto :end
-)
+REM Launch integrated system
+echo [🚀] Starting integrated GUI + Backend protection...
+echo [🛡️] Backend protection will auto-start
+echo [📊] Real-time threat dashboard enabled
+echo [🔔] Desktop notifications active
+echo.
 
-echo [⚠️] Method 1 failed, trying method 2...
-
-REM Method 2: Direct import from main_gui.py
-echo [🚀] Method 2: Direct GUI import...
-python -c "import sys; sys.path.insert(0, 'src'); from ui.main_gui import run_gui; run_gui()"
-if %errorLevel% == 0 (
-    echo [✅] Direct GUI started successfully
-    goto :end
-)
-
-echo [⚠️] Method 2 failed, trying method 3...
-
-REM Method 3: Enhanced launcher with full GUI
-echo [🚀] Method 3: Using enhanced GUI launcher...
-python launch_gui.py
-if %errorLevel% == 0 (
-    echo [✅] Enhanced GUI started successfully
-    goto :end
-)
-
-echo [⚠️] Method 3 failed, trying method 4...
-
-REM Method 4: Standard deadbolt.py with --gui flag
-echo [🚀] Method 4: Using deadbolt.py --gui...
+REM Primary method: Enhanced main with GUI+Backend
 python deadbolt.py --gui
-if %errorLevel% == 0 (
-    echo [✅] Main GUI started successfully
-    goto :end
-)
+if %errorLevel% == 0 goto success
 
-echo [⚠️] Method 4 failed, trying method 5...
-
-REM Method 5: Direct core main with GUI flag
-echo [🚀] Method 5: Using core main module...
+REM Fallback method: Direct core module
+echo [⚠️] Trying fallback method...
 python -m src.core.main --gui
-if %errorLevel% == 0 (
-    echo [✅] Core GUI started successfully
-    goto :end
-)
+if %errorLevel% == 0 goto success
 
-echo [⚠️] Method 5 failed, trying method 6...
+REM Error handling
+echo [❌] GUI startup failed!
+echo [💡] Try: scripts\start_defender.bat (backend only)
+echo [🔧] Or: python deadbolt.py --debug
+goto end
 
-REM Method 6: Minimal GUI (fallback only)
-echo [🚀] Method 6: Fallback to minimal GUI...
-python minimal_gui.py
-if %errorLevel% == 0 (
-    echo [✅] Minimal GUI started successfully (fallback mode)
-    goto :end
-)
-
-REM All methods failed
-echo [❌] All GUI startup methods failed!
-echo [💡] Troubleshooting suggestions:
-echo     1. Check if you're running Windows (GUI requires Windows)
-echo     2. Verify Python installation: python --version
-echo     3. Install dependencies: pip install PyQt5 pyqtgraph matplotlib
-echo     4. Try direct launcher: python run_full_gui.py
-echo     5. Try direct import: python -c "from src.ui.main_gui import run_gui; run_gui()" 
-echo     6. Check logs folder for error details
-echo     7. Run minimal GUI as last resort: python minimal_gui.py
-echo.
-echo [📞] For support, check the logs or run in debug mode
+:success
+echo [✅] GUI session completed successfully
 
 :end
-echo.
-echo [📊] GUI session ended
 echo [⏰] End time: %DATE% %TIME%
+echo [📝] Logs: logs\main.log, logs\ml_detector.log
 echo.
 pause

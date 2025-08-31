@@ -335,3 +335,33 @@ BEHAVIOR TEST STARTED: 2025-08-30 03:49:51.331727
 2025-08-31 18:36:10,858 - INFO - No active threats identified during emergency scan
 2025-08-31 18:36:10,858 - INFO - Implementing protective measures
 2025-08-31 18:36:10,888 - INFO - All suspicious processes successfully terminated
+2025-08-31 18:51:30,399 - INFO - Threat Responder initialized
+2025-08-31 18:51:30,403 - WARNING - Running without administrator privileges - some process termination may fail
+2025-08-31 18:51:41,587 - INFO - Threat Responder initialized
+2025-08-31 18:51:41,587 - INFO - Threat Responder initialized
+2025-08-31 18:51:41,588 - WARNING - Running without administrator privileges - some process termination may fail
+2025-08-31 18:51:41,588 - WARNING - Running without administrator privileges - some process termination may fail
+2025-08-31 18:54:07,902 - INFO - Threat Responder initialized
+2025-08-31 18:56:16,616 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-08-31 18:56:16,616 - CRITICAL - Threat Type: mass_modification
+2025-08-31 18:56:16,616 - CRITICAL - Description: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 18:56:16,616 - CRITICAL - Target PIDs: [20828, 22864, 13208, 17544, 9568, 14740, 11168, 20200]
+2025-08-31 18:56:17,566 - CRITICAL - Attempting to terminate 8 suspicious processes
+2025-08-31 18:56:17,569 - INFO - INSTANT KILL of WindowsTerminal.exe (PID: 20828)
+2025-08-31 18:56:17,653 - INFO - Successfully FORCE-KILLED WindowsTerminal.exe (PID: 20828)
+2025-08-31 18:56:17,657 - INFO - INSTANT KILL of conhost.exe (PID: 22864)
+2025-08-31 18:56:17,668 - INFO - Successfully FORCE-KILLED conhost.exe (PID: 22864)
+2025-08-31 18:56:17,668 - INFO - INSTANT KILL of cmd.exe (PID: 17544)
+2025-08-31 18:56:17,682 - INFO - Successfully FORCE-KILLED cmd.exe (PID: 17544)
+2025-08-31 18:56:17,682 - INFO - INSTANT KILL of python.exe (PID: 9568)
+2025-08-31 18:57:05,625 - INFO - Threat Responder initialized
+2025-08-31 18:57:26,482 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-08-31 18:57:26,482 - CRITICAL - Threat Type: mass_modification
+2025-08-31 18:57:26,482 - CRITICAL - Description: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 18:57:26,482 - CRITICAL - Target PIDs: [15552, 15832, 8620, 1404, 19416, 13544, 2880, 21620, 19864]
+2025-08-31 18:57:27,416 - CRITICAL - Attempting to terminate 9 suspicious processes
+2025-08-31 18:57:27,416 - INFO - INSTANT KILL of conhost.exe (PID: 15552)
+2025-08-31 18:57:27,426 - INFO - Successfully FORCE-KILLED conhost.exe (PID: 15552)
+2025-08-31 18:57:27,426 - INFO - INSTANT KILL of conhost.exe (PID: 15832)
+2025-08-31 18:57:27,441 - INFO - Successfully FORCE-KILLED conhost.exe (PID: 15832)
+2025-08-31 18:57:27,441 - INFO - INSTANT KILL of python.exe (PID: 8620)

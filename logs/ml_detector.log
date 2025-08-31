@@ -2848,3 +2848,37 @@
 2025-08-31 18:36:10,992 - CRITICAL - ML HIGH THREAT DETECTED: {'timestamp': '2025-08-31T18:36:10.991811', 'prediction': 'MALICIOUS', 'confidence': np.float32(1.0), 'network_details': {'service': 'irc', 'protocol': 'tcp', 'dest_port': 6667, 'src_port': 60333, 'duration': 2.5, 'bytes_sent': 75, 'bytes_received': 243}, 'ml_stats': {'total_predictions': 11, 'malicious_rate': 1.0, 'avg_confidence': 1.0}}
 2025-08-31 18:36:10,992 - WARNING - IRC PATTERN DETECTED: Service=irc, Port=6667, Confidence=1.000
 2025-08-31 18:36:10,992 - CRITICAL - ML Model detected malicious behavior - Confidence: 1.000
+2025-08-31 18:51:31,568 - INFO - ML model loaded successfully - Features: 49
+2025-08-31 18:51:31,568 - INFO - ML-Enhanced Threat Detector initialized
+2025-08-31 18:51:31,570 - INFO - ML-Enhanced threat detection monitoring started
+2025-08-31 18:51:41,576 - INFO - ML-Enhanced threat detection monitoring stopped
+2025-08-31 18:51:41,586 - INFO - ML model loaded successfully - Features: 49
+2025-08-31 18:51:41,586 - INFO - ML model loaded successfully - Features: 49
+2025-08-31 18:51:41,587 - INFO - ML-Enhanced Threat Detector initialized
+2025-08-31 18:51:41,587 - INFO - ML-Enhanced Threat Detector initialized
+2025-08-31 18:54:08,815 - INFO - ML model loaded successfully - Features: 49
+2025-08-31 18:54:08,815 - INFO - ML-Enhanced Threat Detector initialized
+2025-08-31 18:54:08,815 - INFO - ML-Enhanced threat detection monitoring started
+2025-08-31 18:56:14,692 - WARNING - Analyzing threat: mass_modification - Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 18:56:14,716 - ERROR - Error updating ML stats: unsupported operand type(s) for +: 'int' and 'str'
+2025-08-31 18:56:14,724 - CRITICAL - ML HIGH THREAT DETECTED: {'timestamp': '2025-08-31T18:56:14.716408', 'prediction': 'MALICIOUS', 'confidence': np.float32(1.0), 'network_details': {'service': 'http-alt', 'protocol': 'tcp', 'dest_port': 8080, 'src_port': 56085, 'duration': 1.2, 'bytes_sent': 128, 'bytes_received': 64}, 'ml_stats': {'total_predictions': 12, 'malicious_rate': 1.0, 'avg_confidence': 1.0}}
+2025-08-31 18:56:14,724 - INFO - HTTP PATTERN ANALYZED: Port=8080, Confidence=1.000
+2025-08-31 18:56:14,724 - CRITICAL - ML Model detected malicious behavior - Confidence: 1.000
+2025-08-31 18:56:14,724 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-08-31 18:56:16,616 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-08-31 18:56:16,616 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [20828, 22864, 13208, 17544, 9568, 14740, 11168, 20200]
+2025-08-31 18:57:04,137 - INFO - ML model loaded successfully - Features: 49
+2025-08-31 18:57:04,137 - INFO - ML-Enhanced Threat Detector initialized
+2025-08-31 18:57:04,139 - INFO - ML-Enhanced threat detection monitoring started
+2025-08-31 18:57:04,139 - INFO - ML-Enhanced threat detection monitoring stopped
+2025-08-31 18:57:06,456 - INFO - ML model loaded successfully - Features: 49
+2025-08-31 18:57:06,456 - INFO - ML-Enhanced Threat Detector initialized
+2025-08-31 18:57:06,458 - INFO - ML-Enhanced threat detection monitoring started
+2025-08-31 18:57:24,521 - WARNING - Analyzing threat: mass_modification - Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-08-31 18:57:24,607 - ERROR - Error updating ML stats: unsupported operand type(s) for +: 'int' and 'str'
+2025-08-31 18:57:24,609 - CRITICAL - ML HIGH THREAT DETECTED: {'timestamp': '2025-08-31T18:57:24.609476', 'prediction': 'MALICIOUS', 'confidence': np.float32(1.0), 'network_details': {'service': 'http-alt', 'protocol': 'tcp', 'dest_port': 8080, 'src_port': 57967, 'duration': 1.2, 'bytes_sent': 128, 'bytes_received': 64}, 'ml_stats': {'total_predictions': 13, 'malicious_rate': 1.0, 'avg_confidence': 1.0}}
+2025-08-31 18:57:24,609 - INFO - HTTP PATTERN ANALYZED: Port=8080, Confidence=1.000
+2025-08-31 18:57:24,610 - CRITICAL - ML Model detected malicious behavior - Confidence: 1.000
+2025-08-31 18:57:24,610 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-08-31 18:57:26,482 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-08-31 18:57:26,482 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [15552, 15832, 8620, 1404, 19416, 13544, 2880, 21620, 19864]

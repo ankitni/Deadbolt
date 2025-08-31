@@ -500,3 +500,95 @@ Threat Type: mass_modification
 System secured (Severity: MEDIUM)
 [2025-08-31 18:36:10,888] INFO: Desktop notification sent via win10toast
 [2025-08-31 18:36:10,888] INFO: Desktop notification sent via win10toast
+[2025-08-31 18:51:30,351] INFO: Deadbolt logging system initialized
+[2025-08-31 18:51:30,357] INFO: Deadbolt logging system initialized
+[2025-08-31 18:51:30,357] INFO: Deadbolt logging system initialized
+[2025-08-31 18:51:30,388] INFO: Alert system initialized with methods: win10toast, plyer, winapi
+[2025-08-31 18:51:30,388] INFO: Alert system initialized with methods: win10toast, plyer, winapi
+[2025-08-31 18:51:30,399] INFO: Alert system initialized with methods: win10toast, plyer, winapi
+[2025-08-31 18:51:30,399] INFO: Alert system initialized with methods: win10toast, plyer, winapi
+[2025-08-31 18:54:07,298] INFO: Deadbolt logging system initialized
+[2025-08-31 18:54:07,298] INFO: Deadbolt logging system initialized
+[2025-08-31 18:54:07,298] INFO: Deadbolt logging system initialized
+[2025-08-31 18:54:07,313] INFO: Alert system initialized with methods: win10toast, plyer, winapi
+[2025-08-31 18:54:07,313] INFO: Alert system initialized with methods: win10toast, plyer, winapi
+[2025-08-31 18:54:07,328] INFO: Alert system initialized with methods: win10toast, plyer, winapi
+[2025-08-31 18:54:07,328] INFO: Alert system initialized with methods: win10toast, plyer, winapi
+[2025-08-31 18:54:12,217] INFO: Deadbolt AI running, monitoring 2 locations
+[2025-08-31 18:54:12,217] INFO: Deadbolt AI running, monitoring 2 locations
+[2025-08-31 18:54:25,197] INFO: Theme switched to dark mode
+[2025-08-31 18:54:25,197] INFO: Theme switched to dark mode
+[2025-08-31 18:55:00,448] INFO: Theme switched to light mode
+[2025-08-31 18:55:00,448] INFO: Theme switched to light mode
+[2025-08-31 18:55:02,776] INFO: Theme switched to dark mode
+[2025-08-31 18:55:02,776] INFO: Theme switched to dark mode
+[2025-08-31 18:56:14,724] CRITICAL: [ALERT-HIGH] RANSOMWARE DETECTED - Threat: mass_modification
+Files affected: 4
+Threat neutralized!
+[2025-08-31 18:56:14,724] CRITICAL: [ALERT-HIGH] RANSOMWARE DETECTED - Threat: mass_modification
+Files affected: 4
+Threat neutralized!
+[2025-08-31 18:56:14,726] CRITICAL: [ALERT] RANSOMWARE DETECTED - Threat: mass_modification
+Files affected: 4
+Threat neutralized! (Severity: HIGH)
+[2025-08-31 18:56:14,726] CRITICAL: [ALERT] RANSOMWARE DETECTED - Threat: mass_modification
+Files affected: 4
+Threat neutralized! (Severity: HIGH)
+[2025-08-31 18:56:14,728] INFO: Desktop notification sent via win10toast
+[2025-08-31 18:56:14,728] INFO: Desktop notification sent via win10toast
+[2025-08-31 18:56:16,616] CRITICAL: [ALERT-HIGH] CRITICAL THREAT RESPONSE ACTIVATED - Threat Type: mass_modification
+Targeting 8 processes
+Response in progress...
+[2025-08-31 18:56:16,616] CRITICAL: [ALERT-HIGH] CRITICAL THREAT RESPONSE ACTIVATED - Threat Type: mass_modification
+Targeting 8 processes
+Response in progress...
+[2025-08-31 18:56:16,616] CRITICAL: [ALERT] CRITICAL THREAT RESPONSE ACTIVATED - Threat Type: mass_modification
+Targeting 8 processes
+Response in progress... (Severity: HIGH)
+[2025-08-31 18:56:16,616] CRITICAL: [ALERT] CRITICAL THREAT RESPONSE ACTIVATED - Threat Type: mass_modification
+Targeting 8 processes
+Response in progress... (Severity: HIGH)
+[2025-08-31 18:56:16,620] INFO: Desktop notification sent via win10toast
+[2025-08-31 18:56:16,620] INFO: Desktop notification sent via win10toast
+[2025-08-31 18:57:03,279] INFO: Deadbolt logging system initialized
+[2025-08-31 18:57:03,279] INFO: Deadbolt logging system initialized
+[2025-08-31 18:57:03,279] INFO: Deadbolt logging system initialized
+[2025-08-31 18:57:03,297] INFO: Alert system initialized with methods: win10toast, plyer, winapi
+[2025-08-31 18:57:03,297] INFO: Alert system initialized with methods: win10toast, plyer, winapi
+[2025-08-31 18:57:03,300] INFO: Alert system initialized with methods: win10toast, plyer, winapi
+[2025-08-31 18:57:03,300] INFO: Alert system initialized with methods: win10toast, plyer, winapi
+[2025-08-31 18:57:05,601] INFO: Deadbolt logging system initialized
+[2025-08-31 18:57:05,601] INFO: Deadbolt logging system initialized
+[2025-08-31 18:57:05,601] INFO: Deadbolt logging system initialized
+[2025-08-31 18:57:05,621] INFO: Alert system initialized with methods: win10toast, plyer, winapi
+[2025-08-31 18:57:05,621] INFO: Alert system initialized with methods: win10toast, plyer, winapi
+[2025-08-31 18:57:05,625] INFO: Alert system initialized with methods: win10toast, plyer, winapi
+[2025-08-31 18:57:05,625] INFO: Alert system initialized with methods: win10toast, plyer, winapi
+[2025-08-31 18:57:24,610] CRITICAL: [ALERT-HIGH] RANSOMWARE DETECTED - Threat: mass_modification
+Files affected: 4
+Threat neutralized!
+[2025-08-31 18:57:24,610] CRITICAL: [ALERT-HIGH] RANSOMWARE DETECTED - Threat: mass_modification
+Files affected: 4
+Threat neutralized!
+[2025-08-31 18:57:24,611] CRITICAL: [ALERT] RANSOMWARE DETECTED - Threat: mass_modification
+Files affected: 4
+Threat neutralized! (Severity: HIGH)
+[2025-08-31 18:57:24,611] CRITICAL: [ALERT] RANSOMWARE DETECTED - Threat: mass_modification
+Files affected: 4
+Threat neutralized! (Severity: HIGH)
+[2025-08-31 18:57:24,611] INFO: Desktop notification sent via win10toast
+[2025-08-31 18:57:24,611] INFO: Desktop notification sent via win10toast
+[2025-08-31 18:57:26,483] CRITICAL: [ALERT-HIGH] CRITICAL THREAT RESPONSE ACTIVATED - Threat Type: mass_modification
+Targeting 9 processes
+Response in progress...
+[2025-08-31 18:57:26,483] CRITICAL: [ALERT-HIGH] CRITICAL THREAT RESPONSE ACTIVATED - Threat Type: mass_modification
+Targeting 9 processes
+Response in progress...
+[2025-08-31 18:57:26,483] CRITICAL: [ALERT] CRITICAL THREAT RESPONSE ACTIVATED - Threat Type: mass_modification
+Targeting 9 processes
+Response in progress... (Severity: HIGH)
+[2025-08-31 18:57:26,483] CRITICAL: [ALERT] CRITICAL THREAT RESPONSE ACTIVATED - Threat Type: mass_modification
+Targeting 9 processes
+Response in progress... (Severity: HIGH)
+[2025-08-31 18:57:26,483] INFO: Desktop notification sent via win10toast
+[2025-08-31 18:57:26,483] INFO: Desktop notification sent via win10toast
