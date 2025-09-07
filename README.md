@@ -1,4 +1,4 @@
-# Deadbolt 5 - ML-Enhanced Ransomware Protection System
+# Deadbolt Ai - ML-Enhanced Ransomware Protection System
 
 <p align="center">
   <img src="assets/deadbolt%20cli.png" alt="Deadbolt CLI" width="45%" />
@@ -7,7 +7,7 @@
 
 ## 🤖 **AI-Powered Security with Clean Architecture**
 
-DeadBolt 5 is an advanced ML-enhanced ransomware detection and prevention system for Windows. It combines traditional behavior-based detection with machine learning to dramatically reduce false positives while maintaining comprehensive protection.
+Deadbolt Ai is an advanced ML-enhanced ransomware detection and prevention system for Windows. It combines traditional behavior-based detection with machine learning to dramatically reduce false positives while maintaining comprehensive protection.
 
 ## 🌐 **Web Interface**
 
@@ -35,7 +35,7 @@ Visit our interactive web dashboard to monitor your system's security status in 
 ## 📁 **Project Organization**
 
 ```
-deadbolt-5/
+deadbolt-Ai/
 ├── src/                     # Source code
 │   ├── core/               # Core security components
 │   │   ├── main.py         # System orchestrator
