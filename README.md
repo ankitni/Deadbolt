@@ -9,6 +9,20 @@
 
 DeadBolt 5 is an advanced ML-enhanced ransomware detection and prevention system for Windows. It combines traditional behavior-based detection with machine learning to dramatically reduce false positives while maintaining comprehensive protection.
 
+## 🌐 **Web Interface**
+
+Visit our interactive web dashboard to monitor your system's security status in real-time:
+
+<p align="center">
+  <a href="https://arnob743.github.io/webpage-for-deadbolt/">
+    <img src="assets/webpage.png" alt="Deadbolt Web Interface" width="70%" />
+  </a>
+  <br>
+  <em>Click the image to access the live dashboard</em>
+</p>
+
+[https://arnob743.github.io/webpage-for-deadbolt/](https://arnob743.github.io/webpage-for-deadbolt/)
+
 ## 🚀 **Tech Stack**
 
 - **Core**: Python 3.7+, C++
