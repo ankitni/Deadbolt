@@ -16,7 +16,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix, roc_auc_score, roc_curve
 from sklearn.utils.class_weight import compute_class_weight
 from imblearn.over_sampling import SMOTE
-import xgboost as xgb
+
 import joblib
 import warnings
 warnings.filterwarnings('ignore')

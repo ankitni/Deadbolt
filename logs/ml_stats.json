@@ -1,11 +1,11 @@
 {
-  "total_predictions": 13,
-  "malicious_detected": 13,
-  "benign_classified": 0,
-  "high_confidence_alerts": 13,
+  "total_predictions": 18,
+  "malicious_detected": 17,
+  "benign_classified": 1,
+  "high_confidence_alerts": 15,
   "network_patterns_analyzed": 0,
   "model_accuracy_score": 0.0,
-  "last_prediction_time": "2025-08-31T18:57:24.607467",
+  "last_prediction_time": "2025-09-07T03:39:11.987851",
   "prediction_history": [
     "0.99983895",
     "0.9999654",
@@ -19,18 +19,23 @@
     "0.9999759",
     "0.9999759",
     "0.9999759",
-    "0.9999759"
+    "0.9999759",
+    0.7653650567157796,
+    0.7653650567157796,
+    0.20707654061305075,
+    0.9645137300454644,
+    0.9494336396019512
   ],
   "confidence_distribution": {
-    "high": 13,
-    "medium": 0,
-    "low": 0
+    "high": 15,
+    "medium": 2,
+    "low": 1
   },
   "threat_types_detected": {
-    "irc": 5,
+    "irc": 6,
     "http": 1,
     "unknown": 1,
-    "http-alt": 5
+    "http-alt": 6
   },
   "false_positive_rate": 0.0,
   "average_confidence": 0.999927818775177

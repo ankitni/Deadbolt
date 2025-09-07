@@ -157,7 +157,12 @@ class DashboardData:
                 if match3:
                     timestamp_str, level, message = match3.groups()
                 else:
-                    return  # Skip lines that don't match any format
+                    # Format 4: timestamp - LEVEL - message (without milliseconds)
+                    match4 = re.match(r'(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) - (\w+) - (.*)', line)
+                    if match4:
+                        timestamp_str, level, message = match4.groups()
+                    else:
+                        return  # Skip lines that don't match any format
         
         # Update event type stats
         if level in self.stats['events_by_type']:
@@ -177,6 +182,20 @@ class DashboardData:
                 if alert_match:
                     severity, alert_msg = alert_match.groups()
                     self._process_alert(severity, alert_msg, timestamp_str)
+            
+            # Check for MULTI-CHANNEL ALERT entries
+            if 'MULTI-CHANNEL ALERT SENT' in message:
+                # Extract severity and score from the message
+                severity_match = re.search(r'Level: (\w+)', message)
+                severity = severity_match.group(1) if severity_match else "HIGH"
+                self._process_alert(severity, message, timestamp_str)
+            
+            # Check for threat analysis entries as well
+            if 'Analyzing threat:' in message:
+                # Treat threat analysis as a MEDIUM severity alert for dashboard purposes
+                threat_match = re.search(r'Analyzing threat: (\w+)', message)
+                threat_type = threat_match.group(1) if threat_match else "UNKNOWN"
+                self._process_alert("MEDIUM", f"Threat detected: {threat_type}", timestamp_str)
             
             # Detector log analysis
             if log_name == 'detector':
@@ -383,7 +402,24 @@ class DashboardData:
         
         # Update alerts by time
         try:
-            dt = datetime.strptime(timestamp, "%Y-%m-%d %H:%M:%S")
+            # Try different timestamp formats
+            dt = None
+            formats_to_try = [
+                "%Y-%m-%d %H:%M:%S",  # Format like "2025-08-30 03:50:29"
+                "%Y-%m-%d %H:%M:%S,%f"  # Format like "2025-08-30 03:50:29,566"
+            ]
+            
+            for fmt in formats_to_try:
+                try:
+                    dt = datetime.strptime(timestamp, fmt)
+                    break
+                except ValueError:
+                    continue
+            
+            if dt is None:
+                # If we can't parse the timestamp, skip this alert for hourly stats
+                return
+            
             hour = dt.hour
             day = dt.weekday()  # 0 = Monday, 6 = Sunday
             

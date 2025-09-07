@@ -352,3 +352,665 @@ BEHAVIOR TEST STARTED: 2025-08-30 03:49:51.331727
 2025-08-31 18:57:24,521 - INFO - Recent process info for modified: 10 unique processes identified
 2025-08-31 18:57:24,521 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
 2025-08-31 18:57:24,521 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-09-05 18:49:04,401 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-05 18:49:04,401 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-05 18:49:04,401 - WARNING - Directory does not exist: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-05 18:49:04,401 - WARNING - Directory does not exist: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-05 18:49:04,401 - WARNING - Directory does not exist: C:\Users\MADHURIMA\Documents
+2025-09-05 18:49:04,401 - WARNING - Directory does not exist: C:\Users\MADHURIMA\Documents
+2025-09-05 18:49:04,401 - INFO - File system watcher started successfully
+2025-09-05 18:49:04,401 - INFO - File system watcher started successfully
+2025-09-05 18:51:33,995 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-05 18:51:33,995 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-05 18:51:33,995 - INFO - Monitoring directory: C:/testtxt
+2025-09-05 18:51:33,995 - INFO - Monitoring directory: C:/testtxt
+2025-09-05 18:51:33,997 - INFO - File system watcher started successfully
+2025-09-05 18:51:33,997 - INFO - File system watcher started successfully
+2025-09-05 18:52:02,609 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-05 18:52:02,609 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-05 18:52:02,609 - INFO - Monitoring directory: C:/testtxt
+2025-09-05 18:52:02,609 - INFO - Monitoring directory: C:/testtxt
+2025-09-05 18:52:02,609 - INFO - File system watcher started successfully
+2025-09-05 18:52:02,609 - INFO - File system watcher started successfully
+2025-09-05 18:53:12,620 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-05 18:53:12,620 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-05 18:53:12,620 - INFO - Monitoring directory: C:/testtxt
+2025-09-05 18:53:12,620 - INFO - Monitoring directory: C:/testtxt
+2025-09-05 18:53:12,622 - INFO - File system watcher started successfully
+2025-09-05 18:53:12,622 - INFO - File system watcher started successfully
+2025-09-05 19:15:40,161 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-05 19:15:40,161 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-05 19:15:40,161 - INFO - Monitoring directory: C:/testtxt
+2025-09-05 19:15:40,161 - INFO - Monitoring directory: C:/testtxt
+2025-09-05 19:15:40,161 - INFO - File system watcher started successfully
+2025-09-05 19:15:40,161 - INFO - File system watcher started successfully
+2025-09-05 19:58:23,963 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-05 19:58:23,963 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-05 19:58:23,963 - INFO - Monitoring directory: C:/testtxt
+2025-09-05 19:58:23,963 - INFO - Monitoring directory: C:/testtxt
+2025-09-05 19:58:23,964 - INFO - File system watcher started successfully
+2025-09-05 19:58:23,964 - INFO - File system watcher started successfully
+2025-09-06 14:28:52,557 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 14:28:52,557 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 14:28:52,558 - WARNING - Directory does not exist: C:/testtxt
+2025-09-06 14:28:52,558 - WARNING - Directory does not exist: C:/testtxt
+2025-09-06 14:28:52,559 - INFO - File system watcher started successfully
+2025-09-06 14:28:52,559 - INFO - File system watcher started successfully
+2025-09-06 14:31:52,563 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 14:31:52,563 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 14:31:52,563 - WARNING - Directory does not exist: C:/testtxt
+2025-09-06 14:31:52,563 - WARNING - Directory does not exist: C:/testtxt
+2025-09-06 14:31:52,563 - INFO - File system watcher started successfully
+2025-09-06 14:31:52,563 - INFO - File system watcher started successfully
+2025-09-06 14:32:27,699 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 14:32:27,699 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 14:32:27,699 - WARNING - Directory does not exist: C:/testtxt
+2025-09-06 14:32:27,699 - WARNING - Directory does not exist: C:/testtxt
+2025-09-06 14:32:27,699 - INFO - File system watcher started successfully
+2025-09-06 14:32:27,699 - INFO - File system watcher started successfully
+2025-09-06 14:32:59,281 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 14:32:59,281 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 14:32:59,281 - WARNING - Directory does not exist: C:/testtxt
+2025-09-06 14:32:59,281 - WARNING - Directory does not exist: C:/testtxt
+2025-09-06 14:32:59,281 - INFO - File system watcher started successfully
+2025-09-06 14:32:59,281 - INFO - File system watcher started successfully
+2025-09-06 14:43:47,929 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 14:43:47,929 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 14:43:47,929 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 14:43:47,929 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 14:43:47,929 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-09-06 14:43:47,929 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents
+2025-09-06 14:43:47,931 - INFO - File system watcher started successfully
+2025-09-06 14:43:47,931 - INFO - File system watcher started successfully
+2025-09-06 14:44:49,656 - INFO - Recent process info for modified: 10 unique processes identified
+2025-09-06 14:44:49,656 - INFO - Recent process info for modified: 10 unique processes identified
+2025-09-06 14:44:49,656 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-09-06 14:44:49,656 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-09-06 14:50:29,048 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 14:50:29,048 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 14:50:29,048 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 14:50:29,048 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 14:50:29,048 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 14:50:29,048 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 14:50:29,048 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 14:50:29,048 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 14:50:29,048 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 14:50:29,048 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 14:50:29,051 - INFO - File system watcher started successfully
+2025-09-06 14:50:29,051 - INFO - File system watcher started successfully
+2025-09-06 14:50:35,355 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 14:50:35,355 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 14:50:35,355 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 14:50:35,355 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 15:55:24,111 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 15:55:24,111 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 15:55:24,111 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 15:55:24,111 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 15:55:24,111 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 15:55:24,111 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 15:55:24,111 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 15:55:24,111 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 15:55:24,111 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 15:55:24,111 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 15:55:24,111 - INFO - File system watcher started successfully
+2025-09-06 15:55:24,111 - INFO - File system watcher started successfully
+2025-09-06 19:02:34,694 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 19:02:34,694 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 19:02:34,694 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 19:02:34,694 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 19:02:34,694 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 19:02:34,694 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 19:02:34,694 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 19:02:34,694 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 19:02:34,694 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 19:02:34,694 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 19:02:34,697 - INFO - File system watcher started successfully
+2025-09-06 19:02:34,697 - INFO - File system watcher started successfully
+2025-09-06 19:02:44,615 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:02:44,615 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:02:44,615 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:02:44,615 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:02:48,570 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:02:48,570 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:02:48,570 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:02:48,570 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:02:52,422 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:02:52,422 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:02:52,422 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:02:52,422 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:02:56,241 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:02:56,241 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:02:56,248 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:02:56,248 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:00,055 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:00,055 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:00,055 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:00,055 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:03,811 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:03,811 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:03,811 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:03,811 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:07,603 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:07,603 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:07,603 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:07,603 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:11,393 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:11,393 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:11,393 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:11,393 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:15,202 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:15,202 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:15,202 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:15,202 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:19,000 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:19,000 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:19,000 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:19,000 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:22,779 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:22,779 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:22,779 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:22,779 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:26,582 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:26,582 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:26,582 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:26,582 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:30,369 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:30,369 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:30,369 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:30,369 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:34,132 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:34,132 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:34,132 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:34,132 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:37,910 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:37,910 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:37,910 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:37,910 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:41,741 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:41,741 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:41,741 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:41,741 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:45,561 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:45,561 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:45,561 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:45,561 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:49,333 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:49,333 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:49,333 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:49,333 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:53,133 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:53,133 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:53,133 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:53,133 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:56,905 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:56,905 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:03:56,905 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:56,905 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:00,704 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:00,704 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:00,704 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:00,704 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:04,494 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:04,494 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:04,494 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:04,494 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:08,270 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:08,270 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:08,270 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:08,270 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:12,109 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:12,109 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:12,109 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:12,109 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:15,903 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:15,903 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:15,903 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:15,903 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:19,664 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:19,664 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:19,664 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:19,664 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:23,464 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:23,464 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:23,464 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:23,464 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:27,244 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:27,244 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:27,244 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:27,244 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:31,037 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:31,037 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:31,037 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:31,037 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:34,830 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:34,830 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:34,830 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:34,830 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:38,641 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:38,641 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:38,641 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:38,641 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:42,467 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:42,467 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:42,467 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:42,467 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:46,292 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:46,292 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:46,292 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:46,292 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:50,093 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:50,093 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:50,093 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:50,093 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:53,911 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:53,911 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:53,911 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:53,911 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:57,708 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:57,708 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:04:57,708 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:57,708 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:01,471 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:01,471 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:01,471 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:01,471 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:05,245 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:05,245 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:05,246 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:05,246 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:09,002 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:09,002 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:09,002 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:09,002 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:12,841 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:12,841 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:12,841 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:12,841 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:16,622 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:16,622 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:16,622 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:16,622 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:20,426 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:20,426 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:20,426 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:20,426 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:24,221 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:24,221 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:24,230 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:24,230 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:28,003 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:28,003 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:28,003 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:28,003 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:31,801 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:31,801 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:31,801 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:31,801 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:35,613 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:35,613 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:35,613 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:35,613 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:39,401 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:39,401 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:39,401 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:39,401 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:43,240 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:43,240 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:43,240 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:43,240 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:47,011 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:47,011 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:47,011 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:47,011 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:50,807 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:50,807 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:50,807 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:50,807 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:54,604 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:54,604 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:54,606 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:54,606 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:58,400 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:58,400 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:05:58,400 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:58,400 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:06:02,211 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:06:02,211 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:06:02,211 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:06:02,211 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:06:05,972 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:06:05,972 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:06:05,972 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:06:05,972 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:06:09,751 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:06:09,751 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:06:09,751 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:06:09,751 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:06:13,575 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:06:13,575 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:06:13,577 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:06:13,577 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:09:50,896 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 19:09:50,896 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 19:09:50,896 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 19:09:50,896 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 19:09:50,896 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 19:09:50,896 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 19:09:50,896 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 19:09:50,896 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 19:09:50,896 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 19:09:50,896 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 19:09:50,899 - INFO - File system watcher started successfully
+2025-09-06 19:09:50,899 - INFO - File system watcher started successfully
+2025-09-06 19:10:03,936 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:10:03,936 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:10:03,936 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:03,936 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:07,730 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:10:07,730 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:10:07,730 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:07,730 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:11,522 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:10:11,522 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:10:11,522 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:11,522 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:15,334 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:10:15,334 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:10:15,334 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:15,334 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:19,138 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:10:19,138 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:10:19,138 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:19,138 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:22,993 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:10:22,993 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:10:22,993 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:22,993 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:26,805 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:10:26,805 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:10:26,805 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:26,805 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:30,567 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:10:30,567 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:10:30,567 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:30,567 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:53,861 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 19:10:53,861 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 19:10:53,862 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 19:10:53,862 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 19:10:53,862 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 19:10:53,862 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 19:10:53,862 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 19:10:53,862 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 19:10:53,862 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 19:10:53,862 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 19:10:53,864 - INFO - File system watcher started successfully
+2025-09-06 19:10:53,864 - INFO - File system watcher started successfully
+2025-09-06 19:15:55,358 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 19:15:55,358 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 19:15:55,358 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 19:15:55,358 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 19:15:55,358 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 19:15:55,358 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 19:15:55,358 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 19:15:55,358 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 19:15:55,358 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 19:15:55,358 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 19:15:55,358 - INFO - File system watcher started successfully
+2025-09-06 19:15:55,358 - INFO - File system watcher started successfully
+2025-09-06 19:16:05,380 - INFO - File system watcher stopped successfully
+2025-09-06 19:16:05,380 - INFO - File system watcher stopped successfully
+2025-09-06 19:16:46,572 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 19:16:46,572 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 19:16:46,573 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 19:16:46,573 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 19:16:46,573 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 19:16:46,573 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 19:16:46,573 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 19:16:46,573 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 19:16:46,573 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 19:16:46,573 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 19:16:46,573 - INFO - File system watcher started successfully
+2025-09-06 19:16:46,573 - INFO - File system watcher started successfully
+2025-09-06 19:16:54,647 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:16:54,647 - INFO - Recent process info for deleted: 10 unique processes identified
+2025-09-06 19:16:54,647 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:16:54,647 - WARNING - RANSOMWARE ALERT: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 21:50:25,486 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 21:50:25,486 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 21:50:25,486 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 21:50:25,486 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 21:50:25,486 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 21:50:25,486 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 21:50:25,486 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 21:50:25,486 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 21:50:25,486 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 21:50:25,486 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 21:50:25,490 - INFO - File system watcher started successfully
+2025-09-06 21:50:25,490 - INFO - File system watcher started successfully
+2025-09-06 21:55:30,657 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 21:55:30,657 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 21:55:30,657 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 21:55:30,657 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 21:55:30,657 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 21:55:30,657 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 21:55:30,657 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 21:55:30,657 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 21:55:30,657 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 21:55:30,657 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 21:55:30,657 - INFO - File system watcher started successfully
+2025-09-06 21:55:30,657 - INFO - File system watcher started successfully
+2025-09-06 21:56:08,151 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 21:56:08,151 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 21:56:08,151 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 21:56:08,151 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 21:56:08,151 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 21:56:08,151 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 21:56:08,151 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 21:56:08,151 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 21:56:08,151 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 21:56:08,151 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 21:56:08,151 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-06 21:56:08,151 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-06 21:56:08,151 - INFO - File system watcher started successfully
+2025-09-06 21:56:08,151 - INFO - File system watcher started successfully
+2025-09-06 22:06:09,255 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 22:06:09,255 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 22:06:09,255 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 22:06:09,255 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 22:06:09,255 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 22:06:09,255 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 22:06:09,255 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 22:06:09,255 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 22:06:09,255 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 22:06:09,255 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 22:06:09,255 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-06 22:06:09,255 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-06 22:06:09,259 - INFO - File system watcher started successfully
+2025-09-06 22:06:09,259 - INFO - File system watcher started successfully
+2025-09-06 22:08:12,521 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 22:08:12,521 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 22:08:12,521 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 22:08:12,521 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 22:08:12,521 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 22:08:12,521 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 22:08:12,521 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 22:08:12,521 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 22:08:12,521 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 22:08:12,521 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 22:08:12,521 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-06 22:08:12,521 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-06 22:08:12,525 - INFO - File system watcher started successfully
+2025-09-06 22:08:12,525 - INFO - File system watcher started successfully
+2025-09-06 22:19:10,112 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 22:19:10,112 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 22:19:10,112 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 22:19:10,112 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 22:19:10,112 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 22:19:10,112 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 22:19:10,112 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 22:19:10,112 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 22:19:10,112 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 22:19:10,112 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 22:19:10,112 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-06 22:19:10,112 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-06 22:19:10,113 - INFO - File system watcher started successfully
+2025-09-06 22:19:10,113 - INFO - File system watcher started successfully
+2025-09-06 22:20:21,484 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 22:20:21,484 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 22:20:21,484 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 22:20:21,484 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 22:20:21,484 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 22:20:21,484 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 22:20:21,484 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 22:20:21,484 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 22:20:21,484 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 22:20:21,484 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 22:20:21,484 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-06 22:20:21,484 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-06 22:20:21,486 - INFO - File system watcher started successfully
+2025-09-06 22:20:21,486 - INFO - File system watcher started successfully
+2025-09-06 22:22:32,008 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 22:22:32,008 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-06 22:22:32,008 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 22:22:32,008 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-06 22:22:32,008 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 22:22:32,008 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-06 22:22:32,008 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 22:22:32,008 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-06 22:22:32,008 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 22:22:32,008 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-06 22:22:32,023 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-06 22:22:32,023 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-06 22:22:32,025 - INFO - File system watcher started successfully
+2025-09-06 22:22:32,025 - INFO - File system watcher started successfully
+2025-09-07 03:14:00,525 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-07 03:14:00,525 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-07 03:14:00,525 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-07 03:14:00,525 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-07 03:14:00,525 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-07 03:14:00,525 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-07 03:14:00,525 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-07 03:14:00,525 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-07 03:14:00,525 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-07 03:14:00,525 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-07 03:14:00,525 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-07 03:14:00,525 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-07 03:14:00,529 - INFO - File system watcher started successfully
+2025-09-07 03:14:00,529 - INFO - File system watcher started successfully
+2025-09-07 03:14:38,869 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-07 03:14:38,869 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-07 03:14:38,869 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-07 03:14:38,869 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-07 03:14:38,869 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-07 03:14:38,869 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-07 03:14:38,869 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-07 03:14:38,869 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-07 03:14:38,869 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-07 03:14:38,869 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-07 03:14:38,869 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-07 03:14:38,869 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-07 03:14:38,872 - INFO - File system watcher started successfully
+2025-09-07 03:14:38,872 - INFO - File system watcher started successfully
+2025-09-07 03:33:38,663 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-07 03:33:38,663 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-07 03:33:38,663 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-07 03:33:38,663 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-07 03:33:38,663 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-07 03:33:38,663 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-07 03:33:38,663 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-07 03:33:38,663 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-07 03:33:38,663 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-07 03:33:38,663 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-07 03:33:38,663 - WARNING - Directory does not exist: C:\Users\MADHURIMA\Documents\test_persistence
+2025-09-07 03:33:38,663 - WARNING - Directory does not exist: C:\Users\MADHURIMA\Documents\test_persistence
+2025-09-07 03:33:38,663 - INFO - File system watcher started successfully
+2025-09-07 03:33:38,663 - INFO - File system watcher started successfully
+2025-09-07 03:34:30,886 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-07 03:34:30,886 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-07 03:34:30,886 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-07 03:34:30,886 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-07 03:34:30,886 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-07 03:34:30,886 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-07 03:34:30,886 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-07 03:34:30,886 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-07 03:34:30,888 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-07 03:34:30,888 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-07 03:34:30,888 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-07 03:34:30,888 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-07 03:34:30,888 - INFO - File system watcher started successfully
+2025-09-07 03:34:30,888 - INFO - File system watcher started successfully
+2025-09-07 03:39:02,947 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-07 03:39:02,947 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-07 03:39:02,947 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-07 03:39:02,947 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-07 03:39:02,949 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-07 03:39:02,949 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-07 03:39:02,949 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-07 03:39:02,949 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-07 03:39:02,949 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-07 03:39:02,949 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-07 03:39:02,949 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-07 03:39:02,949 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-07 03:39:02,951 - INFO - File system watcher started successfully
+2025-09-07 03:39:02,951 - INFO - File system watcher started successfully
+2025-09-07 03:39:11,923 - INFO - Recent process info for modified: 10 unique processes identified
+2025-09-07 03:39:11,923 - INFO - Recent process info for modified: 10 unique processes identified
+2025-09-07 03:39:11,925 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-09-07 03:39:11,925 - CRITICAL - RANSOMWARE ALERT: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-09-07 05:11:39,664 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-07 05:11:39,664 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-07 05:11:39,664 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-07 05:11:39,664 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-07 05:11:39,664 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-07 05:11:39,664 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-07 05:11:39,664 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-07 05:11:39,664 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-07 05:11:39,664 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-07 05:11:39,664 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-07 05:11:39,669 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-07 05:11:39,669 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-07 05:11:39,672 - INFO - File system watcher started successfully
+2025-09-07 05:11:39,672 - INFO - File system watcher started successfully
+2025-09-07 05:16:45,503 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-07 05:16:45,503 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-07 05:16:45,503 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-07 05:16:45,503 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-07 05:16:45,503 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-07 05:16:45,503 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-07 05:16:45,503 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-07 05:16:45,503 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-07 05:16:45,503 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-07 05:16:45,503 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-07 05:16:45,503 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-07 05:16:45,503 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-07 05:16:45,512 - INFO - File system watcher started successfully
+2025-09-07 05:16:45,512 - INFO - File system watcher started successfully
+2025-09-07 05:22:45,992 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-07 05:22:45,992 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-07 05:22:45,993 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-07 05:22:45,993 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-07 05:22:45,993 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-07 05:22:45,993 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-07 05:22:45,994 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-07 05:22:45,994 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-07 05:22:45,994 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-07 05:22:45,994 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-07 05:22:45,994 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-07 05:22:45,994 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-07 05:22:45,994 - INFO - File system watcher started successfully
+2025-09-07 05:22:45,994 - INFO - File system watcher started successfully
+2025-09-07 05:32:56,762 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-07 05:32:56,762 - INFO - Ransomware Watcher initialized - monitoring directories
+2025-09-07 05:32:56,762 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-07 05:32:56,762 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt
+2025-09-07 05:32:56,762 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-07 05:32:56,762 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testtxt_new
+2025-09-07 05:32:56,762 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-07 05:32:56,762 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testfol
+2025-09-07 05:32:56,762 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-07 05:32:56,762 - INFO - Monitoring directory: C:\Users\MADHURIMA\Documents\testla
+2025-09-07 05:32:56,762 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-07 05:32:56,762 - INFO - Monitoring directory: C:/Users/MADHURIMA/Pictures
+2025-09-07 05:32:56,762 - INFO - File system watcher started successfully
+2025-09-07 05:32:56,762 - INFO - File system watcher started successfully

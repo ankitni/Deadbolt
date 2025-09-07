@@ -2882,3 +2882,1016 @@
 2025-08-31 18:57:24,610 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
 2025-08-31 18:57:26,482 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
 2025-08-31 18:57:26,482 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [15552, 15832, 8620, 1404, 19416, 13544, 2880, 21620, 19864]
+2025-09-05 18:49:04,399 - INFO - ML model loaded successfully - Features: 49
+2025-09-05 18:49:04,399 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-05 18:49:04,399 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-05 18:51:33,992 - INFO - ML model loaded successfully - Features: 49
+2025-09-05 18:51:33,994 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-05 18:51:33,995 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-05 18:52:02,607 - INFO - ML model loaded successfully - Features: 49
+2025-09-05 18:52:02,607 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-05 18:52:02,607 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-05 18:53:12,618 - INFO - ML model loaded successfully - Features: 49
+2025-09-05 18:53:12,618 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-05 18:53:12,620 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-05 19:15:40,159 - INFO - ML model loaded successfully - Features: 49
+2025-09-05 19:15:40,159 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-05 19:15:40,159 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-05 19:58:23,960 - INFO - ML model loaded successfully - Features: 49
+2025-09-05 19:58:23,960 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-05 19:58:23,962 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 14:13:06,949 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 14:13:06,950 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 14:13:49,858 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 14:13:49,858 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 14:14:35,889 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 14:14:35,889 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 14:14:35,891 - ERROR - Error updating ML stats: unsupported operand type(s) for +: 'int' and 'str'
+2025-09-06 14:14:35,892 - WARNING - ML SUSPICIOUS ACTIVITY: {'timestamp': '2025-09-06T14:14:35.892789', 'prediction': 'MALICIOUS', 'confidence': np.float64(0.7654), 'network_details': {'service': 'unknown', 'protocol': 'tcp', 'dest_port': 0, 'src_port': 0, 'duration': 4.0, 'bytes_sent': 9206, 'bytes_received': 727}, 'ml_stats': {'total_predictions': 14, 'malicious_rate': 1.0, 'avg_confidence': 1.0}}
+2025-09-06 14:18:32,940 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 14:18:32,940 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 14:18:32,940 - ERROR - Error updating ML stats: unsupported operand type(s) for +: 'int' and 'str'
+2025-09-06 14:18:32,940 - WARNING - ML SUSPICIOUS ACTIVITY: {'timestamp': '2025-09-06T14:18:32.940196', 'prediction': 'MALICIOUS', 'confidence': np.float64(0.7654), 'network_details': {'service': 'unknown', 'protocol': 'tcp', 'dest_port': 0, 'src_port': 0, 'duration': 4.0, 'bytes_sent': 9206, 'bytes_received': 727}, 'ml_stats': {'total_predictions': 15, 'malicious_rate': 1.0, 'avg_confidence': 1.0}}
+2025-09-06 14:18:32,940 - ERROR - Error updating ML stats: unsupported operand type(s) for +: 'int' and 'str'
+2025-09-06 14:18:32,940 - INFO - ML ANALYSIS: {'timestamp': '2025-09-06T14:18:32.940196', 'prediction': 'BENIGN', 'confidence': np.float64(0.2071), 'network_details': {'service': 'unknown', 'protocol': 'tcp', 'dest_port': 0, 'src_port': 0, 'duration': 12.0, 'bytes_sent': 1053, 'bytes_received': 3870}, 'ml_stats': {'total_predictions': 16, 'malicious_rate': 0.9375, 'avg_confidence': 1.0}}
+2025-09-06 14:28:50,077 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 14:28:50,093 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 14:28:50,093 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 14:28:50,093 - INFO - ML-Enhanced threat detection monitoring stopped
+2025-09-06 14:28:52,555 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 14:28:52,555 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 14:28:52,556 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 14:31:50,245 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 14:31:50,247 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 14:31:50,247 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 14:31:50,247 - INFO - ML-Enhanced threat detection monitoring stopped
+2025-09-06 14:31:52,561 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 14:31:52,563 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 14:31:52,563 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 14:32:27,696 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 14:32:27,698 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 14:32:27,699 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 14:32:56,859 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 14:32:56,866 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 14:32:56,866 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 14:32:56,866 - INFO - ML-Enhanced threat detection monitoring stopped
+2025-09-06 14:32:59,278 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 14:32:59,278 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 14:32:59,278 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 14:42:35,660 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 14:42:35,660 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 14:43:47,921 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 14:43:47,921 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 14:43:47,927 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 14:44:49,656 - WARNING - Analyzing threat: mass_modification - Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-09-06 14:44:49,682 - ERROR - Error updating ML stats: unsupported operand type(s) for +: 'int' and 'str'
+2025-09-06 14:44:49,684 - CRITICAL - ML HIGH THREAT DETECTED: {'timestamp': '2025-09-06T14:44:49.684626', 'prediction': 'MALICIOUS', 'confidence': 0.9645, 'network_details': {'service': 'http-alt', 'protocol': 'tcp', 'dest_port': 8080, 'src_port': 61446, 'duration': 1.2, 'bytes_sent': 128, 'bytes_received': 64}, 'ml_stats': {'total_predictions': 17, 'malicious_rate': 0.9411764705882353, 'avg_confidence': 1.0}}
+2025-09-06 14:44:49,684 - INFO - HTTP PATTERN ANALYZED: Port=8080, Confidence=0.965
+2025-09-06 14:44:49,684 - CRITICAL - ML Model detected malicious behavior - Confidence: 0.965
+2025-09-06 14:44:49,686 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 14:44:51,570 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 14:44:51,570 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [19324, 8544, 14448, 14408, 15608, 7544, 14064, 14024, 16848, 5248]
+2025-09-06 14:50:26,510 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 14:50:26,520 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 14:50:26,520 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 14:50:26,521 - INFO - ML-Enhanced threat detection monitoring stopped
+2025-09-06 14:50:29,046 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 14:50:29,046 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 14:50:29,046 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 14:50:35,355 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 14:50:35,355 - INFO - ML-Enhanced threat analysis complete - Score: 30.0, Response: CRITICAL
+2025-09-06 14:50:37,209 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 30.0
+2025-09-06 14:50:37,209 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [9784, 15316, 20864, 10348, 13904, 8368, 3892, 19916]
+2025-09-06 15:55:24,109 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 15:55:24,109 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 15:55:24,109 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 19:02:32,601 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 19:02:32,618 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 19:02:32,618 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 19:02:32,618 - INFO - ML-Enhanced threat detection monitoring stopped
+2025-09-06 19:02:34,687 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 19:02:34,687 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 19:02:34,687 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 19:02:44,615 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:02:44,615 - INFO - ML-Enhanced threat analysis complete - Score: 30.0, Response: CRITICAL
+2025-09-06 19:02:46,490 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 30.0
+2025-09-06 19:02:46,490 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 2952, 13476, 13764, 3392, 1224, 9864, 5512]
+2025-09-06 19:02:48,570 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:02:48,570 - INFO - ML-Enhanced threat analysis complete - Score: 48.0, Response: CRITICAL
+2025-09-06 19:02:50,409 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 48.0
+2025-09-06 19:02:50,409 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 14728, 2952, 15296, 13764, 3392, 1224, 9864, 12284]
+2025-09-06 19:02:52,422 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:02:52,422 - INFO - ML-Enhanced threat analysis complete - Score: 57.0, Response: CRITICAL
+2025-09-06 19:02:54,273 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 57.0
+2025-09-06 19:02:54,273 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 14728, 15296, 13764, 3392, 9352, 1224, 6728, 12284]
+2025-09-06 19:02:56,248 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:02:56,248 - CRITICAL - Highly suspicious process detected: dllhost.exe (PID: 14728) - Score: 19
+2025-09-06 19:02:56,248 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 19
+2025-09-06 19:02:56,248 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 22
+2025-09-06 19:02:56,248 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 22
+2025-09-06 19:02:56,248 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 22
+2025-09-06 19:02:56,248 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 19
+2025-09-06 19:02:56,248 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:02:58,101 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:02:58,101 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [14728, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:00,055 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:00,055 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 22
+2025-09-06 19:03:00,055 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 20
+2025-09-06 19:03:00,055 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 29
+2025-09-06 19:03:00,055 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 32
+2025-09-06 19:03:00,055 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 32
+2025-09-06 19:03:00,055 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 25
+2025-09-06 19:03:00,055 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 32
+2025-09-06 19:03:00,055 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 25
+2025-09-06 19:03:00,055 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 20
+2025-09-06 19:03:00,055 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 29
+2025-09-06 19:03:00,055 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:03:01,888 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:03:01,888 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:03,811 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:03,811 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 32
+2025-09-06 19:03:03,811 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 30
+2025-09-06 19:03:03,817 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 39
+2025-09-06 19:03:03,817 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 42
+2025-09-06 19:03:03,817 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 42
+2025-09-06 19:03:03,817 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 35
+2025-09-06 19:03:03,817 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 42
+2025-09-06 19:03:03,817 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 35
+2025-09-06 19:03:03,817 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 30
+2025-09-06 19:03:03,817 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 39
+2025-09-06 19:03:03,817 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:03:05,671 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:03:05,671 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:07,603 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:07,603 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 42
+2025-09-06 19:03:07,603 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 40
+2025-09-06 19:03:07,603 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 49
+2025-09-06 19:03:07,603 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 52
+2025-09-06 19:03:07,603 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 52
+2025-09-06 19:03:07,603 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 45
+2025-09-06 19:03:07,604 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 52
+2025-09-06 19:03:07,604 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 45
+2025-09-06 19:03:07,604 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 40
+2025-09-06 19:03:07,604 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 49
+2025-09-06 19:03:07,604 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:03:09,462 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:03:09,462 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:11,393 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:11,393 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 52
+2025-09-06 19:03:11,393 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 50
+2025-09-06 19:03:11,393 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 59
+2025-09-06 19:03:11,393 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 62
+2025-09-06 19:03:11,393 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 62
+2025-09-06 19:03:11,393 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 55
+2025-09-06 19:03:11,393 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 62
+2025-09-06 19:03:11,393 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 55
+2025-09-06 19:03:11,393 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 50
+2025-09-06 19:03:11,393 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 59
+2025-09-06 19:03:11,393 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:03:13,269 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:03:13,269 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:15,202 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:15,202 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 62
+2025-09-06 19:03:15,202 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 60
+2025-09-06 19:03:15,202 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 69
+2025-09-06 19:03:15,202 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 72
+2025-09-06 19:03:15,202 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 72
+2025-09-06 19:03:15,202 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 65
+2025-09-06 19:03:15,202 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 72
+2025-09-06 19:03:15,202 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 65
+2025-09-06 19:03:15,202 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 60
+2025-09-06 19:03:15,202 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 69
+2025-09-06 19:03:15,202 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:03:17,084 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:03:17,084 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:19,000 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:19,000 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 72
+2025-09-06 19:03:19,000 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 70
+2025-09-06 19:03:19,000 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 79
+2025-09-06 19:03:19,000 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 82
+2025-09-06 19:03:19,000 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 82
+2025-09-06 19:03:19,000 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 75
+2025-09-06 19:03:19,000 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 82
+2025-09-06 19:03:19,000 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 75
+2025-09-06 19:03:19,000 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 70
+2025-09-06 19:03:19,000 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 79
+2025-09-06 19:03:19,000 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:03:20,852 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:03:20,852 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:22,779 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:22,779 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 82
+2025-09-06 19:03:22,779 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 80
+2025-09-06 19:03:22,779 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 89
+2025-09-06 19:03:22,779 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 92
+2025-09-06 19:03:22,779 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 92
+2025-09-06 19:03:22,779 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 85
+2025-09-06 19:03:22,779 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 92
+2025-09-06 19:03:22,779 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 85
+2025-09-06 19:03:22,779 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 80
+2025-09-06 19:03:22,779 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 89
+2025-09-06 19:03:22,779 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:03:24,638 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:03:24,638 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:26,582 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:26,582 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 92
+2025-09-06 19:03:26,582 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 90
+2025-09-06 19:03:26,582 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 99
+2025-09-06 19:03:26,582 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 102
+2025-09-06 19:03:26,582 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 102
+2025-09-06 19:03:26,582 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 95
+2025-09-06 19:03:26,582 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 102
+2025-09-06 19:03:26,582 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 95
+2025-09-06 19:03:26,582 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 90
+2025-09-06 19:03:26,582 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 99
+2025-09-06 19:03:26,582 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:03:28,429 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:03:28,429 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:30,369 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:30,369 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 102
+2025-09-06 19:03:30,369 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 100
+2025-09-06 19:03:30,369 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 109
+2025-09-06 19:03:30,369 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 112
+2025-09-06 19:03:30,369 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 112
+2025-09-06 19:03:30,369 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 105
+2025-09-06 19:03:30,369 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 112
+2025-09-06 19:03:30,369 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 105
+2025-09-06 19:03:30,369 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 100
+2025-09-06 19:03:30,369 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 109
+2025-09-06 19:03:30,369 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:03:32,198 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:03:32,198 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:34,132 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:34,132 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 112
+2025-09-06 19:03:34,132 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 110
+2025-09-06 19:03:34,132 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 119
+2025-09-06 19:03:34,132 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 122
+2025-09-06 19:03:34,132 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 122
+2025-09-06 19:03:34,132 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 115
+2025-09-06 19:03:34,132 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 122
+2025-09-06 19:03:34,132 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 115
+2025-09-06 19:03:34,132 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 110
+2025-09-06 19:03:34,132 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 119
+2025-09-06 19:03:34,132 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:03:35,989 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:03:35,989 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:37,910 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:37,910 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 122
+2025-09-06 19:03:37,910 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 120
+2025-09-06 19:03:37,910 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 129
+2025-09-06 19:03:37,910 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 132
+2025-09-06 19:03:37,910 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 132
+2025-09-06 19:03:37,910 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 125
+2025-09-06 19:03:37,910 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 132
+2025-09-06 19:03:37,910 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 125
+2025-09-06 19:03:37,910 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 120
+2025-09-06 19:03:37,910 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 129
+2025-09-06 19:03:37,910 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:03:39,771 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:03:39,771 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:41,741 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:41,741 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 130
+2025-09-06 19:03:41,741 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 139
+2025-09-06 19:03:41,741 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 142
+2025-09-06 19:03:41,741 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 135
+2025-09-06 19:03:41,741 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 142
+2025-09-06 19:03:41,741 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 142
+2025-09-06 19:03:41,741 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 135
+2025-09-06 19:03:41,741 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 130
+2025-09-06 19:03:41,743 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 139
+2025-09-06 19:03:41,743 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:03:43,617 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:03:43,617 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [15252, 5756, 15296, 13764, 9352, 3392, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:45,561 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:45,561 - CRITICAL - Highly suspicious process detected: dllhost.exe (PID: 15252) - Score: 20
+2025-09-06 19:03:45,561 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 140
+2025-09-06 19:03:45,561 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 149
+2025-09-06 19:03:45,561 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 152
+2025-09-06 19:03:45,561 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 145
+2025-09-06 19:03:45,561 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 152
+2025-09-06 19:03:45,561 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 152
+2025-09-06 19:03:45,561 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 145
+2025-09-06 19:03:45,561 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 140
+2025-09-06 19:03:45,561 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 149
+2025-09-06 19:03:45,561 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:03:47,403 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:03:47,403 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [15252, 5756, 15296, 13764, 9352, 3392, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:49,333 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:49,333 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 132
+2025-09-06 19:03:49,333 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 150
+2025-09-06 19:03:49,333 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 159
+2025-09-06 19:03:49,333 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 162
+2025-09-06 19:03:49,333 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 162
+2025-09-06 19:03:49,333 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 155
+2025-09-06 19:03:49,333 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 162
+2025-09-06 19:03:49,333 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 155
+2025-09-06 19:03:49,333 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 150
+2025-09-06 19:03:49,333 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 159
+2025-09-06 19:03:49,333 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:03:51,195 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:03:51,196 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:53,133 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:53,133 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 142
+2025-09-06 19:03:53,133 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 160
+2025-09-06 19:03:53,133 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 169
+2025-09-06 19:03:53,133 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 172
+2025-09-06 19:03:53,133 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 172
+2025-09-06 19:03:53,133 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 165
+2025-09-06 19:03:53,133 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 172
+2025-09-06 19:03:53,133 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 165
+2025-09-06 19:03:53,133 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 160
+2025-09-06 19:03:53,133 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 169
+2025-09-06 19:03:53,133 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:03:54,988 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:03:54,988 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:56,905 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:56,905 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 152
+2025-09-06 19:03:56,905 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 170
+2025-09-06 19:03:56,905 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 179
+2025-09-06 19:03:56,905 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 182
+2025-09-06 19:03:56,905 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 182
+2025-09-06 19:03:56,905 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 175
+2025-09-06 19:03:56,905 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 182
+2025-09-06 19:03:56,905 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 175
+2025-09-06 19:03:56,905 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 170
+2025-09-06 19:03:56,905 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 179
+2025-09-06 19:03:56,905 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:03:58,766 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:03:58,766 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:00,704 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:00,704 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 162
+2025-09-06 19:04:00,704 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 180
+2025-09-06 19:04:00,704 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 189
+2025-09-06 19:04:00,704 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 192
+2025-09-06 19:04:00,704 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 192
+2025-09-06 19:04:00,704 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 185
+2025-09-06 19:04:00,704 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 192
+2025-09-06 19:04:00,704 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 185
+2025-09-06 19:04:00,704 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 180
+2025-09-06 19:04:00,704 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 189
+2025-09-06 19:04:00,704 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:04:02,560 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:04:02,560 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:04,494 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:04,494 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 172
+2025-09-06 19:04:04,494 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 190
+2025-09-06 19:04:04,494 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 199
+2025-09-06 19:04:04,494 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 202
+2025-09-06 19:04:04,494 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 202
+2025-09-06 19:04:04,494 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 195
+2025-09-06 19:04:04,494 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 202
+2025-09-06 19:04:04,494 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 195
+2025-09-06 19:04:04,494 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 190
+2025-09-06 19:04:04,494 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 199
+2025-09-06 19:04:04,494 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:04:06,365 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:04:06,365 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:08,270 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:08,270 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 182
+2025-09-06 19:04:08,270 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 200
+2025-09-06 19:04:08,270 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 209
+2025-09-06 19:04:08,270 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 212
+2025-09-06 19:04:08,270 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 212
+2025-09-06 19:04:08,270 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 205
+2025-09-06 19:04:08,270 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 212
+2025-09-06 19:04:08,270 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 205
+2025-09-06 19:04:08,270 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 200
+2025-09-06 19:04:08,270 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 209
+2025-09-06 19:04:08,270 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:04:10,137 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:04:10,137 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:12,109 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:12,110 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 192
+2025-09-06 19:04:12,110 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 210
+2025-09-06 19:04:12,110 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 219
+2025-09-06 19:04:12,110 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 222
+2025-09-06 19:04:12,110 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 222
+2025-09-06 19:04:12,110 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 215
+2025-09-06 19:04:12,110 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 222
+2025-09-06 19:04:12,110 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 215
+2025-09-06 19:04:12,110 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 210
+2025-09-06 19:04:12,110 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 219
+2025-09-06 19:04:12,110 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:04:13,977 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:04:13,977 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:15,903 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:15,903 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 202
+2025-09-06 19:04:15,903 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 220
+2025-09-06 19:04:15,903 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 229
+2025-09-06 19:04:15,903 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 232
+2025-09-06 19:04:15,912 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 232
+2025-09-06 19:04:15,912 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 225
+2025-09-06 19:04:15,912 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 232
+2025-09-06 19:04:15,912 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 225
+2025-09-06 19:04:15,912 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 220
+2025-09-06 19:04:15,912 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 229
+2025-09-06 19:04:15,912 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:04:17,747 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:04:17,747 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:19,664 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:19,664 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 212
+2025-09-06 19:04:19,664 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 230
+2025-09-06 19:04:19,664 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 239
+2025-09-06 19:04:19,664 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 242
+2025-09-06 19:04:19,664 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 242
+2025-09-06 19:04:19,664 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 235
+2025-09-06 19:04:19,664 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 242
+2025-09-06 19:04:19,664 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 235
+2025-09-06 19:04:19,664 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 230
+2025-09-06 19:04:19,664 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 239
+2025-09-06 19:04:19,664 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:04:21,540 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:04:21,540 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:23,464 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:23,464 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 222
+2025-09-06 19:04:23,464 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 240
+2025-09-06 19:04:23,464 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 249
+2025-09-06 19:04:23,464 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 252
+2025-09-06 19:04:23,464 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 252
+2025-09-06 19:04:23,464 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 245
+2025-09-06 19:04:23,464 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 252
+2025-09-06 19:04:23,464 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 245
+2025-09-06 19:04:23,464 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 240
+2025-09-06 19:04:23,464 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 249
+2025-09-06 19:04:23,464 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:04:25,308 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:04:25,308 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:27,244 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:27,244 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 232
+2025-09-06 19:04:27,244 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 250
+2025-09-06 19:04:27,244 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 259
+2025-09-06 19:04:27,244 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 262
+2025-09-06 19:04:27,244 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 262
+2025-09-06 19:04:27,244 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 255
+2025-09-06 19:04:27,244 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 262
+2025-09-06 19:04:27,244 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 255
+2025-09-06 19:04:27,244 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 250
+2025-09-06 19:04:27,244 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 259
+2025-09-06 19:04:27,244 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:04:29,102 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:04:29,102 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:31,037 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:31,037 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 242
+2025-09-06 19:04:31,037 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 260
+2025-09-06 19:04:31,037 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 269
+2025-09-06 19:04:31,037 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 272
+2025-09-06 19:04:31,037 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 272
+2025-09-06 19:04:31,037 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 265
+2025-09-06 19:04:31,037 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 272
+2025-09-06 19:04:31,037 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 265
+2025-09-06 19:04:31,037 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 260
+2025-09-06 19:04:31,037 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 269
+2025-09-06 19:04:31,037 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:04:32,891 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:04:32,891 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:34,830 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:34,830 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 252
+2025-09-06 19:04:34,830 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 270
+2025-09-06 19:04:34,831 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 279
+2025-09-06 19:04:34,831 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 282
+2025-09-06 19:04:34,831 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 282
+2025-09-06 19:04:34,831 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 275
+2025-09-06 19:04:34,831 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 282
+2025-09-06 19:04:34,831 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 275
+2025-09-06 19:04:34,831 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 270
+2025-09-06 19:04:34,831 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 279
+2025-09-06 19:04:34,831 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:04:36,695 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:04:36,695 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:38,642 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:38,642 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 262
+2025-09-06 19:04:38,642 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 280
+2025-09-06 19:04:38,642 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 289
+2025-09-06 19:04:38,642 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 292
+2025-09-06 19:04:38,642 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 292
+2025-09-06 19:04:38,642 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 285
+2025-09-06 19:04:38,642 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 292
+2025-09-06 19:04:38,642 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 285
+2025-09-06 19:04:38,642 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 280
+2025-09-06 19:04:38,642 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 289
+2025-09-06 19:04:38,642 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:04:40,491 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:04:40,491 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:42,467 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:42,467 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 272
+2025-09-06 19:04:42,467 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 290
+2025-09-06 19:04:42,467 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 299
+2025-09-06 19:04:42,467 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 302
+2025-09-06 19:04:42,467 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 302
+2025-09-06 19:04:42,469 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 295
+2025-09-06 19:04:42,469 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 302
+2025-09-06 19:04:42,469 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 295
+2025-09-06 19:04:42,469 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 290
+2025-09-06 19:04:42,469 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 299
+2025-09-06 19:04:42,469 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:04:44,352 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:04:44,352 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:46,293 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:46,293 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 282
+2025-09-06 19:04:46,293 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 300
+2025-09-06 19:04:46,293 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 309
+2025-09-06 19:04:46,293 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 312
+2025-09-06 19:04:46,293 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 312
+2025-09-06 19:04:46,293 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 305
+2025-09-06 19:04:46,293 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 312
+2025-09-06 19:04:46,293 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 305
+2025-09-06 19:04:46,293 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 300
+2025-09-06 19:04:46,293 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 309
+2025-09-06 19:04:46,293 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:04:48,164 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:04:48,164 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:50,093 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:50,093 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 292
+2025-09-06 19:04:50,093 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 310
+2025-09-06 19:04:50,093 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 319
+2025-09-06 19:04:50,093 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 322
+2025-09-06 19:04:50,093 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 322
+2025-09-06 19:04:50,093 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 315
+2025-09-06 19:04:50,093 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 322
+2025-09-06 19:04:50,093 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 315
+2025-09-06 19:04:50,093 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 310
+2025-09-06 19:04:50,093 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 319
+2025-09-06 19:04:50,093 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:04:51,957 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:04:51,957 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:53,911 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:53,911 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 302
+2025-09-06 19:04:53,911 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 320
+2025-09-06 19:04:53,911 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 329
+2025-09-06 19:04:53,911 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 332
+2025-09-06 19:04:53,911 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 332
+2025-09-06 19:04:53,911 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 325
+2025-09-06 19:04:53,911 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 332
+2025-09-06 19:04:53,911 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 325
+2025-09-06 19:04:53,911 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 320
+2025-09-06 19:04:53,911 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 329
+2025-09-06 19:04:53,911 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:04:55,781 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:04:55,781 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:57,708 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:57,708 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 312
+2025-09-06 19:04:57,708 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 330
+2025-09-06 19:04:57,708 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 339
+2025-09-06 19:04:57,708 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 342
+2025-09-06 19:04:57,708 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 342
+2025-09-06 19:04:57,708 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 335
+2025-09-06 19:04:57,708 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 342
+2025-09-06 19:04:57,708 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 335
+2025-09-06 19:04:57,708 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 330
+2025-09-06 19:04:57,708 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 339
+2025-09-06 19:04:57,708 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:04:59,536 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:04:59,536 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:01,471 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:01,471 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 322
+2025-09-06 19:05:01,471 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 340
+2025-09-06 19:05:01,471 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 349
+2025-09-06 19:05:01,471 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 352
+2025-09-06 19:05:01,471 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 352
+2025-09-06 19:05:01,471 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 345
+2025-09-06 19:05:01,471 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 352
+2025-09-06 19:05:01,471 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 345
+2025-09-06 19:05:01,471 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 340
+2025-09-06 19:05:01,471 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 349
+2025-09-06 19:05:01,471 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:05:03,328 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:05:03,328 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:05,246 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:05,246 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 332
+2025-09-06 19:05:05,247 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 350
+2025-09-06 19:05:05,247 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 359
+2025-09-06 19:05:05,247 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 362
+2025-09-06 19:05:05,247 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 362
+2025-09-06 19:05:05,247 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 355
+2025-09-06 19:05:05,247 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 362
+2025-09-06 19:05:05,247 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 355
+2025-09-06 19:05:05,247 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 350
+2025-09-06 19:05:05,247 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 359
+2025-09-06 19:05:05,247 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:05:07,089 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:05:07,089 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:09,002 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:09,002 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 342
+2025-09-06 19:05:09,002 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 360
+2025-09-06 19:05:09,002 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 369
+2025-09-06 19:05:09,002 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 372
+2025-09-06 19:05:09,002 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 372
+2025-09-06 19:05:09,002 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 365
+2025-09-06 19:05:09,002 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 372
+2025-09-06 19:05:09,002 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 365
+2025-09-06 19:05:09,002 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 360
+2025-09-06 19:05:09,002 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 369
+2025-09-06 19:05:09,002 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:05:10,874 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:05:10,874 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:12,841 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:12,841 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 352
+2025-09-06 19:05:12,841 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 370
+2025-09-06 19:05:12,841 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 379
+2025-09-06 19:05:12,841 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 382
+2025-09-06 19:05:12,841 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 382
+2025-09-06 19:05:12,841 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 375
+2025-09-06 19:05:12,841 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 382
+2025-09-06 19:05:12,841 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 375
+2025-09-06 19:05:12,841 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 370
+2025-09-06 19:05:12,841 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 379
+2025-09-06 19:05:12,841 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:05:14,691 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:05:14,691 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:16,622 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:16,622 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 362
+2025-09-06 19:05:16,622 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 380
+2025-09-06 19:05:16,622 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 389
+2025-09-06 19:05:16,622 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 392
+2025-09-06 19:05:16,622 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 392
+2025-09-06 19:05:16,622 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 385
+2025-09-06 19:05:16,622 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 392
+2025-09-06 19:05:16,622 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 385
+2025-09-06 19:05:16,622 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 380
+2025-09-06 19:05:16,622 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 389
+2025-09-06 19:05:16,622 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:05:18,512 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:05:18,513 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:20,426 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:20,426 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 372
+2025-09-06 19:05:20,426 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 390
+2025-09-06 19:05:20,426 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 399
+2025-09-06 19:05:20,426 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 402
+2025-09-06 19:05:20,426 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 402
+2025-09-06 19:05:20,426 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 395
+2025-09-06 19:05:20,426 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 402
+2025-09-06 19:05:20,426 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 395
+2025-09-06 19:05:20,426 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 390
+2025-09-06 19:05:20,426 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 399
+2025-09-06 19:05:20,426 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:05:22,291 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:05:22,291 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:24,230 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:24,230 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 382
+2025-09-06 19:05:24,230 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 400
+2025-09-06 19:05:24,230 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 409
+2025-09-06 19:05:24,230 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 412
+2025-09-06 19:05:24,230 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 412
+2025-09-06 19:05:24,230 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 405
+2025-09-06 19:05:24,230 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 412
+2025-09-06 19:05:24,230 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 405
+2025-09-06 19:05:24,230 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 400
+2025-09-06 19:05:24,230 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 409
+2025-09-06 19:05:24,230 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:05:26,081 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:05:26,081 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:28,005 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:28,005 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 392
+2025-09-06 19:05:28,005 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 410
+2025-09-06 19:05:28,005 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 419
+2025-09-06 19:05:28,005 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 422
+2025-09-06 19:05:28,005 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 422
+2025-09-06 19:05:28,005 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 415
+2025-09-06 19:05:28,005 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 422
+2025-09-06 19:05:28,005 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 415
+2025-09-06 19:05:28,005 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 410
+2025-09-06 19:05:28,005 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 419
+2025-09-06 19:05:28,005 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:05:29,857 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:05:29,857 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:31,801 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:31,801 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 402
+2025-09-06 19:05:31,801 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 420
+2025-09-06 19:05:31,801 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 429
+2025-09-06 19:05:31,801 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 432
+2025-09-06 19:05:31,801 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 432
+2025-09-06 19:05:31,801 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 425
+2025-09-06 19:05:31,801 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 432
+2025-09-06 19:05:31,801 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 425
+2025-09-06 19:05:31,802 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 420
+2025-09-06 19:05:31,802 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 429
+2025-09-06 19:05:31,802 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:05:33,666 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:05:33,666 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:35,613 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:35,613 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 412
+2025-09-06 19:05:35,613 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 430
+2025-09-06 19:05:35,613 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 439
+2025-09-06 19:05:35,613 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 442
+2025-09-06 19:05:35,613 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 442
+2025-09-06 19:05:35,613 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 435
+2025-09-06 19:05:35,613 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 442
+2025-09-06 19:05:35,613 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 435
+2025-09-06 19:05:35,613 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 430
+2025-09-06 19:05:35,613 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 439
+2025-09-06 19:05:35,613 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:05:37,481 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:05:37,481 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:39,401 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:39,401 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 422
+2025-09-06 19:05:39,401 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 440
+2025-09-06 19:05:39,401 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 449
+2025-09-06 19:05:39,401 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 452
+2025-09-06 19:05:39,401 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 452
+2025-09-06 19:05:39,401 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 445
+2025-09-06 19:05:39,401 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 452
+2025-09-06 19:05:39,401 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 445
+2025-09-06 19:05:39,401 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 440
+2025-09-06 19:05:39,401 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 449
+2025-09-06 19:05:39,401 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:05:41,269 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:05:41,269 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:43,240 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:43,240 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 432
+2025-09-06 19:05:43,241 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 450
+2025-09-06 19:05:43,241 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 459
+2025-09-06 19:05:43,241 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 462
+2025-09-06 19:05:43,241 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 462
+2025-09-06 19:05:43,241 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 455
+2025-09-06 19:05:43,241 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 462
+2025-09-06 19:05:43,241 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 455
+2025-09-06 19:05:43,241 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 450
+2025-09-06 19:05:43,241 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 459
+2025-09-06 19:05:43,241 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:05:45,091 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:05:45,091 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:47,011 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:47,011 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 442
+2025-09-06 19:05:47,011 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 460
+2025-09-06 19:05:47,011 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 469
+2025-09-06 19:05:47,011 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 472
+2025-09-06 19:05:47,011 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 472
+2025-09-06 19:05:47,011 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 465
+2025-09-06 19:05:47,011 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 472
+2025-09-06 19:05:47,011 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 465
+2025-09-06 19:05:47,011 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 460
+2025-09-06 19:05:47,011 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 469
+2025-09-06 19:05:47,011 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:05:48,866 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:05:48,866 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:50,807 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:50,807 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 452
+2025-09-06 19:05:50,807 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 470
+2025-09-06 19:05:50,807 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 479
+2025-09-06 19:05:50,807 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 482
+2025-09-06 19:05:50,807 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 482
+2025-09-06 19:05:50,807 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 475
+2025-09-06 19:05:50,807 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 482
+2025-09-06 19:05:50,807 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 475
+2025-09-06 19:05:50,807 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 470
+2025-09-06 19:05:50,807 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 479
+2025-09-06 19:05:50,807 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:05:52,666 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:05:52,666 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:54,606 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:54,606 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 462
+2025-09-06 19:05:54,606 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 480
+2025-09-06 19:05:54,606 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 489
+2025-09-06 19:05:54,606 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 492
+2025-09-06 19:05:54,606 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 492
+2025-09-06 19:05:54,606 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 485
+2025-09-06 19:05:54,606 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 492
+2025-09-06 19:05:54,606 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 485
+2025-09-06 19:05:54,606 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 480
+2025-09-06 19:05:54,606 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 489
+2025-09-06 19:05:54,606 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:05:56,476 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:05:56,476 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:58,400 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:58,400 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 472
+2025-09-06 19:05:58,400 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 490
+2025-09-06 19:05:58,400 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 499
+2025-09-06 19:05:58,400 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 502
+2025-09-06 19:05:58,400 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 502
+2025-09-06 19:05:58,400 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 495
+2025-09-06 19:05:58,400 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 502
+2025-09-06 19:05:58,400 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 495
+2025-09-06 19:05:58,400 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 490
+2025-09-06 19:05:58,400 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 499
+2025-09-06 19:05:58,400 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:06:00,280 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:06:00,280 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:06:02,211 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:06:02,211 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 482
+2025-09-06 19:06:02,211 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 500
+2025-09-06 19:06:02,211 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 509
+2025-09-06 19:06:02,211 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 512
+2025-09-06 19:06:02,211 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 512
+2025-09-06 19:06:02,211 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 505
+2025-09-06 19:06:02,211 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 512
+2025-09-06 19:06:02,211 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 505
+2025-09-06 19:06:02,211 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 500
+2025-09-06 19:06:02,211 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 509
+2025-09-06 19:06:02,211 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:06:04,051 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:06:04,051 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:06:05,980 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:06:05,980 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 492
+2025-09-06 19:06:05,980 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 510
+2025-09-06 19:06:05,980 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 519
+2025-09-06 19:06:05,980 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 522
+2025-09-06 19:06:05,980 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 522
+2025-09-06 19:06:05,980 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 515
+2025-09-06 19:06:05,980 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 522
+2025-09-06 19:06:05,980 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 515
+2025-09-06 19:06:05,980 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 510
+2025-09-06 19:06:05,980 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 519
+2025-09-06 19:06:05,980 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:06:07,826 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:06:07,826 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:06:09,751 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:06:09,751 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 502
+2025-09-06 19:06:09,751 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 520
+2025-09-06 19:06:09,751 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 529
+2025-09-06 19:06:09,751 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 532
+2025-09-06 19:06:09,751 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 532
+2025-09-06 19:06:09,751 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 525
+2025-09-06 19:06:09,751 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 532
+2025-09-06 19:06:09,751 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 525
+2025-09-06 19:06:09,751 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 520
+2025-09-06 19:06:09,751 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 529
+2025-09-06 19:06:09,751 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:06:11,603 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:06:11,603 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:06:13,577 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:06:13,577 - CRITICAL - Highly suspicious process detected: audiodg.exe (PID: 12896) - Score: 512
+2025-09-06 19:06:13,577 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 530
+2025-09-06 19:06:13,577 - CRITICAL - Highly suspicious process detected: ShellExperienceHost.exe (PID: 15296) - Score: 539
+2025-09-06 19:06:13,577 - CRITICAL - Highly suspicious process detected: python.exe (PID: 13764) - Score: 542
+2025-09-06 19:06:13,577 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 3392) - Score: 542
+2025-09-06 19:06:13,577 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 9352) - Score: 535
+2025-09-06 19:06:13,577 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 1224) - Score: 542
+2025-09-06 19:06:13,577 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 535
+2025-09-06 19:06:13,577 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 530
+2025-09-06 19:06:13,577 - CRITICAL - Highly suspicious process detected: RuntimeBroker.exe (PID: 12284) - Score: 539
+2025-09-06 19:06:13,577 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:09:48,808 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 19:09:48,809 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 19:09:48,809 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 19:09:48,809 - INFO - ML-Enhanced threat detection monitoring stopped
+2025-09-06 19:09:50,895 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 19:09:50,895 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 19:09:50,895 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 19:10:03,936 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:03,936 - INFO - ML-Enhanced threat analysis complete - Score: 30.0, Response: CRITICAL
+2025-09-06 19:10:05,800 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 30.0
+2025-09-06 19:10:05,801 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [11432, 7796, 3508, 11948, 2768, 5420, 5756, 13996, 6728, 9352]
+2025-09-06 19:10:07,730 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:07,732 - INFO - ML-Enhanced threat analysis complete - Score: 48.0, Response: CRITICAL
+2025-09-06 19:10:09,578 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 48.0
+2025-09-06 19:10:09,578 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [11432, 7796, 3508, 11948, 2768, 5420, 5756, 13996, 6728, 8820]
+2025-09-06 19:10:11,522 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:11,522 - INFO - ML-Enhanced threat analysis complete - Score: 57.0, Response: CRITICAL
+2025-09-06 19:10:13,384 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 57.0
+2025-09-06 19:10:13,384 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [11432, 7796, 3508, 11948, 2768, 5420, 5756, 13996, 6728, 8820]
+2025-09-06 19:10:15,334 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:15,334 - CRITICAL - Highly suspicious process detected: python.exe (PID: 11432) - Score: 22
+2025-09-06 19:10:15,334 - CRITICAL - Highly suspicious process detected: WmiPrvSE.exe (PID: 7796) - Score: 22
+2025-09-06 19:10:15,334 - CRITICAL - Highly suspicious process detected: python.exe (PID: 3508) - Score: 22
+2025-09-06 19:10:15,334 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 11948) - Score: 22
+2025-09-06 19:10:15,334 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 2768) - Score: 22
+2025-09-06 19:10:15,334 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 5420) - Score: 22
+2025-09-06 19:10:15,334 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 22
+2025-09-06 19:10:15,334 - CRITICAL - Highly suspicious process detected: smartscreen.exe (PID: 13996) - Score: 22
+2025-09-06 19:10:15,334 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 6728) - Score: 22
+2025-09-06 19:10:15,334 - CRITICAL - Highly suspicious process detected: dllhost.exe (PID: 8820) - Score: 19
+2025-09-06 19:10:15,334 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:10:17,191 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:10:17,191 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [11432, 7796, 3508, 11948, 2768, 5420, 5756, 13996, 6728, 8820]
+2025-09-06 19:10:19,138 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:19,138 - CRITICAL - Highly suspicious process detected: python.exe (PID: 11432) - Score: 32
+2025-09-06 19:10:19,138 - CRITICAL - Highly suspicious process detected: WmiPrvSE.exe (PID: 7796) - Score: 32
+2025-09-06 19:10:19,138 - CRITICAL - Highly suspicious process detected: python.exe (PID: 3508) - Score: 32
+2025-09-06 19:10:19,138 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 5420) - Score: 32
+2025-09-06 19:10:19,138 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 2768) - Score: 32
+2025-09-06 19:10:19,138 - CRITICAL - Highly suspicious process detected: smartscreen.exe (PID: 13996) - Score: 32
+2025-09-06 19:10:19,138 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:10:21,019 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:10:21,019 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [11432, 7796, 3508, 5672, 5420, 2768, 13996, 14016]
+2025-09-06 19:10:22,993 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:22,993 - CRITICAL - Highly suspicious process detected: python.exe (PID: 11432) - Score: 42
+2025-09-06 19:10:22,993 - CRITICAL - Highly suspicious process detected: WmiPrvSE.exe (PID: 7796) - Score: 42
+2025-09-06 19:10:22,993 - CRITICAL - Highly suspicious process detected: python.exe (PID: 3508) - Score: 42
+2025-09-06 19:10:22,993 - CRITICAL - Highly suspicious process detected: backgroundTaskHost.exe (PID: 13856) - Score: 20
+2025-09-06 19:10:23,002 - CRITICAL - Highly suspicious process detected: SDXHelper.exe (PID: 5672) - Score: 20
+2025-09-06 19:10:23,002 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 5420) - Score: 42
+2025-09-06 19:10:23,002 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 2768) - Score: 42
+2025-09-06 19:10:23,002 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 32
+2025-09-06 19:10:23,002 - CRITICAL - Highly suspicious process detected: smartscreen.exe (PID: 13996) - Score: 42
+2025-09-06 19:10:23,002 - CRITICAL - Highly suspicious process detected: backgroundTaskHost.exe (PID: 15212) - Score: 20
+2025-09-06 19:10:23,002 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:10:24,864 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:10:24,864 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [11432, 7796, 3508, 5672, 5420, 2768, 5756, 13996]
+2025-09-06 19:10:26,805 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:26,805 - CRITICAL - Highly suspicious process detected: python.exe (PID: 11432) - Score: 52
+2025-09-06 19:10:26,805 - CRITICAL - Highly suspicious process detected: WmiPrvSE.exe (PID: 7796) - Score: 52
+2025-09-06 19:10:26,805 - CRITICAL - Highly suspicious process detected: python.exe (PID: 3508) - Score: 52
+2025-09-06 19:10:26,805 - CRITICAL - Highly suspicious process detected: backgroundTaskHost.exe (PID: 13856) - Score: 30
+2025-09-06 19:10:26,805 - CRITICAL - Highly suspicious process detected: SDXHelper.exe (PID: 5672) - Score: 30
+2025-09-06 19:10:26,805 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 5420) - Score: 52
+2025-09-06 19:10:26,805 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 2768) - Score: 52
+2025-09-06 19:10:26,805 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 42
+2025-09-06 19:10:26,805 - CRITICAL - Highly suspicious process detected: smartscreen.exe (PID: 13996) - Score: 52
+2025-09-06 19:10:26,805 - CRITICAL - Highly suspicious process detected: backgroundTaskHost.exe (PID: 15212) - Score: 30
+2025-09-06 19:10:26,805 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:10:28,656 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-06 19:10:28,656 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [11432, 7796, 3508, 5672, 5420, 2768, 5756, 13996]
+2025-09-06 19:10:30,567 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:30,567 - CRITICAL - Highly suspicious process detected: python.exe (PID: 11432) - Score: 62
+2025-09-06 19:10:30,568 - CRITICAL - Highly suspicious process detected: WmiPrvSE.exe (PID: 7796) - Score: 62
+2025-09-06 19:10:30,568 - CRITICAL - Highly suspicious process detected: python.exe (PID: 3508) - Score: 62
+2025-09-06 19:10:30,568 - CRITICAL - Highly suspicious process detected: backgroundTaskHost.exe (PID: 13856) - Score: 40
+2025-09-06 19:10:30,568 - CRITICAL - Highly suspicious process detected: SDXHelper.exe (PID: 5672) - Score: 40
+2025-09-06 19:10:30,568 - CRITICAL - Highly suspicious process detected: conhost.exe (PID: 5420) - Score: 62
+2025-09-06 19:10:30,568 - CRITICAL - Highly suspicious process detected: cmd.exe (PID: 2768) - Score: 62
+2025-09-06 19:10:30,568 - CRITICAL - Highly suspicious process detected: powershell.exe (PID: 5756) - Score: 52
+2025-09-06 19:10:30,568 - CRITICAL - Highly suspicious process detected: smartscreen.exe (PID: 13996) - Score: 62
+2025-09-06 19:10:30,568 - CRITICAL - Highly suspicious process detected: backgroundTaskHost.exe (PID: 15212) - Score: 40
+2025-09-06 19:10:30,568 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-06 19:10:53,859 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 19:10:53,861 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 19:10:53,861 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 19:15:53,255 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 19:15:53,256 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 19:15:53,256 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 19:15:53,256 - INFO - ML-Enhanced threat detection monitoring stopped
+2025-09-06 19:15:55,358 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 19:15:55,358 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 19:15:55,358 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 19:16:05,380 - INFO - ML-Enhanced threat detection monitoring stopped
+2025-09-06 19:16:44,503 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 19:16:44,503 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 19:16:44,503 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 19:16:44,503 - INFO - ML-Enhanced threat detection monitoring stopped
+2025-09-06 19:16:46,569 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 19:16:46,572 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 19:16:46,572 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 19:16:54,647 - WARNING - Analyzing threat: mass_delete - Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:16:54,647 - INFO - ML-Enhanced threat analysis complete - Score: 30.0, Response: CRITICAL
+2025-09-06 19:16:56,497 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 30.0
+2025-09-06 19:16:56,497 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [7644, 12928, 1632, 12692, 14944, 7648, 5428]
+2025-09-06 21:50:25,484 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 21:50:25,485 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 21:50:25,485 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 21:55:30,657 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 21:55:30,657 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 21:55:30,657 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 21:56:08,150 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 21:56:08,151 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 21:56:08,151 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 22:06:09,254 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 22:06:09,254 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 22:06:09,255 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 22:08:12,514 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 22:08:12,514 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 22:08:12,514 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 22:19:10,110 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 22:19:10,110 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 22:19:10,110 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 22:20:21,479 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 22:20:21,479 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 22:20:21,484 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 22:22:29,956 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 22:22:29,960 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 22:22:29,960 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-06 22:22:29,960 - INFO - ML-Enhanced threat detection monitoring stopped
+2025-09-06 22:22:32,008 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-06 22:22:32,008 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-06 22:22:32,008 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-07 03:14:00,524 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-07 03:14:00,524 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-07 03:14:00,525 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-07 03:14:38,867 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-07 03:14:38,869 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-07 03:14:38,869 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-07 03:33:38,654 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-07 03:33:38,654 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-07 03:33:38,663 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-07 03:34:30,876 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-07 03:34:30,876 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-07 03:34:30,885 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-07 03:38:59,524 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-07 03:38:59,535 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-07 03:38:59,535 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-07 03:38:59,535 - INFO - ML-Enhanced threat detection monitoring stopped
+2025-09-07 03:39:02,944 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-07 03:39:02,946 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-07 03:39:02,947 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-07 03:39:11,925 - WARNING - Analyzing threat: mass_modification - Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-09-07 03:39:11,987 - ERROR - Error updating ML stats: unsupported operand type(s) for +: 'int' and 'str'
+2025-09-07 03:39:11,987 - CRITICAL - ML HIGH THREAT DETECTED: {'timestamp': '2025-09-07T03:39:11.987851', 'prediction': 'MALICIOUS', 'confidence': 0.9494, 'network_details': {'service': 'irc', 'protocol': 'tcp', 'dest_port': 6667, 'src_port': 56534, 'duration': 2.5, 'bytes_sent': 75, 'bytes_received': 243}, 'ml_stats': {'total_predictions': 18, 'malicious_rate': 0.9444444444444444, 'avg_confidence': 1.0}}
+2025-09-07 03:39:11,987 - WARNING - IRC PATTERN DETECTED: Service=irc, Port=6667, Confidence=0.949
+2025-09-07 03:39:11,987 - CRITICAL - ML Model detected malicious behavior - Confidence: 0.949
+2025-09-07 03:39:11,987 - INFO - ML-Enhanced threat analysis complete - Score: 100, Response: CRITICAL
+2025-09-07 03:39:13,940 - CRITICAL - ML-ENHANCED ALERT SENT - Level: CRITICAL, Score: 100
+2025-09-07 03:39:13,940 - CRITICAL - Triggering ML-enhanced CRITICAL response - Target PIDs: [12844, 9184, 11948, 2932, 11160, 17536, 17588]
+2025-09-07 05:11:39,643 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-07 05:11:39,643 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-07 05:11:39,646 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-07 05:16:45,503 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-07 05:16:45,503 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-07 05:16:45,503 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-07 05:22:42,304 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-07 05:22:42,313 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-07 05:22:42,313 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-07 05:22:42,313 - INFO - ML-Enhanced threat detection monitoring stopped
+2025-09-07 05:22:45,983 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-07 05:22:45,983 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-07 05:22:45,992 - INFO - ML-Enhanced threat detection monitoring started
+2025-09-07 05:32:56,760 - INFO - Enhanced Logistic Regression model loaded - Features: 16
+2025-09-07 05:32:56,760 - INFO - ML-Enhanced Threat Detector initialized
+2025-09-07 05:32:56,761 - INFO - ML-Enhanced threat detection monitoring started

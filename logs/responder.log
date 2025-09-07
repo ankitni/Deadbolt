@@ -365,3 +365,586 @@ BEHAVIOR TEST STARTED: 2025-08-30 03:49:51.331727
 2025-08-31 18:57:27,426 - INFO - INSTANT KILL of conhost.exe (PID: 15832)
 2025-08-31 18:57:27,441 - INFO - Successfully FORCE-KILLED conhost.exe (PID: 15832)
 2025-08-31 18:57:27,441 - INFO - INSTANT KILL of python.exe (PID: 8620)
+2025-09-05 18:48:49,671 - INFO - Threat Responder initialized
+2025-09-05 18:51:30,952 - INFO - Threat Responder initialized
+2025-09-05 18:52:00,544 - INFO - Threat Responder initialized
+2025-09-05 18:53:09,667 - INFO - Threat Responder initialized
+2025-09-05 19:15:37,039 - INFO - Threat Responder initialized
+2025-09-05 19:58:20,911 - INFO - Threat Responder initialized
+2025-09-06 14:28:51,885 - INFO - Threat Responder initialized
+2025-09-06 14:31:51,867 - INFO - Threat Responder initialized
+2025-09-06 14:32:26,787 - INFO - Threat Responder initialized
+2025-09-06 14:32:58,585 - INFO - Threat Responder initialized
+2025-09-06 14:43:46,922 - INFO - Threat Responder initialized
+2025-09-06 14:43:46,922 - WARNING - Running without administrator privileges - some process termination may fail
+2025-09-06 14:44:51,570 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 14:44:51,570 - CRITICAL - Threat Type: mass_modification
+2025-09-06 14:44:51,570 - CRITICAL - Description: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-09-06 14:44:51,570 - CRITICAL - Target PIDs: [19324, 8544, 14448, 14408, 15608, 7544, 14064, 14024, 16848, 5248]
+2025-09-06 14:44:52,499 - CRITICAL - Attempting to terminate 10 suspicious processes
+2025-09-06 14:44:52,499 - INFO - INSTANT KILL of python.exe (PID: 19324)
+2025-09-06 14:50:28,306 - INFO - Threat Responder initialized
+2025-09-06 14:50:37,209 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 14:50:37,209 - CRITICAL - Threat Type: mass_delete
+2025-09-06 14:50:37,209 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 14:50:37,210 - CRITICAL - Target PIDs: [9784, 15316, 20864, 10348, 13904, 8368, 3892, 19916]
+2025-09-06 14:50:38,145 - CRITICAL - Attempting to terminate 8 suspicious processes
+2025-09-06 14:50:38,146 - INFO - INSTANT KILL of python.exe (PID: 9784)
+2025-09-06 14:50:38,152 - INFO - Successfully FORCE-KILLED python.exe (PID: 9784)
+2025-09-06 14:50:38,152 - INFO - INSTANT KILL of conhost.exe (PID: 15316)
+2025-09-06 14:50:38,161 - INFO - Successfully FORCE-KILLED conhost.exe (PID: 15316)
+2025-09-06 14:50:38,161 - INFO - INSTANT KILL of python.exe (PID: 20864)
+2025-09-06 15:55:22,711 - INFO - Threat Responder initialized
+2025-09-06 19:02:34,083 - INFO - Threat Responder initialized
+2025-09-06 19:02:46,490 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:02:46,490 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:02:46,491 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:02:46,491 - CRITICAL - Target PIDs: [12896, 2952, 13476, 13764, 3392, 1224, 9864, 5512]
+2025-09-06 19:02:47,410 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:02:47,425 - CRITICAL - Active threats identified: 1 processes
+2025-09-06 19:02:47,426 - CRITICAL - TARGET: code.exe (PID: 15196) - Reason: Recently created: 68.7s ago; High CPU: 123.9%
+2025-09-06 19:02:47,426 - INFO - INSTANT KILL of Code.exe (PID: 15196)
+2025-09-06 19:02:47,506 - INFO - Successfully FORCE-KILLED Code.exe (PID: 15196)
+2025-09-06 19:02:47,507 - INFO - Implementing protective measures
+2025-09-06 19:02:47,523 - ERROR - Failed to terminate 7 processes: [12896, 2952, 13764, 3392, 1224, 9864, 5512]
+2025-09-06 19:02:50,409 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:02:50,410 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:02:50,410 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:02:50,410 - CRITICAL - Target PIDs: [12896, 14728, 2952, 15296, 13764, 3392, 1224, 9864, 12284]
+2025-09-06 19:02:51,347 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:02:51,357 - CRITICAL - Active threats identified: 1 processes
+2025-09-06 19:02:51,357 - CRITICAL - TARGET: code.exe (PID: 4260) - Reason: Recently created: 3.7s ago; High CPU: 109.5%
+2025-09-06 19:02:51,357 - INFO - INSTANT KILL of Code.exe (PID: 4260)
+2025-09-06 19:02:51,421 - INFO - Successfully FORCE-KILLED Code.exe (PID: 4260)
+2025-09-06 19:02:51,423 - INFO - Implementing protective measures
+2025-09-06 19:02:51,427 - ERROR - Failed to terminate 9 processes: [12896, 14728, 2952, 15296, 13764, 3392, 1224, 9864, 12284]
+2025-09-06 19:02:54,273 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:02:54,273 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:02:54,273 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:02:54,273 - CRITICAL - Target PIDs: [12896, 14728, 15296, 13764, 3392, 9352, 1224, 6728, 12284]
+2025-09-06 19:02:55,197 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:02:55,211 - CRITICAL - Active threats identified: 1 processes
+2025-09-06 19:02:55,211 - CRITICAL - TARGET: code.exe (PID: 13180) - Reason: Recently created: 3.8s ago; High CPU: 115.7%
+2025-09-06 19:02:55,211 - INFO - INSTANT KILL of Code.exe (PID: 13180)
+2025-09-06 19:02:55,257 - INFO - Successfully FORCE-KILLED Code.exe (PID: 13180)
+2025-09-06 19:02:55,257 - INFO - Implementing protective measures
+2025-09-06 19:02:55,261 - ERROR - Failed to terminate 9 processes: [12896, 14728, 15296, 13764, 3392, 9352, 1224, 6728, 12284]
+2025-09-06 19:02:58,101 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:02:58,101 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:02:58,101 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:02:58,101 - CRITICAL - Target PIDs: [14728, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:02:59,040 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:02:59,051 - INFO - No active threats identified during emergency scan
+2025-09-06 19:02:59,051 - INFO - Implementing protective measures
+2025-09-06 19:02:59,054 - ERROR - Failed to terminate 10 processes: [14728, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:01,888 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:03:01,888 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:03:01,888 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:01,890 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:02,820 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:03:02,830 - INFO - No active threats identified during emergency scan
+2025-09-06 19:03:02,830 - INFO - Implementing protective measures
+2025-09-06 19:03:02,833 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:05,671 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:03:05,671 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:03:05,671 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:05,671 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:06,606 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:03:06,617 - INFO - No active threats identified during emergency scan
+2025-09-06 19:03:06,617 - INFO - Implementing protective measures
+2025-09-06 19:03:06,621 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:09,462 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:03:09,462 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:03:09,462 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:09,462 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:10,382 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:03:10,391 - INFO - No active threats identified during emergency scan
+2025-09-06 19:03:10,391 - INFO - Implementing protective measures
+2025-09-06 19:03:10,391 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:13,269 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:03:13,269 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:03:13,269 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:13,269 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:14,207 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:03:14,213 - INFO - No active threats identified during emergency scan
+2025-09-06 19:03:14,213 - INFO - Implementing protective measures
+2025-09-06 19:03:14,221 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:17,084 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:03:17,084 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:03:17,084 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:17,084 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:18,004 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:03:18,017 - INFO - No active threats identified during emergency scan
+2025-09-06 19:03:18,017 - INFO - Implementing protective measures
+2025-09-06 19:03:18,017 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:20,852 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:03:20,852 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:03:20,852 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:20,852 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:21,779 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:03:21,782 - INFO - No active threats identified during emergency scan
+2025-09-06 19:03:21,782 - INFO - Implementing protective measures
+2025-09-06 19:03:21,792 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:24,638 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:03:24,638 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:03:24,638 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:24,638 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:25,567 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:03:25,578 - INFO - No active threats identified during emergency scan
+2025-09-06 19:03:25,578 - INFO - Implementing protective measures
+2025-09-06 19:03:25,581 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:28,429 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:03:28,429 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:03:28,429 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:28,429 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:29,364 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:03:29,375 - INFO - No active threats identified during emergency scan
+2025-09-06 19:03:29,375 - INFO - Implementing protective measures
+2025-09-06 19:03:29,379 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:32,198 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:03:32,199 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:03:32,199 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:32,199 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:33,130 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:03:33,140 - INFO - No active threats identified during emergency scan
+2025-09-06 19:03:33,140 - INFO - Implementing protective measures
+2025-09-06 19:03:33,143 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:35,989 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:03:35,989 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:03:35,989 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:35,989 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:36,910 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:03:36,922 - INFO - No active threats identified during emergency scan
+2025-09-06 19:03:36,922 - INFO - Implementing protective measures
+2025-09-06 19:03:36,926 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:39,771 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:03:39,771 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:03:39,771 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:39,771 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:40,720 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:03:40,729 - INFO - No active threats identified during emergency scan
+2025-09-06 19:03:40,731 - INFO - Implementing protective measures
+2025-09-06 19:03:40,731 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:43,617 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:03:43,617 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:03:43,617 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:43,617 - CRITICAL - Target PIDs: [15252, 5756, 15296, 13764, 9352, 3392, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:44,554 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:03:44,564 - INFO - No active threats identified during emergency scan
+2025-09-06 19:03:44,564 - INFO - Implementing protective measures
+2025-09-06 19:03:44,569 - ERROR - Failed to terminate 10 processes: [15252, 5756, 15296, 13764, 9352, 3392, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:47,403 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:03:47,403 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:03:47,403 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:47,403 - CRITICAL - Target PIDs: [15252, 5756, 15296, 13764, 9352, 3392, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:48,329 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:03:48,333 - INFO - No active threats identified during emergency scan
+2025-09-06 19:03:48,333 - INFO - Implementing protective measures
+2025-09-06 19:03:48,341 - ERROR - Failed to terminate 9 processes: [5756, 15296, 13764, 9352, 3392, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:51,196 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:03:51,196 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:03:51,196 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:51,196 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:52,126 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:03:52,134 - INFO - No active threats identified during emergency scan
+2025-09-06 19:03:52,134 - INFO - Implementing protective measures
+2025-09-06 19:03:52,137 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:54,988 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:03:54,988 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:03:54,988 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:54,988 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:55,909 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:03:55,921 - INFO - No active threats identified during emergency scan
+2025-09-06 19:03:55,921 - INFO - Implementing protective measures
+2025-09-06 19:03:55,923 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:58,766 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:03:58,766 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:03:58,766 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:03:58,766 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:03:59,696 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:03:59,705 - INFO - No active threats identified during emergency scan
+2025-09-06 19:03:59,705 - INFO - Implementing protective measures
+2025-09-06 19:03:59,705 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:02,560 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:04:02,560 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:04:02,560 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:02,560 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:03,486 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:04:03,493 - INFO - No active threats identified during emergency scan
+2025-09-06 19:04:03,493 - INFO - Implementing protective measures
+2025-09-06 19:04:03,493 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:06,365 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:04:06,365 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:04:06,365 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:06,365 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:07,275 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:04:07,284 - INFO - No active threats identified during emergency scan
+2025-09-06 19:04:07,284 - INFO - Implementing protective measures
+2025-09-06 19:04:07,287 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:10,137 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:04:10,137 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:04:10,137 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:10,137 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:11,073 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:04:11,083 - INFO - No active threats identified during emergency scan
+2025-09-06 19:04:11,083 - INFO - Implementing protective measures
+2025-09-06 19:04:11,085 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:13,977 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:04:13,977 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:04:13,977 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:13,977 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:14,912 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:04:14,923 - INFO - No active threats identified during emergency scan
+2025-09-06 19:04:14,923 - INFO - Implementing protective measures
+2025-09-06 19:04:14,924 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:17,747 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:04:17,747 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:04:17,747 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:17,747 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:18,665 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:04:18,675 - INFO - No active threats identified during emergency scan
+2025-09-06 19:04:18,675 - INFO - Implementing protective measures
+2025-09-06 19:04:18,676 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:21,540 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:04:21,540 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:04:21,540 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:21,540 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:22,468 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:04:22,473 - INFO - No active threats identified during emergency scan
+2025-09-06 19:04:22,473 - INFO - Implementing protective measures
+2025-09-06 19:04:22,482 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:25,308 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:04:25,308 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:04:25,308 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:25,308 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:26,248 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:04:26,253 - INFO - No active threats identified during emergency scan
+2025-09-06 19:04:26,253 - INFO - Implementing protective measures
+2025-09-06 19:04:26,262 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:29,102 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:04:29,102 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:04:29,102 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:29,102 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:30,012 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:04:30,023 - INFO - No active threats identified during emergency scan
+2025-09-06 19:04:30,023 - INFO - Implementing protective measures
+2025-09-06 19:04:30,024 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:32,891 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:04:32,891 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:04:32,891 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:32,891 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:33,822 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:04:33,825 - INFO - No active threats identified during emergency scan
+2025-09-06 19:04:33,825 - INFO - Implementing protective measures
+2025-09-06 19:04:33,835 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:36,695 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:04:36,695 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:04:36,695 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:36,695 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:37,627 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:04:37,633 - INFO - No active threats identified during emergency scan
+2025-09-06 19:04:37,633 - INFO - Implementing protective measures
+2025-09-06 19:04:37,638 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:40,491 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:04:40,491 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:04:40,491 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:40,491 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:41,431 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:04:41,442 - INFO - No active threats identified during emergency scan
+2025-09-06 19:04:41,442 - INFO - Implementing protective measures
+2025-09-06 19:04:41,444 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:44,352 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:04:44,352 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:04:44,352 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:44,352 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:45,288 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:04:45,296 - INFO - No active threats identified during emergency scan
+2025-09-06 19:04:45,296 - INFO - Implementing protective measures
+2025-09-06 19:04:45,302 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:48,164 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:04:48,164 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:04:48,164 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:48,164 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:49,089 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:04:49,092 - INFO - No active threats identified during emergency scan
+2025-09-06 19:04:49,092 - INFO - Implementing protective measures
+2025-09-06 19:04:49,103 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:51,957 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:04:51,957 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:04:51,957 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:51,957 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:52,902 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:04:52,913 - INFO - No active threats identified during emergency scan
+2025-09-06 19:04:52,913 - INFO - Implementing protective measures
+2025-09-06 19:04:52,914 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:55,781 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:04:55,781 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:04:55,781 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:55,781 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:56,704 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:04:56,716 - INFO - No active threats identified during emergency scan
+2025-09-06 19:04:56,716 - INFO - Implementing protective measures
+2025-09-06 19:04:56,719 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:04:59,536 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:04:59,536 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:04:59,536 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:04:59,536 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:00,473 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:05:00,483 - INFO - No active threats identified during emergency scan
+2025-09-06 19:05:00,483 - INFO - Implementing protective measures
+2025-09-06 19:05:00,486 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:03,328 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:05:03,328 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:05:03,328 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:03,328 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:04,247 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:05:04,256 - INFO - No active threats identified during emergency scan
+2025-09-06 19:05:04,256 - INFO - Implementing protective measures
+2025-09-06 19:05:04,260 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:07,089 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:05:07,089 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:05:07,089 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:07,089 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:08,009 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:05:08,017 - INFO - No active threats identified during emergency scan
+2025-09-06 19:05:08,017 - INFO - Implementing protective measures
+2025-09-06 19:05:08,022 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:10,874 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:05:10,874 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:05:10,874 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:10,874 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:11,805 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:05:11,822 - INFO - No active threats identified during emergency scan
+2025-09-06 19:05:11,822 - INFO - Implementing protective measures
+2025-09-06 19:05:11,828 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:14,691 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:05:14,691 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:05:14,691 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:14,691 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:15,628 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:05:15,638 - INFO - No active threats identified during emergency scan
+2025-09-06 19:05:15,638 - INFO - Implementing protective measures
+2025-09-06 19:05:15,642 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:18,513 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:05:18,513 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:05:18,513 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:18,513 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:19,440 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:05:19,451 - INFO - No active threats identified during emergency scan
+2025-09-06 19:05:19,451 - INFO - Implementing protective measures
+2025-09-06 19:05:19,452 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:22,291 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:05:22,291 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:05:22,291 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:22,291 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:23,222 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:05:23,231 - INFO - No active threats identified during emergency scan
+2025-09-06 19:05:23,231 - INFO - Implementing protective measures
+2025-09-06 19:05:23,233 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:26,081 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:05:26,081 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:05:26,081 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:26,081 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:27,003 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:05:27,013 - INFO - No active threats identified during emergency scan
+2025-09-06 19:05:27,013 - INFO - Implementing protective measures
+2025-09-06 19:05:27,016 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:29,857 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:05:29,857 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:05:29,857 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:29,857 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:30,797 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:05:30,801 - INFO - No active threats identified during emergency scan
+2025-09-06 19:05:30,801 - INFO - Implementing protective measures
+2025-09-06 19:05:30,811 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:33,666 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:05:33,666 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:05:33,666 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:33,666 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:34,611 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:05:34,621 - INFO - No active threats identified during emergency scan
+2025-09-06 19:05:34,621 - INFO - Implementing protective measures
+2025-09-06 19:05:34,621 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:37,481 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:05:37,481 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:05:37,481 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:37,481 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:38,412 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:05:38,422 - INFO - No active threats identified during emergency scan
+2025-09-06 19:05:38,422 - INFO - Implementing protective measures
+2025-09-06 19:05:38,425 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:41,269 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:05:41,269 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:05:41,269 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:41,270 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:42,199 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:05:42,211 - INFO - No active threats identified during emergency scan
+2025-09-06 19:05:42,211 - INFO - Implementing protective measures
+2025-09-06 19:05:42,220 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:45,091 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:05:45,091 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:05:45,091 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:45,091 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:46,016 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:05:46,021 - INFO - No active threats identified during emergency scan
+2025-09-06 19:05:46,021 - INFO - Implementing protective measures
+2025-09-06 19:05:46,026 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:48,866 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:05:48,866 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:05:48,866 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:48,866 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:49,809 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:05:49,820 - INFO - No active threats identified during emergency scan
+2025-09-06 19:05:49,820 - INFO - Implementing protective measures
+2025-09-06 19:05:49,821 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:52,666 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:05:52,666 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:05:52,666 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:52,666 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:53,598 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:05:53,608 - INFO - No active threats identified during emergency scan
+2025-09-06 19:05:53,608 - INFO - Implementing protective measures
+2025-09-06 19:05:53,611 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:56,476 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:05:56,476 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:05:56,476 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:05:56,476 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:05:57,403 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:05:57,411 - INFO - No active threats identified during emergency scan
+2025-09-06 19:05:57,411 - INFO - Implementing protective measures
+2025-09-06 19:05:57,416 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:06:00,280 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:06:00,280 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:06:00,280 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:06:00,280 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:06:01,212 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:06:01,221 - INFO - No active threats identified during emergency scan
+2025-09-06 19:06:01,221 - INFO - Implementing protective measures
+2025-09-06 19:06:01,224 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:06:04,051 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:06:04,051 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:06:04,051 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:06:04,052 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:06:04,987 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:06:04,996 - INFO - No active threats identified during emergency scan
+2025-09-06 19:06:04,998 - INFO - Implementing protective measures
+2025-09-06 19:06:05,001 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:06:07,826 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:06:07,826 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:06:07,826 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:06:07,826 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:06:08,748 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:06:08,759 - INFO - No active threats identified during emergency scan
+2025-09-06 19:06:08,759 - INFO - Implementing protective measures
+2025-09-06 19:06:08,761 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:06:11,603 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:06:11,603 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:06:11,603 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:06:11,603 - CRITICAL - Target PIDs: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:06:12,527 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:06:12,541 - INFO - No active threats identified during emergency scan
+2025-09-06 19:06:12,541 - INFO - Implementing protective measures
+2025-09-06 19:06:12,545 - ERROR - Failed to terminate 10 processes: [12896, 5756, 15296, 13764, 3392, 9352, 1224, 6728, 11948, 12284]
+2025-09-06 19:09:50,280 - INFO - Threat Responder initialized
+2025-09-06 19:10:05,801 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:10:05,801 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:10:05,801 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:05,801 - CRITICAL - Target PIDs: [11432, 7796, 3508, 11948, 2768, 5420, 5756, 13996, 6728, 9352]
+2025-09-06 19:10:06,727 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:10:06,739 - INFO - No active threats identified during emergency scan
+2025-09-06 19:10:06,739 - INFO - Implementing protective measures
+2025-09-06 19:10:06,743 - ERROR - Failed to terminate 10 processes: [11432, 7796, 3508, 11948, 2768, 5420, 5756, 13996, 6728, 9352]
+2025-09-06 19:10:09,578 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:10:09,578 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:10:09,578 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:09,578 - CRITICAL - Target PIDs: [11432, 7796, 3508, 11948, 2768, 5420, 5756, 13996, 6728, 8820]
+2025-09-06 19:10:10,513 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:10:10,526 - INFO - No active threats identified during emergency scan
+2025-09-06 19:10:10,526 - INFO - Implementing protective measures
+2025-09-06 19:10:10,530 - ERROR - Failed to terminate 10 processes: [11432, 7796, 3508, 11948, 2768, 5420, 5756, 13996, 6728, 8820]
+2025-09-06 19:10:13,384 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:10:13,384 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:10:13,384 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:13,384 - CRITICAL - Target PIDs: [11432, 7796, 3508, 11948, 2768, 5420, 5756, 13996, 6728, 8820]
+2025-09-06 19:10:14,317 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:10:14,332 - INFO - No active threats identified during emergency scan
+2025-09-06 19:10:14,332 - INFO - Implementing protective measures
+2025-09-06 19:10:14,335 - ERROR - Failed to terminate 10 processes: [11432, 7796, 3508, 11948, 2768, 5420, 5756, 13996, 6728, 8820]
+2025-09-06 19:10:17,191 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:10:17,191 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:10:17,191 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:17,191 - CRITICAL - Target PIDs: [11432, 7796, 3508, 11948, 2768, 5420, 5756, 13996, 6728, 8820]
+2025-09-06 19:10:18,110 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:10:18,125 - INFO - No active threats identified during emergency scan
+2025-09-06 19:10:18,125 - INFO - Implementing protective measures
+2025-09-06 19:10:18,129 - ERROR - Failed to terminate 10 processes: [11432, 7796, 3508, 11948, 2768, 5420, 5756, 13996, 6728, 8820]
+2025-09-06 19:10:21,021 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:10:21,021 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:10:21,021 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:21,021 - CRITICAL - Target PIDs: [11432, 7796, 3508, 5672, 5420, 2768, 13996, 14016]
+2025-09-06 19:10:21,960 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:10:21,973 - INFO - No active threats identified during emergency scan
+2025-09-06 19:10:21,973 - INFO - Implementing protective measures
+2025-09-06 19:10:21,980 - ERROR - Failed to terminate 7 processes: [11432, 7796, 3508, 5672, 5420, 2768, 13996]
+2025-09-06 19:10:24,864 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:10:24,864 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:10:24,864 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:24,864 - CRITICAL - Target PIDs: [11432, 7796, 3508, 5672, 5420, 2768, 5756, 13996]
+2025-09-06 19:10:25,795 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:10:25,804 - INFO - No active threats identified during emergency scan
+2025-09-06 19:10:25,804 - INFO - Implementing protective measures
+2025-09-06 19:10:25,807 - ERROR - Failed to terminate 8 processes: [11432, 7796, 3508, 5672, 5420, 2768, 5756, 13996]
+2025-09-06 19:10:28,656 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:10:28,656 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:10:28,656 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:10:28,656 - CRITICAL - Target PIDs: [11432, 7796, 3508, 5672, 5420, 2768, 5756, 13996]
+2025-09-06 19:10:29,585 - CRITICAL - EXECUTING EMERGENCY RESPONSE MEASURES - ACTIVE THREAT HUNTING
+2025-09-06 19:10:29,596 - INFO - No active threats identified during emergency scan
+2025-09-06 19:10:29,596 - INFO - Implementing protective measures
+2025-09-06 19:10:29,597 - ERROR - Failed to terminate 8 processes: [11432, 7796, 3508, 5672, 5420, 2768, 5756, 13996]
+2025-09-06 19:10:53,159 - INFO - Threat Responder initialized
+2025-09-06 19:15:54,749 - INFO - Threat Responder initialized
+2025-09-06 19:16:45,966 - INFO - Threat Responder initialized
+2025-09-06 19:16:56,497 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-06 19:16:56,497 - CRITICAL - Threat Type: mass_delete
+2025-09-06 19:16:56,497 - CRITICAL - Description: Mass file deletion detected: 3 files deleted in 2 seconds
+2025-09-06 19:16:56,498 - CRITICAL - Target PIDs: [7644, 12928, 1632, 12692, 14944, 7648, 5428]
+2025-09-06 19:16:57,417 - CRITICAL - Attempting to terminate 7 suspicious processes
+2025-09-06 19:16:57,417 - INFO - INSTANT KILL of cloudcode_cli.exe (PID: 7644)
+2025-09-06 19:16:57,426 - INFO - Successfully FORCE-KILLED cloudcode_cli.exe (PID: 7644)
+2025-09-06 19:16:57,427 - INFO - INSTANT KILL of cmd.exe (PID: 12928)
+2025-09-06 19:16:57,428 - INFO - Successfully FORCE-KILLED cmd.exe (PID: 12928)
+2025-09-06 19:16:57,429 - INFO - INSTANT KILL of WmiPrvSE.exe (PID: 12692)
+2025-09-06 19:16:57,432 - INFO - Successfully FORCE-KILLED WmiPrvSE.exe (PID: 12692)
+2025-09-06 19:16:57,432 - INFO - INSTANT KILL of conhost.exe (PID: 14944)
+2025-09-06 19:16:57,440 - INFO - Successfully FORCE-KILLED conhost.exe (PID: 14944)
+2025-09-06 19:16:57,440 - INFO - INSTANT KILL of python.exe (PID: 7648)
+2025-09-06 19:16:57,446 - INFO - Successfully FORCE-KILLED python.exe (PID: 7648)
+2025-09-06 19:16:57,446 - INFO - INSTANT KILL of python.exe (PID: 5428)
+2025-09-06 21:50:23,616 - INFO - Threat Responder initialized
+2025-09-06 21:55:29,943 - INFO - Threat Responder initialized
+2025-09-06 21:56:07,450 - INFO - Threat Responder initialized
+2025-09-06 22:06:08,535 - INFO - Threat Responder initialized
+2025-09-06 22:08:11,803 - INFO - Threat Responder initialized
+2025-09-06 22:19:09,382 - INFO - Threat Responder initialized
+2025-09-06 22:20:20,768 - INFO - Threat Responder initialized
+2025-09-06 22:22:31,417 - INFO - Threat Responder initialized
+2025-09-07 03:13:59,499 - INFO - Threat Responder initialized
+2025-09-07 03:14:38,154 - INFO - Threat Responder initialized
+2025-09-07 03:33:37,450 - INFO - Threat Responder initialized
+2025-09-07 03:34:29,667 - INFO - Threat Responder initialized
+2025-09-07 03:39:01,902 - INFO - Threat Responder initialized
+2025-09-07 03:39:13,940 - CRITICAL - THREAT RESPONSE INITIATED - Level: CRITICAL
+2025-09-07 03:39:13,940 - CRITICAL - Threat Type: mass_modification
+2025-09-07 03:39:13,940 - CRITICAL - Description: Mass file modification detected: 4 files modified in 2 seconds (potential encryption)
+2025-09-07 03:39:13,940 - CRITICAL - Target PIDs: [12844, 9184, 11948, 2932, 11160, 17536, 17588]
+2025-09-07 03:39:14,874 - CRITICAL - Attempting to terminate 7 suspicious processes
+2025-09-07 03:39:14,875 - INFO - INSTANT KILL of python.exe (PID: 12844)
+2025-09-07 03:39:14,913 - INFO - Successfully FORCE-KILLED python.exe (PID: 12844)
+2025-09-07 03:39:14,913 - INFO - INSTANT KILL of conhost.exe (PID: 9184)
+2025-09-07 03:39:14,939 - INFO - Successfully FORCE-KILLED conhost.exe (PID: 9184)
+2025-09-07 03:39:14,939 - INFO - INSTANT KILL of python.exe (PID: 11948)
+2025-09-07 05:11:29,453 - INFO - Threat Responder initialized
+2025-09-07 05:16:44,196 - INFO - Threat Responder initialized
+2025-09-07 05:22:44,802 - INFO - Threat Responder initialized
+2025-09-07 05:32:55,481 - INFO - Threat Responder initialized

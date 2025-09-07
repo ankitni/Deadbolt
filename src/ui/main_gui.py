@@ -59,6 +59,19 @@ except ImportError:
             print(f"[ALERT-{level}] {message}")
         LOG_DIR = os.path.join(os.getcwd(), 'logs')
         
+# Import config manager first to ensure configuration is loaded before other modules
+try:
+    from ..utils.config_manager import config_manager
+    CONFIG_MANAGER_AVAILABLE = True
+except ImportError:
+    try:
+        from utils.config_manager import config_manager
+        CONFIG_MANAGER_AVAILABLE = True
+    except ImportError:
+        CONFIG_MANAGER_AVAILABLE = False
+        print("Config manager not available - settings will not persist")
+
+# Now import config after config manager has loaded the saved configuration
 try:
     from ..utils import config
     from ..utils.config import TARGET_DIRS, RULES, SUSPICIOUS_PATTERNS, ACTIONS
@@ -1298,16 +1311,21 @@ class DeadboltMainWindow(QMainWindow):
             
             # Save configuration if config manager is available
             if CONFIG_MANAGER_AVAILABLE:
-                config_manager.update_target_dirs(TARGET_DIRS)
+                if config_manager.update_target_dirs(TARGET_DIRS):
+                    QMessageBox.information(self, "Success", f"Directory added and saved: {dir_path}")
+                else:
+                    QMessageBox.warning(self, "Warning", f"Directory added but failed to save to configuration file: {dir_path}")
+            else:
+                QMessageBox.information(self, "Info", f"Directory added (not saved): {dir_path}")
             
             # Update the table
             row_position = self.dirs_table.rowCount()
             self.dirs_table.insertRow(row_position)
             self.dirs_table.setItem(row_position, 0, QTableWidgetItem(dir_path))
-            self.dirs_table.setItem(row_position, 1, QTableWidgetItem("Added (restart monitoring)"))
+            self.dirs_table.setItem(row_position, 1, QTableWidgetItem("Added"))
             
             log_event("INFO", f"Added directory to monitor via GUI: {dir_path}")
-    
+
     def remove_directory(self):
         # Get selected row
         selected_rows = self.dirs_table.selectedIndexes()
@@ -1324,7 +1342,10 @@ class DeadboltMainWindow(QMainWindow):
             
             # Save configuration if config manager is available
             if CONFIG_MANAGER_AVAILABLE:
-                config_manager.update_target_dirs(TARGET_DIRS)
+                if config_manager.update_target_dirs(TARGET_DIRS):
+                    QMessageBox.information(self, "Success", f"Directory removed and configuration saved: {dir_path}")
+                else:
+                    QMessageBox.warning(self, "Warning", f"Directory removed but failed to save to configuration file: {dir_path}")
         
         # Remove from table
         self.dirs_table.removeRow(row)
@@ -1381,9 +1402,24 @@ class DeadboltMainWindow(QMainWindow):
         log_event("INFO", "Response actions updated via GUI")
     
     def load_initial_data(self):
-        # Load monitored directories
+        # Load monitored directories - dynamically fetch current values
         self.dirs_table.setRowCount(0)
-        for dir_path in TARGET_DIRS:
+        
+        # Ensure we're using the current config values
+        current_dirs = []
+        try:
+            if CONFIG_MANAGER_AVAILABLE:
+                # Get current config from config manager
+                current_config = config_manager.get_current_config()
+                current_dirs = current_config.get('TARGET_DIRS', [])
+            else:
+                # Fallback to imported config
+                current_dirs = TARGET_DIRS
+        except:
+            # Final fallback
+            current_dirs = TARGET_DIRS
+            
+        for dir_path in current_dirs:
             row_position = self.dirs_table.rowCount()
             self.dirs_table.insertRow(row_position)
             self.dirs_table.setItem(row_position, 0, QTableWidgetItem(dir_path))

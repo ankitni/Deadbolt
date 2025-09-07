@@ -1,0 +1,64 @@
+{
+  "model_type": "Enhanced Logistic Regression",
+  "training_date": "2025-09-06T14:11:52.274660",
+  "feature_count": 16,
+  "feature_names": [
+    "duration",
+    "orig_bytes",
+    "resp_bytes",
+    "orig_pkts",
+    "resp_pkts",
+    "file_changes",
+    "entropy",
+    "proto_TCP",
+    "proto_UDP",
+    "bytes_ratio",
+    "pkts_ratio",
+    "orig_throughput",
+    "resp_throughput",
+    "protocol_efficiency",
+    "entropy_category",
+    "file_change_rate"
+  ],
+  "performance": {
+    "mean_accuracy": 0.9783333333333333,
+    "std_accuracy": 0.00849836585598798,
+    "mean_auc": 0.9848153214774282,
+    "std_auc": 0.011495585734345178,
+    "cross_validation_scores": [
+      0.9833333333333333,
+      0.975,
+      0.9916666666666667,
+      0.9666666666666667,
+      0.975
+    ],
+    "model_stability": "High"
+  },
+  "model_params": {
+    "C": 0.01,
+    "class_weight": "balanced",
+    "dual": false,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "l1_ratio": 0.5,
+    "max_iter": 1000,
+    "multi_class": "deprecated",
+    "n_jobs": null,
+    "penalty": "elasticnet",
+    "random_state": 42,
+    "solver": "saga",
+    "tol": 0.0001,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "scaler_type": "RobustScaler",
+  "label_mapping": {
+    "benign": 0,
+    "malicious": 1
+  },
+  "deadbolt_integration": {
+    "compatible": true,
+    "version": "2.0",
+    "ml_detector_ready": true
+  }
+}

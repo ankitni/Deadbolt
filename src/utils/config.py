@@ -11,8 +11,10 @@ except ImportError:
 
 # Directories to monitor - can be overridden with TARGET_DIRS env var
 default_dirs = [
-    r"C:\Users\MADHURIMA\Documents\testtxt",  # Test directory for comprehensive testing
-    r"C:\Users\MADHURIMA\Documents",
+    r"C:\Users\MADHURIMA\Documents\testtxt",
+    r"C:\Users\MADHURIMA\Documents\testtxt_new",
+    r"C:\Users\MADHURIMA\Documents\testfol",
+    r"C:\Users\MADHURIMA\Documents\testla"  # Test directory for comprehensive testing
     # Add more directories as needed
 ]
 

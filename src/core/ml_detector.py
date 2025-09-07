@@ -157,25 +157,68 @@ class MLThreatDetector:
             return {}
         
     def _load_ml_model(self):
-        """Load the trained ML model components."""
+        """Load the trained ML model components with enhanced logistic regression support."""
         try:
             # Get ML model paths
             ml_dir = os.path.join(self.project_root, 'ml')
             
-            model_path = os.path.join(ml_dir, 'best_iot_ransomware_model.joblib')
-            scaler_path = os.path.join(ml_dir, 'iot_ransomware_scaler.joblib')
-            features_path = os.path.join(ml_dir, 'iot_ransomware_features.joblib')
+            # Primary: Enhanced Logistic Regression Model
+            lr_model_path = os.path.join(ml_dir, 'models', 'ransomware_detection_model.joblib')
+            lr_scaler_path = os.path.join(ml_dir, 'models', 'feature_scaler.joblib') 
+            lr_features_path = os.path.join(ml_dir, 'models', 'feature_names.joblib')
+            lr_metadata_path = os.path.join(ml_dir, 'models', 'model_metadata.json')
             
-            if os.path.exists(model_path) and os.path.exists(scaler_path) and os.path.exists(features_path):
-                self.ml_model = joblib.load(model_path)
-                self.ml_scaler = joblib.load(scaler_path)
-                self.ml_features = joblib.load(features_path)
+            # Fallback: IoT XGBoost Model
+            xgb_model_path = os.path.join(ml_dir, 'best_iot_ransomware_model.joblib')
+            xgb_scaler_path = os.path.join(ml_dir, 'iot_ransomware_scaler.joblib')
+            xgb_features_path = os.path.join(ml_dir, 'iot_ransomware_features.joblib')
+            
+            # Try enhanced logistic regression first
+            if (os.path.exists(lr_model_path) and os.path.exists(lr_scaler_path) 
+                and os.path.exists(lr_features_path)):
                 
-                self.logger.info(f"ML model loaded successfully - Features: {len(self.ml_features)}")
-                print(f"ML-Enhanced Detection: Model loaded with {len(self.ml_features)} features")
+                self.ml_model = joblib.load(lr_model_path)
+                self.ml_scaler = joblib.load(lr_scaler_path)
+                self.ml_features = joblib.load(lr_features_path)
+                
+                # Load metadata if available
+                self.ml_metadata = None
+                if os.path.exists(lr_metadata_path):
+                    try:
+                        import json
+                        with open(lr_metadata_path, 'r') as f:
+                            self.ml_metadata = json.load(f)
+                    except Exception:
+                        pass
+                
+                model_type = "Enhanced Logistic Regression"
+                self.logger.info(f"Enhanced Logistic Regression model loaded - Features: {len(self.ml_features)}")
+                print(f"🤖 ML-Enhanced Detection: {model_type} loaded with {len(self.ml_features)} features")
+                
+                # Log model capabilities
+                if self.ml_metadata:
+                    performance = self.ml_metadata.get('performance', {})
+                    print(f"   📊 Model Performance: Accuracy {performance.get('mean_accuracy', 'N/A'):.3f}")
+                    print(f"   🔧 Model Stability: {performance.get('model_stability', 'Unknown')}")
+                
+            # Fallback to XGBoost IoT model if available
+            elif (os.path.exists(xgb_model_path) and os.path.exists(xgb_scaler_path) 
+                  and os.path.exists(xgb_features_path)):
+                
+                self.ml_model = joblib.load(xgb_model_path)
+                self.ml_scaler = joblib.load(xgb_scaler_path)
+                self.ml_features = joblib.load(xgb_features_path)
+                self.ml_metadata = None
+                
+                model_type = "XGBoost IoT"
+                self.logger.info(f"XGBoost IoT model loaded (fallback) - Features: {len(self.ml_features)}")
+                print(f"🤖 ML-Enhanced Detection: {model_type} (fallback) loaded with {len(self.ml_features)} features")
+            
             else:
-                self.logger.warning("ML model files not found - using rule-based detection only")
-                print("WARNING: ML model not found - Run 'python ml/simple_iot_detection.py' to train first")
+                self.logger.warning("No ML models found - using rule-based detection only")
+                print("WARNING: No ML models found")
+                print("   To train Enhanced Logistic Regression: python ml/logistic_regression_ransomware_detection.py")
+                print("   To train XGBoost IoT model: python ml/simple_iot_detection.py")
                 
         except Exception as e:
             self.logger.error(f"Failed to load ML model: {e}")
@@ -292,14 +335,27 @@ class MLThreatDetector:
         return min(score, 100)  # Cap at 100
         
     def _get_ml_threat_score(self, network_info):
-        """Get ML-based threat score from network information with comprehensive logging."""
+        """Get ML-based threat score with enhanced logistic regression support."""
         try:
             if not self.ml_model:
                 self.logger.debug("ML model not available, returning 0.0 score")
                 return 0.0
             
-            # Convert network info to DataFrame format expected by model
-            data = self._prepare_network_data(network_info)
+            # Determine model type and prepare data accordingly
+            if hasattr(self, 'ml_metadata') and self.ml_metadata:
+                model_type = self.ml_metadata.get('model_type', 'Unknown')
+                if 'Logistic Regression' in model_type:
+                    data = self._prepare_logistic_regression_data(network_info)
+                else:
+                    data = self._prepare_network_data(network_info)
+            else:
+                # Try logistic regression format first, fallback to IoT format
+                try:
+                    data = self._prepare_logistic_regression_data(network_info)
+                    if data is None:
+                        data = self._prepare_network_data(network_info)
+                except Exception:
+                    data = self._prepare_network_data(network_info)
             
             if data is not None:
                 # Predict with ML model
@@ -322,11 +378,94 @@ class MLThreatDetector:
             self.logger.error(f"ML prediction error: {e}")
             return 0.0
             
-    def _prepare_network_data(self, network_info):
-        """Prepare network data for ML model prediction."""
+    def _prepare_logistic_regression_data(self, network_info):
+        """Prepare network data for enhanced logistic regression model prediction."""
         try:
-            # Create a DataFrame with the network information
-            # This should match the format expected by your ML model
+            # Create base features from network information
+            base_features = {
+                'duration': network_info.get('duration', 0.0),
+                'orig_bytes': network_info.get('orig_bytes', 0),
+                'resp_bytes': network_info.get('resp_bytes', 0),
+                'orig_pkts': network_info.get('orig_pkts', 0),
+                'resp_pkts': network_info.get('resp_pkts', 0),
+                'file_changes': network_info.get('file_changes', 0),
+                'entropy': network_info.get('entropy', 0.0),
+                'proto_TCP': 1 if network_info.get('protocol', '').lower() == 'tcp' else 0,
+                'proto_UDP': 1 if network_info.get('protocol', '').lower() == 'udp' else 0
+            }
+            
+            # Create enhanced features (matching training)
+            enhanced_features = base_features.copy()
+            
+            # Traffic ratio features
+            enhanced_features['bytes_ratio'] = (
+                base_features['orig_bytes'] / base_features['resp_bytes'] 
+                if base_features['resp_bytes'] > 0 else base_features['orig_bytes']
+            )
+            
+            enhanced_features['pkts_ratio'] = (
+                base_features['orig_pkts'] / base_features['resp_pkts']
+                if base_features['resp_pkts'] > 0 else base_features['orig_pkts']
+            )
+            
+            # Throughput features
+            enhanced_features['orig_throughput'] = (
+                base_features['orig_bytes'] / base_features['duration']
+                if base_features['duration'] > 0 else base_features['orig_bytes']
+            )
+            
+            enhanced_features['resp_throughput'] = (
+                base_features['resp_bytes'] / base_features['duration']
+                if base_features['duration'] > 0 else base_features['resp_bytes']
+            )
+            
+            # Protocol efficiency
+            enhanced_features['protocol_efficiency'] = (
+                base_features['proto_TCP'] * 2 + base_features['proto_UDP']
+            )
+            
+            # Entropy category (binned)
+            entropy = base_features['entropy']
+            if entropy <= 3:
+                enhanced_features['entropy_category'] = 0
+            elif entropy <= 6:
+                enhanced_features['entropy_category'] = 1
+            elif entropy <= 9:
+                enhanced_features['entropy_category'] = 2
+            else:
+                enhanced_features['entropy_category'] = 3
+            
+            # File change rate
+            enhanced_features['file_change_rate'] = (
+                base_features['file_changes'] / base_features['duration']
+                if base_features['duration'] > 0 else base_features['file_changes']
+            )
+            
+            # Convert to DataFrame format
+            df = pd.DataFrame([enhanced_features])
+            
+            # Ensure all expected features are present in correct order
+            feature_order = self.ml_features if hasattr(self, 'ml_features') else list(enhanced_features.keys())
+            
+            for feature in feature_order:
+                if feature not in df.columns:
+                    df[feature] = 0
+            
+            # Keep only the features used in training (in the same order)
+            df_final = df[feature_order]
+            
+            # Scale the features
+            df_scaled = self.ml_scaler.transform(df_final)
+            
+            return df_scaled
+            
+        except Exception as e:
+            self.logger.error(f"Logistic regression data preparation error: {e}")
+            return None
+    def _prepare_network_data(self, network_info):
+        """Prepare network data for IoT XGBoost model prediction (fallback)."""
+        try:
+            # Create a DataFrame with the network information for IoT model
             data_dict = {
                 'id.orig_p': network_info.get('orig_port', 0),
                 'id.resp_p': network_info.get('resp_port', 0),
@@ -355,7 +494,7 @@ class MLThreatDetector:
             return df_scaled
             
         except Exception as e:
-            self.logger.error(f"Data preparation error: {e}")
+            self.logger.error(f"IoT model data preparation error: {e}")
             return None
             
     def _update_ml_stats(self, confidence, prediction, network_info):
@@ -466,7 +605,7 @@ class MLThreatDetector:
             self.logger.error(f"Error logging ML prediction: {e}")
     
     def get_ml_statistics(self):
-        """Get comprehensive ML statistics for GUI display."""
+        """Get comprehensive ML statistics for GUI display with enhanced model info."""
         try:
             # Load persistent stats if available
             stats = self._load_persistent_stats()
@@ -485,10 +624,25 @@ class MLThreatDetector:
                 stats['benign_rate'] = 0.0
                 stats['high_confidence_rate'] = 0.0
             
-            # Add model status
+            # Add model status with enhanced info
             stats['model_loaded'] = self.ml_model is not None
             stats['model_features'] = len(self.ml_features) if self.ml_features else 0
             stats['monitoring_active'] = self.monitoring_active
+            
+            # Enhanced model information
+            if hasattr(self, 'ml_metadata') and self.ml_metadata:
+                stats['model_type'] = self.ml_metadata.get('model_type', 'Unknown')
+                stats['model_version'] = self.ml_metadata.get('deadbolt_integration', {}).get('version', '1.0')
+                performance = self.ml_metadata.get('performance', {})
+                stats['model_accuracy'] = performance.get('mean_accuracy', 0.0)
+                stats['model_stability'] = performance.get('model_stability', 'Unknown')
+                stats['training_date'] = self.ml_metadata.get('training_date', 'Unknown')
+            else:
+                stats['model_type'] = 'XGBoost IoT (Legacy)' if self.ml_model else 'None'
+                stats['model_version'] = '1.0'
+                stats['model_accuracy'] = 0.0
+                stats['model_stability'] = 'Unknown'
+                stats['training_date'] = 'Unknown'
             
             # Format timestamps
             if stats['last_prediction_time']:
@@ -496,7 +650,7 @@ class MLThreatDetector:
                     if isinstance(stats['last_prediction_time'], str):
                         stats['last_prediction_formatted'] = datetime.fromisoformat(stats['last_prediction_time']).strftime('%Y-%m-%d %H:%M:%S')
                     else:
-                        stats['last_prediction_formatted'] = stats['last_prediction_time']
+                        stats['last_prediction_formatted'] = str(stats['last_prediction_time'])
                 except:
                     stats['last_prediction_formatted'] = str(stats['last_prediction_time'])
             else:
@@ -513,6 +667,7 @@ class MLThreatDetector:
                 'model_loaded': self.ml_model is not None,
                 'model_features': len(self.ml_features) if self.ml_features else 0,
                 'monitoring_active': self.monitoring_active,
+                'model_type': 'Error',
                 'error': str(e)
             }
     

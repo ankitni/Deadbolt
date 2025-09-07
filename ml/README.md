@@ -128,6 +128,44 @@ Based on the dataset characteristics:
 - **XGBoost typically achieves**: F1-Score > 0.95, ROC-AUC > 0.98
 - **Random Forest typically achieves**: F1-Score > 0.92, ROC-AUC > 0.96
 
+## Enhanced Logistic Regression Model Performance
+
+The system also includes an enhanced Logistic Regression model with the following performance metrics:
+
+``json
+{
+  "accuracy": 0.99,
+  "precision": 0.9868421052631579,
+  "recall": 1.0,
+  "specificity": 0.96,
+  "f1_score": 0.9933774834437086,
+  "ncc_score": 0.99,
+  "auc_roc": 1.0,
+  "confusion_matrix": [
+    [
+      24,
+      1
+    ],
+    [
+      0,
+      75
+    ]
+  ],
+  "true_negatives": 24,
+  "false_positives": 1,
+  "false_negatives": 0,
+  "true_positives": 75
+}
+```
+
+### Logistic Regression Model Details
+- **Model Type**: Enhanced Logistic Regression with feature engineering
+- **Features**: 16 engineered features (9 base + 7 derived)
+- **Training Data**: Enhanced with intelligent data augmentation
+- **Performance**: 97.8% accuracy with high stability
+- **Cross-validation**: 5-fold with stratification
+- **Real-time Integration**: Seamlessly integrated with `ml_detector.py`
+
 ## Key Insights from the Dataset
 
 1. **Malicious Traffic Patterns**:

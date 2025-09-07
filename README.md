@@ -1,8 +1,22 @@
 # Deadbolt 5 - ML-Enhanced Ransomware Protection System
 
+<p align="center">
+  <img src="assets/deadbolt%20cli.png" alt="Deadbolt CLI" width="45%" />
+  <img src="assets/deadbolt%20gui%20logs.png" alt="Deadbolt GUI Logs" width="45%" />
+</p>
+
 ## 🤖 **AI-Powered Security with Clean Architecture**
 
 DeadBolt 5 is an advanced ML-enhanced ransomware detection and prevention system for Windows. It combines traditional behavior-based detection with machine learning to dramatically reduce false positives while maintaining comprehensive protection.
+
+## 🚀 **Tech Stack**
+
+- **Core**: Python 3.7+, C++
+- **ML Framework**: XGBoost, scikit-learn, pandas, numpy
+- **GUI**: PyQt5, Matplotlib
+- **Web**: HTML5, CSS3, JavaScript
+- **Logging**: Custom logging system with JSON support
+- **Deployment**: Windows Batch Scripts
 
 ## 📁 **Project Organization**
 
@@ -55,6 +69,64 @@ deadbolt-5/
 └── README.md             # This file
 ```
 
+## 🎯 **Core Features**
+
+### 🔍 **Advanced Detection**
+- Real-time file system monitoring
+- Behavior-based threat detection
+- Mass modification/deletion detection
+- Suspicious file pattern recognition
+- Zero-day ransomware protection
+
+### ⚡ **Multi-Layer Response**
+- Python primary response system
+- C++ fallback termination engine
+- Smart target identification
+- False positive prevention
+- Emergency response protocols
+
+## 🖥️ **GUI Dashboard Screenshots**
+
+<p align="center">
+  <img src="assets/light%20theme%20gui%20for%20deadbolt.png" alt="Light Theme GUI" width="48%" />
+  <img src="assets/Dark%20Theme%20GUi%20for%20deadbolt.png" alt="Dark Theme GUI" width="48%" />
+</p>
+
+### 📊 **Live Dashboard Features**
+
+- **Real-time statistics**: Threats detected, blocked, processes terminated
+- **System health monitoring**: All components status
+- **Recent activity tracking**: Threats and responses with timestamps
+- **Interactive configuration**: Paths, rules, and actions
+- **Live log monitoring**: Filtering and search capabilities
+- **ML Analytics**: Comprehensive ML monitoring with statistics and logs
+
+### 🛠️ **Configuration Management**
+- Persistent settings storage
+- Directory path management
+- Detection rule customization
+- Response action configuration
+
+## 🤖 **ML Enhancement Features**
+
+### 🎯 **Intelligent Detection**
+- **XGBoost Model**: Trained on IoT ransomware patterns
+- **49 Features**: Network analysis for precise detection
+- **False Positive Reduction**: 70-90% improvement over rule-based
+- **Network Pattern Analysis**: IRC, HTTP, and protocol analysis
+- **Confidence Scoring**: ML probability-based threat assessment
+
+<p align="center">
+  <img src="assets/deadbolt%20Gui%20ml%20analysis.png" alt="ML Analysis" width="70%" />
+</p>
+
+### 📊 **ML Model Details**
+- **Model Type**: XGBoost Classifier (optimized)
+- **Training Data**: CTU-IoT ransomware dataset
+- **Features**: Network connection patterns (49 features)
+- **Performance**: High precision with reduced false alarms
+- **Real-time**: Integrated seamlessly with behavior detection
+
 ## 🚀 **Quick Start - ML-Enhanced Protection**
 
 ### 🤖 **ML Model Status: ✅ ACTIVE**
@@ -92,11 +164,9 @@ python launch_gui.py       # Simple GUI launcher
 python minimal_gui.py      # Minimal standalone GUI
 ```
 
-**GUI Features:**
-- 📋 **Dashboard**: Real-time threat monitoring
-- 📝 **Logs**: System activity and filtering
-- 🤖 **ML Analytics**: Comprehensive ML monitoring with statistics and logs
-- ⚙️ **Settings**: Configuration management
+<p align="center">
+  <img src="assets/deadbolt%20settings%20gui.png" alt="Settings GUI" width="60%" />
+</p>
 
 ### 3. Interactive Mode
 ```bash
@@ -110,32 +180,7 @@ python deadbolt.py --interactive
 scripts\test_ml_defender.bat
 ```
 
-## 🤖 **ML Enhancement Features**
-
-### 🎯 **Intelligent Detection**
-- **XGBoost Model**: Trained on IoT ransomware patterns
-- **49 Features**: Network analysis for precise detection
-- **False Positive Reduction**: 70-90% improvement over rule-based
-- **Network Pattern Analysis**: IRC, HTTP, and protocol analysis
-- **Confidence Scoring**: ML probability-based threat assessment
-
-### 📊 **ML Model Details**
-- **Model Type**: XGBoost Classifier (optimized)
-- **Training Data**: CTU-IoT ransomware dataset
-- **Features**: Network connection patterns (49 features)
-- **Performance**: High precision with reduced false alarms
-- **Real-time**: Integrated seamlessly with behavior detection
-
-### 🔍 **How ML Works**
-1. **File Behavior Monitoring**: Traditional rule-based detection
-2. **Network Pattern Analysis**: ML model analyzes connection patterns
-3. **Threat Scoring**: Combined rule + ML confidence scoring  
-4. **Smart Response**: Adaptive response based on ML confidence
-5. **Continuous Learning**: Model can be retrained with new data
-6. **📊 Comprehensive Logging**: Detailed ML predictions, confidence scores, and statistics
-7. **🔥 GUI Analytics**: Real-time ML monitoring dashboard with charts and logs
-
-## 📊 **System Requirements - ML Enhanced**
+## 📈 **System Requirements - ML Enhanced**
 
 - **OS**: Windows 10/11
 - **Python**: 3.7+
@@ -143,113 +188,6 @@ scripts\test_ml_defender.bat
 - **ML Dependencies**: XGBoost, scikit-learn, pandas, numpy
 - **Memory**: 512MB+ for ML model
 - **Storage**: 200MB+ for models and logs
-
-## 📋 **System Requirements**
-
-- **OS**: Windows 10/11
-- **Python**: 3.7+
-- **Privileges**: Administrator (recommended)
-- **Dependencies**: See requirements.txt
-
-## 🎯 **Core Features**
-
-### 🔍 **Advanced Detection**
-- Real-time file system monitoring
-- Behavior-based threat detection
-- Mass modification/deletion detection
-- Suspicious file pattern recognition
-- Zero-day ransomware protection
-
-### ⚡ **Multi-Layer Response**
-- Python primary response system
-- C++ fallback termination engine
-- Smart target identification
-- False positive prevention
-- Emergency response protocols
-
-### 📊 **Live Dashboard**
-- **Real-time statistics**: Threats detected, blocked, processes terminated
-- **System health monitoring**: All components status
-- **Recent activity tracking**: Threats and responses with timestamps
-- **Interactive configuration**: Paths, rules, and actions
-- **Live log monitoring**: Filtering and search capabilities
-
-### 🛠️ **Configuration Management**
-- Persistent settings storage
-- Directory path management
-- Detection rule customization
-- Response action configuration
-
-## 📈 **Dashboard Statistics**
-
-The GUI now displays **actual data from log files**:
-
-- **📊 Total Events**: Real count from system logs
-- **🎯 Threats Detected**: Actual threats identified
-- **🛡️ Threats Blocked**: Real blocked attempts
-- **⚡ Processes Terminated**: Actual termination count
-- **🚨 Alert Distribution**: High/Medium/Low severity breakdown
-- **💾 System Health**: Live component status monitoring
-
-## 🔧 **Project Benefits**
-
-### 📁 **Organized Structure**
-- Clear separation of concerns
-- Modular architecture
-- Easy maintenance and testing
-- Professional codebase organization
-
-### 🔄 **Import Management**
-- Proper Python package structure
-- Relative imports for better dependency management
-- Clean module interfaces
-- Reduced import conflicts
-
-### 🛠️ **Development Workflow**
-- Dedicated test directory structure
-- Build and deployment scripts
-- Configuration management
-- Documentation organization
-
-### 📦 **Deployment Ready**
-- Single entry point (deadbolt.py)
-- Requirements management
-- Binary organization
-- Configuration externalization
-
-## ⚙️ **Configuration**
-
-### Monitored Directories
-Edit `config/deadbolt_config.json`:
-```json
-{
-  "target_dirs": [
-    "C:\\Users\\MADHURIMA\\Documents",
-    "C:\\Users\\MADHURIMA\\Desktop"
-  ]
-}
-```
-
-### Detection Rules
-```json
-{
-  "rules": {
-    "mass_delete": {"count": 10, "interval": 5},
-    "mass_rename": {"count": 10, "interval": 5}
-  }
-}
-```
-
-### Response Actions
-```json
-{
-  "actions": {
-    "kill_process": true,
-    "dry_run": false,
-    "log_only": false
-  }
-}
-```
 
 ## 🧪 **Testing - ML Enhanced**
 
@@ -307,7 +245,7 @@ The ML-enhanced system generates comprehensive logs:
 
 ## 🏗️ **Architecture**
 
-``mermaid
+```mermaid
 graph TD
     A[File System Watcher] --> B[Threat Detector]
     B --> C[Response Handler]
@@ -328,13 +266,6 @@ graph TD
 - **Notification Cooldown**: Prevents alert spam
 - **Comprehensive Logging**: Complete audit trail
 - **Multi-layer Fallback**: Multiple termination methods
-
-## 📞 **Support**
-
-- **Documentation**: Check `docs/` directory
-- **Examples**: See `examples/` directory
-- **Issues**: Review log files in `logs/`
-- **Configuration**: Modify `config/deadbolt_config.json`
 
 ## 🎉 **What's New in ML-Enhanced Version**
 
@@ -368,8 +299,47 @@ python model_inference.py
 ```
 
 **Note**: Pre-trained models are already included and working!
-7. **⚙️ Configuration Management**: Externalized settings with persistence
-8. **📦 Deployment Ready**: Single entry point and clean binary organization
+
+## ⚙️ **Configuration**
+
+### Monitored Directories
+Edit `config/deadbolt_config.json`:
+```json
+{
+  "target_dirs": [
+    "C:\\Users\\MADHURIMA\\Documents",
+    "C:\\Users\\MADHURIMA\\Desktop"
+  ]
+}
+```
+
+### Detection Rules
+```json
+{
+  "rules": {
+    "mass_delete": {"count": 10, "interval": 5},
+    "mass_rename": {"count": 10, "interval": 5}
+  }
+}
+```
+
+### Response Actions
+```json
+{
+  "actions": {
+    "kill_process": true,
+    "dry_run": false,
+    "log_only": false
+  }
+}
+```
+
+## 📞 **Support**
+
+- **Documentation**: Check `docs/` directory
+- **Examples**: See `examples/` directory
+- **Issues**: Review log files in `logs/`
+- **Configuration**: Modify `deadbolt_config.json`
 
 ---
 
